@@ -1,0 +1,2566 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CognitoIdentity</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../../index.html"/>
+        <link rel="up" title="Available Services" href="index.html"/>
+        <link rel="next" title="CognitoIdentityProvider" href="cognito-idp.html"/>
+        <link rel="prev" title="CodePipeline" href="codepipeline.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Boto3 API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cloudfront.html">Generate a signed URL for Amazon CloudFront</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../s3.html">s3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">User Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#migration-guides">Migration Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/new.html">What&#8217;s New</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/new.html#major-features">Major Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/migration.html">Migrating from Boto 2.x</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#high-level-concepts">High Level Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#installation-configuration">Installation &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/upgrading.html">Upgrading Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/upgrading.html#id1">1.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#general-feature-guides">General Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/resources.html">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#identifiers-attributes-intro">Identifiers &amp; Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#actions">Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#sub-resources">Sub-resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#waiters">Waiters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#multithreading">Multithreading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/collections.html">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#chainability">Chainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#limiting-results">Limiting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#controlling-page-size">Controlling Page Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#batch-actions">Batch Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/clients.html">Low-level Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#creating-clients">Creating Clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#service-operations">Service Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#handling-responses">Handling Responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/paginators.html">Paginators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#creating-paginators">Creating Paginators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#filtering-results">Filtering results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#default-session">Default Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#custom-session">Custom Session</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#interactive-configuration">Interactive Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#configuring-credentials">Configuring Credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#environment-variable-configuration">Environment Variable Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/events.html">Extensibility Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#an-introduction-to-the-event-system">An Introduction to the Event System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#a-hierarchical-structure">A Hierarchical Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#wildcard-matching">Wildcard Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#isolation-of-event-systems">Isolation of Event Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#boto3-specific-events">Boto3 Specific Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#service-feature-guides">Service Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-table">Creating a New Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#using-an-existing-table">Using an Existing Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-item">Creating a New Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#getting-an-item">Getting an Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#updating-item">Updating Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-item">Deleting Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#batch-writing">Batch Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#querying-and-scanning">Querying and Scanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-a-table">Deleting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/s3.html">S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#changing-the-addressing-style">Changing the Addressing Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#using-the-transfer-manager">Using the Transfer Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-urls">Generating Presigned URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-posts">Generating Presigned POSTs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/boto3.html">Boto3 Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/collections.html">Collections Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/resources.html">Resources Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.model">Resource Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.params">Request Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.response">Response Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.action">Resource Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.base">Resource Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.factory">Resource Factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/session.html">Session Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customizations/index.html">Customization References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/dynamodb.html">DynamoDB Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#valid-dynamodb-types">Valid DynamoDB Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#custom-boto3-types">Custom Boto3 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#dynamodb-conditions">DynamoDB Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/s3.html">S3 Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/s3.html#s3-transfers">S3 Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Available Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="acm.html">ACM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">APIGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="application-autoscaling.html">ApplicationAutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application-autoscaling.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">AutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudformation.html">CloudFormation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#event">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresource">StackResource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresourcesummary">StackResourceSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudfront.html">CloudFront</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cloudfront.html#generate-a-signed-url-for-amazon-cloudfront">Generate a signed URL for Amazon CloudFront</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudhsm.html">CloudHSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudhsm.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearch.html">CloudSearch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearch.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearchdomain.html">CloudSearchDomain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearchdomain.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudtrail.html">CloudTrail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudtrail.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudwatch.html">CloudWatch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#alarm">Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#metric">Metric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codecommit.html">CodeCommit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codedeploy.html">CodeDeploy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codepipeline.html">CodePipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codepipeline.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">CognitoIdentity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-idp.html">CognitoIdentityProvider</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-idp.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-sync.html">CognitoSync</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-sync.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">ConfigService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datapipeline.html">DataPipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="devicefarm.html">DeviceFarm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="directconnect.html">DirectConnect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="directconnect.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="discovery.html">ApplicationDiscoveryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="discovery.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dms.html">DatabaseMigrationService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dms.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ds.html">DirectoryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ds.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#table">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodbstreams.html">DynamoDBStreams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodbstreams.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ec2.html">EC2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#classicaddress">ClassicAddress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#dhcpoptions">DhcpOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#instance">Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#internetgateway">InternetGateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypair">KeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypairinfo">KeyPairInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkacl">NetworkAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterface">NetworkInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterfaceassociation">NetworkInterfaceAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#placementgroup">PlacementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#route">Route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetable">RouteTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetableassociation">RouteTableAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#securitygroup">SecurityGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#snapshot">Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#subnet">Subnet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#tag">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#volume">Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpc">Vpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcpeeringconnection">VpcPeeringConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcaddress">VpcAddress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecr.html">ECR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecs.html">ECS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="efs.html">EFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="efs.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticache.html">ElastiCache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticbeanstalk.html">ElasticBeanstalk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elastictranscoder.html">ElasticTranscoder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elb.html">ElasticLoadBalancing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elbv2.html">ElasticLoadBalancingv2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emr.html">EMR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="es.html">ElasticsearchService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="es.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">CloudWatchEvents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="events.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="firehose.html">Firehose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="firehose.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gamelift.html">GameLift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gamelift.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="glacier.html">Glacier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#account">Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#archive">Archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#job">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#notification">Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#vault">Vault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iam.html">IAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskey">AccessKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskeypair">AccessKeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountpasswordpolicy">AccountPasswordPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountsummary">AccountSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#assumerolepolicy">AssumeRolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#currentuser">CurrentUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#group">Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#grouppolicy">GroupPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#instanceprofile">InstanceProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#loginprofile">LoginProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#mfadevice">MfaDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policy">Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policyversion">PolicyVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#role">Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#rolepolicy">RolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#samlprovider">SamlProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#servercertificate">ServerCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#signingcertificate">SigningCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#user">User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#userpolicy">UserPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#virtualmfadevice">VirtualMfaDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="importexport.html">ImportExport</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inspector.html">Inspector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="inspector.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot.html">IoT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot-data.html">IoTDataPlane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot-data.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesis.html">Kinesis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesisanalytics.html">KinesisAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesisanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kms.html">KMS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lambda.html">Lambda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">CloudWatchLogs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machinelearning.html">MachineLearning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="marketplacecommerceanalytics.html">MarketplaceCommerceAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="marketplacecommerceanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meteringmarketplace.html">MarketplaceMetering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteringmarketplace.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opsworks.html">OpsWorks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#layer">Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stacksummary">StackSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rds.html">RDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="redshift.html">Redshift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53.html">Route53</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53domains.html">Route53Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="s3.html">S3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucket">Bucket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketacl">BucketAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketcors">BucketCors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlifecycle">BucketLifecycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlogging">BucketLogging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketnotification">BucketNotification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketpolicy">BucketPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketrequestpayment">BucketRequestPayment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#buckettagging">BucketTagging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketversioning">BucketVersioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketwebsite">BucketWebsite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartuploadpart">MultipartUploadPart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#object">Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectacl">ObjectAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectsummary">ObjectSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectversion">ObjectVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdb.html">SimpleDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="servicecatalog.html">ServiceCatalog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="servicecatalog.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ses.html">SES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="snowball.html">Snowball</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="snowball.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sns.html">SNS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformapplication">PlatformApplication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformendpoint">PlatformEndpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#subscription">Subscription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#topic">Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqs.html">SQS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#message">Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#queue">Queue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ssm.html">SSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="storagegateway.html">StorageGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sts.html">STS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sts.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="swf.html">SWF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">WAF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="waf.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workspaces.html">WorkSpaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html#client">Client</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autogenerated API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.client.html"><code class="docutils literal"><span class="pre">boto3.client()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resource.html"><code class="docutils literal"><span class="pre">boto3.resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.set_stream_logger.html"><code class="docutils literal"><span class="pre">boto3.set_stream_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.setup_default_session.html"><code class="docutils literal"><span class="pre">boto3.setup_default_session()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.NullHandler.html"><code class="docutils literal"><span class="pre">boto3.NullHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.Session.html"><code class="docutils literal"><span class="pre">boto3.Session</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.session.html"><code class="docutils literal"><span class="pre">boto3.session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Config.html"><code class="docutils literal"><span class="pre">boto3.session.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.session.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Session.html"><code class="docutils literal"><span class="pre">boto3.session.Session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.DataNotFoundError.html">boto3.session.DataNotFoundError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.ResourceNotExistsError.html">boto3.session.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownAPIVersionError.html">boto3.session.UnknownAPIVersionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownServiceError.html">boto3.session.UnknownServiceError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.exceptions.html"><code class="docutils literal"><span class="pre">boto3.exceptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.exceptions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.Boto3Error.html">boto3.exceptions.Boto3Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsConditionError.html">boto3.exceptions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsKeyConditionError.html">boto3.exceptions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBOperationNotSupportedError.html">boto3.exceptions.DynamoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynanmoDBOperationNotSupportedError.html">boto3.exceptions.DynanmoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.NoVersionFound.html">boto3.exceptions.NoVersionFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceLoadException.html">boto3.exceptions.ResourceLoadException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceNotExistsError.html">boto3.exceptions.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.RetriesExceededError.html">boto3.exceptions.RetriesExceededError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3TransferFailedError.html">boto3.exceptions.S3TransferFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3UploadFailedError.html">boto3.exceptions.S3UploadFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.UnknownAPIVersionError.html">boto3.exceptions.UnknownAPIVersionError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.utils.html"><code class="docutils literal"><span class="pre">boto3.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.import_module.html"><code class="docutils literal"><span class="pre">boto3.utils.import_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.utils.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.lazy_call.html"><code class="docutils literal"><span class="pre">boto3.utils.lazy_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.utils.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.LazyLoadedWaiterModel.html"><code class="docutils literal"><span class="pre">boto3.utils.LazyLoadedWaiterModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.ServiceContext.html"><code class="docutils literal"><span class="pre">boto3.utils.ServiceContext</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_ec2.html"><code class="docutils literal"><span class="pre">botos3.ecs2</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.create_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.inject_create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.inject_create_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.delete_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.inject_delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.inject_delete_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.CustomModeledAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_s3.html"><code class="docutils literal"><span class="pre">botos3.s3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.inject.html"><code class="docutils literal"><span class="pre">boto3.s3.inject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_bucket_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_bucket_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_summary_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_summary_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_s3_transfer_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_s3_transfer_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_summary_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_summary_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_fileobj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.ProgressCallbackInvoker.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.ProgressCallbackInvoker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.S3Transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.S3Transfer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferConfig.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferManager.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.inject.ClientError.html">boto3.s3.inject.ClientError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.transfer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_resources.html"><code class="docutils literal"><span class="pre">resources</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.action.html"><code class="docutils literal"><span class="pre">boto3.resources.action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.action.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.resources.action.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.action.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.action.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ActionDocstring.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ActionDocstring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.CustomModeledAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.WaiterAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.base.html"><code class="docutils literal"><span class="pre">boto3.resources.base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.base.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ServiceResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.collection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.merge_dicts.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.merge_dicts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionManager.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceCollection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.factory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.build_identifiers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.WaiterAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.partial.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.partial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.factory.ResourceLoadException.html">boto3.resources.factory.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.model.html"><code class="docutils literal"><span class="pre">boto3.resources.model</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.model.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Collection.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Collection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.DefinitionWithParams.html"><code class="docutils literal"><span class="pre">boto3.resources.model.DefinitionWithParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Identifier.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Parameter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Request.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResponseResource.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResponseResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Waiter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Waiter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.params.html"><code class="docutils literal"><span class="pre">boto3.resources.params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.build_param_structure.html"><code class="docutils literal"><span class="pre">boto3.resources.params.build_param_structure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.params.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.params.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.params.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.params.ResourceLoadException.html">boto3.resources.params.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.response.html"><code class="docutils literal"><span class="pre">boto3.resources.response</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.all_not_none.html"><code class="docutils literal"><span class="pre">boto3.resources.response.all_not_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_empty_response.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_empty_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.response.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.response.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.And.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.And</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Attr.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Attr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeNotExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeNotExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeType.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BeginsWith.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BeginsWith</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Between.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Between</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BuiltConditionExpression.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BuiltConditionExpression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ComparisonCondition.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ComparisonCondition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionAttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionAttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Contains.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Contains</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Equals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Equals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.In.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.In</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Key.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Not.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.NotEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.NotEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Or.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Size.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError.html">boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.register_table_methods.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.register_table_methods()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.BatchWriter.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.BatchWriter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.TableResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.TableResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.copy_dynamodb_params.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.copy_dynamodb_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.register_high_level_interface.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.register_high_level_interface()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionTransformation.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionTransformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DocumentModifiedShape.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DocumentModifiedShape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DynamoDBHighLevelResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DynamoDBHighLevelResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.MutableSequence.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.MutableSequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ParameterTransformer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ParameterTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TransformationInjector.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TransformationInjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Binary.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Binary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Context.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Decimal.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Decimal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Set.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Clamped.html">boto3.dynamodb.types.Clamped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Inexact.html">boto3.dynamodb.types.Inexact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Overflow.html">boto3.dynamodb.types.Overflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Rounded.html">boto3.dynamodb.types.Rounded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Underflow.html">boto3.dynamodb.types.Underflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Boto3 API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Available Services</a> &raquo;</li>
+      
+    <li>CognitoIdentity</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/services/cognito-identity.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cognitoidentity">
+<h1><a class="toc-backref" href="#id1">CognitoIdentity</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#cognitoidentity" id="id1">CognitoIdentity</a><ul>
+<li><a class="reference internal" href="#client" id="id2">Client</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="client">
+<h2><a class="toc-backref" href="#id2">Client</a></h2>
+<dl class="class">
+<dt id="CognitoIdentity.Client">
+<em class="property">class </em><code class="descclassname">CognitoIdentity.</code><code class="descname">Client</code></dt>
+<dd><p>A low-level client representing Amazon Cognito Identity:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;cognito-identity&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These are the available methods:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#CognitoIdentity.Client.can_paginate" title="CognitoIdentity.Client.can_paginate"><code class="xref py py-meth docutils literal"><span class="pre">can_paginate()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.create_identity_pool" title="CognitoIdentity.Client.create_identity_pool"><code class="xref py py-meth docutils literal"><span class="pre">create_identity_pool()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.delete_identities" title="CognitoIdentity.Client.delete_identities"><code class="xref py py-meth docutils literal"><span class="pre">delete_identities()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.delete_identity_pool" title="CognitoIdentity.Client.delete_identity_pool"><code class="xref py py-meth docutils literal"><span class="pre">delete_identity_pool()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.describe_identity" title="CognitoIdentity.Client.describe_identity"><code class="xref py py-meth docutils literal"><span class="pre">describe_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.describe_identity_pool" title="CognitoIdentity.Client.describe_identity_pool"><code class="xref py py-meth docutils literal"><span class="pre">describe_identity_pool()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.generate_presigned_url" title="CognitoIdentity.Client.generate_presigned_url"><code class="xref py py-meth docutils literal"><span class="pre">generate_presigned_url()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_credentials_for_identity" title="CognitoIdentity.Client.get_credentials_for_identity"><code class="xref py py-meth docutils literal"><span class="pre">get_credentials_for_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_id" title="CognitoIdentity.Client.get_id"><code class="xref py py-meth docutils literal"><span class="pre">get_id()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_identity_pool_roles" title="CognitoIdentity.Client.get_identity_pool_roles"><code class="xref py py-meth docutils literal"><span class="pre">get_identity_pool_roles()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_open_id_token" title="CognitoIdentity.Client.get_open_id_token"><code class="xref py py-meth docutils literal"><span class="pre">get_open_id_token()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_open_id_token_for_developer_identity" title="CognitoIdentity.Client.get_open_id_token_for_developer_identity"><code class="xref py py-meth docutils literal"><span class="pre">get_open_id_token_for_developer_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_paginator" title="CognitoIdentity.Client.get_paginator"><code class="xref py py-meth docutils literal"><span class="pre">get_paginator()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.get_waiter" title="CognitoIdentity.Client.get_waiter"><code class="xref py py-meth docutils literal"><span class="pre">get_waiter()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.list_identities" title="CognitoIdentity.Client.list_identities"><code class="xref py py-meth docutils literal"><span class="pre">list_identities()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.list_identity_pools" title="CognitoIdentity.Client.list_identity_pools"><code class="xref py py-meth docutils literal"><span class="pre">list_identity_pools()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.lookup_developer_identity" title="CognitoIdentity.Client.lookup_developer_identity"><code class="xref py py-meth docutils literal"><span class="pre">lookup_developer_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.merge_developer_identities" title="CognitoIdentity.Client.merge_developer_identities"><code class="xref py py-meth docutils literal"><span class="pre">merge_developer_identities()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.set_identity_pool_roles" title="CognitoIdentity.Client.set_identity_pool_roles"><code class="xref py py-meth docutils literal"><span class="pre">set_identity_pool_roles()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.unlink_developer_identity" title="CognitoIdentity.Client.unlink_developer_identity"><code class="xref py py-meth docutils literal"><span class="pre">unlink_developer_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.unlink_identity" title="CognitoIdentity.Client.unlink_identity"><code class="xref py py-meth docutils literal"><span class="pre">unlink_identity()</span></code></a></li>
+<li><a class="reference internal" href="#CognitoIdentity.Client.update_identity_pool" title="CognitoIdentity.Client.update_identity_pool"><code class="xref py py-meth docutils literal"><span class="pre">update_identity_pool()</span></code></a></li>
+</ul>
+<dl class="method">
+<dt id="CognitoIdentity.Client.can_paginate">
+<code class="descname">can_paginate</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Check if an operation can be paginated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the operation can be paginated,
+<code class="docutils literal"><span class="pre">False</span></code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.create_identity_pool">
+<code class="descname">create_identity_pool</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS account. The limit on identity pools is 60 per account. The keys for <code class="docutils literal"><span class="pre">SupportedLoginProviders</span></code> are as follows:</p>
+<ul class="simple">
+<li>Facebook: <code class="docutils literal"><span class="pre">graph.facebook.com</span></code></li>
+<li>Google: <code class="docutils literal"><span class="pre">accounts.google.com</span></code></li>
+<li>Amazon: <code class="docutils literal"><span class="pre">www.amazon.com</span></code></li>
+<li>Twitter: <code class="docutils literal"><span class="pre">api.twitter.com</span></code></li>
+<li>Digits: <code class="docutils literal"><span class="pre">www.digits.com</span></code></li>
+</ul>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_identity_pool</span><span class="p">(</span>
+    <span class="n">IdentityPoolName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">AllowUnauthenticatedIdentities</span><span class="o">=</span><span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">SupportedLoginProviders</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="n">DeveloperProviderName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">OpenIdConnectProviderARNs</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">CognitoIdentityProviders</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;ProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ClientId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">SamlProviderARNs</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolName</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A string that you provide.</p>
+</li>
+<li><strong>AllowUnauthenticatedIdentities</strong> (<em>boolean</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>TRUE if the identity pool supports unauthenticated logins.</p>
+</li>
+<li><strong>SupportedLoginProviders</strong> (<em>dict</em>) &#8211; <p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>DeveloperProviderName</strong> (<em>string</em>) &#8211; <p>The &#8220;domain&#8221; by which Cognito will refer to your users. This name acts as a placeholder that allows your backend and the Cognito service to communicate about the developer provider. For the <code class="docutils literal"><span class="pre">DeveloperProviderName</span></code> , you can use letters as well as period (<code class="docutils literal"><span class="pre">.</span></code> ), underscore (<code class="docutils literal"><span class="pre">_</span></code> ), and dash (<code class="docutils literal"><span class="pre">-</span></code> ).</p>
+<p>Once you have set a developer provider name, you cannot change it. Please take care in setting this parameter.</p>
+</li>
+<li><strong>OpenIdConnectProviderARNs</strong> (<em>list</em>) &#8211; <p>A list of OpendID Connect provider ARNs.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>CognitoIdentityProviders</strong> (<em>list</em>) &#8211; <p>An array of Amazon Cognito Identity user pools.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A provider representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><strong>ProviderName</strong> <em>(string) &#8211;</em><p>The provider name for an Amazon Cognito Identity User Pool. For example, <code class="docutils literal"><span class="pre">cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</span></code> .</p>
+</li>
+<li><strong>ClientId</strong> <em>(string) &#8211;</em><p>The client ID for the Amazon Cognito Identity User Pool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>SamlProviderARNs</strong> (<em>list</em>) &#8211; <p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IdentityPoolName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AllowUnauthenticatedIdentities&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">,</span>
+    <span class="s1">&#39;SupportedLoginProviders&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;DeveloperProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;OpenIdConnectProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;CognitoIdentityProviders&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;ProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ClientId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;SamlProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em> An object representing a Cognito identity pool.</p>
+<ul>
+<li><p class="first"><strong>IdentityPoolId</strong> <em>(string) &#8211;</em> An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>IdentityPoolName</strong> <em>(string) &#8211;</em></p>
+<p>A string that you provide.</p>
+</li>
+<li><p class="first"><strong>AllowUnauthenticatedIdentities</strong> <em>(boolean) &#8211;</em> TRUE if the identity pool supports unauthenticated logins.</p>
+</li>
+<li><p class="first"><strong>SupportedLoginProviders</strong> <em>(dict) &#8211;</em></p>
+<p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>DeveloperProviderName</strong> <em>(string) &#8211;</em></p>
+<p>The &#8220;domain&#8221; by which Cognito will refer to your users.</p>
+</li>
+<li><p class="first"><strong>OpenIdConnectProviderARNs</strong> <em>(list) &#8211;</em></p>
+<p>A list of OpendID Connect provider ARNs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><p class="first"><strong>CognitoIdentityProviders</strong> <em>(list) &#8211;</em></p>
+<p>A list representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>A provider representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><p class="first"><strong>ProviderName</strong> <em>(string) &#8211;</em></p>
+<p>The provider name for an Amazon Cognito Identity User Pool. For example, <code class="docutils literal"><span class="pre">cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</span></code> .</p>
+</li>
+<li><p class="first"><strong>ClientId</strong> <em>(string) &#8211;</em></p>
+<p>The client ID for the Amazon Cognito Identity User Pool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>SamlProviderARNs</strong> <em>(list) &#8211;</em></p>
+<p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.delete_identities">
+<code class="descname">delete_identities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes identities from an identity pool. You can specify a list of 1-60 identities that you want to delete.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_identities</span><span class="p">(</span>
+    <span class="n">IdentityIdsToDelete</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>IdentityIdsToDelete</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A list of 1-60 identities that you want to delete.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;UnprocessedIdentityIds&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ErrorCode&#39;</span><span class="p">:</span> <span class="s1">&#39;AccessDenied&#39;</span><span class="o">|</span><span class="s1">&#39;InternalServerError&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><p>Returned in response to a successful <code class="docutils literal"><span class="pre">DeleteIdentities</span></code> operation.</p>
+<ul>
+<li><strong>UnprocessedIdentityIds</strong> <em>(list) &#8211;</em><p>An array of UnprocessedIdentityId objects, each of which contains an ErrorCode and IdentityId.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>An array of UnprocessedIdentityId objects, each of which contains an ErrorCode and IdentityId.</p>
+<ul>
+<li><strong>IdentityId</strong> <em>(string) &#8211;</em><p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><strong>ErrorCode</strong> <em>(string) &#8211;</em><p>The error code indicating the type of error that occurred.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.delete_identity_pool">
+<code class="descname">delete_identity_pool</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes a user pool. Once a pool is deleted, users will not be able to authenticate with the pool.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_identity_pool</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> An identity pool ID in the format REGION:GUID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.describe_identity">
+<code class="descname">describe_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns metadata related to the given identity, including when the identity was created and any associated linked logins.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_identity</span><span class="p">(</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>IdentityId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Logins&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;CreationDate&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="s1">&#39;LastModifiedDate&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em> A description of the identity.<ul>
+<li><strong>IdentityId</strong> <em>(string) &#8211;</em> A unique identifier in the format REGION:GUID.</li>
+<li><strong>Logins</strong> <em>(list) &#8211;</em> A set of optional name-value pairs that map provider names to provider tokens.<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>CreationDate</strong> <em>(datetime) &#8211;</em><p>Date on which the identity was created.</p>
+</li>
+<li><strong>LastModifiedDate</strong> <em>(datetime) &#8211;</em><p>Date on which the identity was last modified.</p>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.describe_identity_pool">
+<code class="descname">describe_identity_pool</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Gets details about a particular identity pool, including the pool name, ID description, creation date, and current number of users.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_identity_pool</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> An identity pool ID in the format REGION:GUID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IdentityPoolName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AllowUnauthenticatedIdentities&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">,</span>
+    <span class="s1">&#39;SupportedLoginProviders&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;DeveloperProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;OpenIdConnectProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;CognitoIdentityProviders&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;ProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ClientId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;SamlProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em> An object representing a Cognito identity pool.<ul>
+<li><strong>IdentityPoolId</strong> <em>(string) &#8211;</em> An identity pool ID in the format REGION:GUID.</li>
+<li><strong>IdentityPoolName</strong> <em>(string) &#8211;</em><p>A string that you provide.</p>
+</li>
+<li><strong>AllowUnauthenticatedIdentities</strong> <em>(boolean) &#8211;</em> TRUE if the identity pool supports unauthenticated logins.</li>
+<li><strong>SupportedLoginProviders</strong> <em>(dict) &#8211;</em><p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>DeveloperProviderName</strong> <em>(string) &#8211;</em><p>The &#8220;domain&#8221; by which Cognito will refer to your users.</p>
+</li>
+<li><strong>OpenIdConnectProviderARNs</strong> <em>(list) &#8211;</em><p>A list of OpendID Connect provider ARNs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>CognitoIdentityProviders</strong> <em>(list) &#8211;</em><p>A list representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A provider representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><strong>ProviderName</strong> <em>(string) &#8211;</em><p>The provider name for an Amazon Cognito Identity User Pool. For example, <code class="docutils literal"><span class="pre">cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</span></code> .</p>
+</li>
+<li><strong>ClientId</strong> <em>(string) &#8211;</em><p>The client ID for the Amazon Cognito Identity User Pool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>SamlProviderARNs</strong> <em>(list) &#8211;</em><p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.generate_presigned_url">
+<code class="descname">generate_presigned_url</code><span class="sig-paren">(</span><em>ClientMethod</em>, <em>Params=None</em>, <em>ExpiresIn=3600</em>, <em>HttpMethod=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Generate a presigned url given a client, its method, and arguments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ClientMethod</strong> (<em>string</em>) &#8211; The client method to presign for</li>
+<li><strong>Params</strong> (<em>dict</em>) &#8211; The parameters normally passed to
+<code class="docutils literal"><span class="pre">ClientMethod</span></code>.</li>
+<li><strong>ExpiresIn</strong> (<em>int</em>) &#8211; The number of seconds the presigned url is valid
+for. By default it expires in an hour (3600 seconds)</li>
+<li><strong>HttpMethod</strong> (<em>string</em>) &#8211; The http method to use on the generated url. By
+default, the http method is whatever is used in the method&#8217;s model.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The presigned url</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_credentials_for_identity">
+<code class="descname">get_credentials_for_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns credentials for the provided identity ID. Any provided logins will be validated against supported login providers. If the token is for cognito-identity.amazonaws.com, it will be passed through to AWS Security Token Service with the appropriate role for the token.</p>
+<p>This is a public API. You do not need any credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_credentials_for_identity</span><span class="p">(</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Logins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="n">CustomRoleArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><strong>Logins</strong> (<em>dict</em>) &#8211; <p>A set of optional name-value pairs that map provider names to provider tokens.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>CustomRoleArn</strong> (<em>string</em>) &#8211; The Amazon Resource Name (ARN) of the role to be assumed when multiple roles were received in the token from the identity provider. For example, a SAML-based identity provider. This parameter is optional for identity providers that do not support role customization.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Credentials&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;AccessKeyId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;SecretKey&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;SessionToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Expiration&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Returned in response to a successful <code class="docutils literal"><span class="pre">GetCredentialsForIdentity</span></code> operation.</p>
+<ul>
+<li><p class="first"><strong>IdentityId</strong> <em>(string) &#8211;</em></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>Credentials</strong> <em>(dict) &#8211;</em></p>
+<p>Credentials for the provided identity ID.</p>
+<ul>
+<li><p class="first"><strong>AccessKeyId</strong> <em>(string) &#8211;</em></p>
+<p>The Access Key portion of the credentials.</p>
+</li>
+<li><p class="first"><strong>SecretKey</strong> <em>(string) &#8211;</em></p>
+<p>The Secret Access Key portion of the credentials</p>
+</li>
+<li><p class="first"><strong>SessionToken</strong> <em>(string) &#8211;</em></p>
+<p>The Session Token portion of the credentials</p>
+</li>
+<li><p class="first"><strong>Expiration</strong> <em>(datetime) &#8211;</em></p>
+<p>The date at which these credentials will expire.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_id">
+<code class="descname">get_id</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Generates (or retrieves) a Cognito ID. Supplying multiple logins will create an implicit linked account.</p>
+<p>This is a public API. You do not need any credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_id</span><span class="p">(</span>
+    <span class="n">AccountId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Logins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>AccountId</strong> (<em>string</em>) &#8211; A standard AWS account ID (9+ digits).</li>
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> An identity pool ID in the format REGION:GUID.</li>
+<li><strong>Logins</strong> (<em>dict</em>) &#8211; <p>A set of optional name-value pairs that map provider names to provider tokens.</p>
+<p>The available provider names for <code class="docutils literal"><span class="pre">Logins</span></code> are as follows:</p>
+<ul>
+<li>Facebook: <code class="docutils literal"><span class="pre">graph.facebook.com</span></code></li>
+<li>Google: <code class="docutils literal"><span class="pre">accounts.google.com</span></code></li>
+<li>Amazon: <code class="docutils literal"><span class="pre">www.amazon.com</span></code></li>
+<li>Twitter: <code class="docutils literal"><span class="pre">api.twitter.com</span></code></li>
+<li>Digits: <code class="docutils literal"><span class="pre">www.digits.com</span></code></li>
+</ul>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul class="simple">
+<li><em>(dict) &#8211;</em> Returned in response to a GetId request.<ul>
+<li><strong>IdentityId</strong> <em>(string) &#8211;</em> A unique identifier in the format REGION:GUID.</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_identity_pool_roles">
+<code class="descname">get_identity_pool_roles</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Gets the roles for an identity pool.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_identity_pool_roles</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Roles&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><p>Returned in response to a successful <code class="docutils literal"><span class="pre">GetIdentityPoolRoles</span></code> operation.</p>
+<ul>
+<li><strong>IdentityPoolId</strong> <em>(string) &#8211;</em><p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><strong>Roles</strong> <em>(dict) &#8211;</em><p>The map of roles associated with this pool. Currently only authenticated and unauthenticated roles are supported.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_open_id_token">
+<code class="descname">get_open_id_token</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Gets an OpenID token, using a known Cognito ID. This known Cognito ID is returned by  GetId . You can optionally add additional logins for the identity. Supplying multiple logins creates an implicit link.</p>
+<p>The OpenId token is valid for 15 minutes.</p>
+<p>This is a public API. You do not need any credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_open_id_token</span><span class="p">(</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Logins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> A unique identifier in the format REGION:GUID.</li>
+<li><strong>Logins</strong> (<em>dict</em>) &#8211; <p>A set of optional name-value pairs that map provider names to provider tokens. When using graph.facebook.com and www.amazon.com, supply the access_token returned from the provider&#8217;s authflow. For accounts.google.com or any other OpenId Connect provider, always include the id_token.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Token&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul class="simple">
+<li><em>(dict) &#8211;</em> Returned in response to a successful GetOpenIdToken request.<ul>
+<li><strong>IdentityId</strong> <em>(string) &#8211;</em> A unique identifier in the format REGION:GUID. Note that the IdentityId returned may not match the one passed on input.</li>
+<li><strong>Token</strong> <em>(string) &#8211;</em> An OpenID token, valid for 15 minutes.</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_open_id_token_for_developer_identity">
+<code class="descname">get_open_id_token_for_developer_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Registers (or retrieves) a Cognito <code class="docutils literal"><span class="pre">IdentityId</span></code> and an OpenID Connect token for a user authenticated by your backend authentication process. Supplying multiple logins will create an implicit linked account. You can only specify one developer provider as part of the <code class="docutils literal"><span class="pre">Logins</span></code> map, which is linked to the identity pool. The developer provider is the &#8220;domain&#8221; by which Cognito will refer to your users.</p>
+<p>You can use <code class="docutils literal"><span class="pre">GetOpenIdTokenForDeveloperIdentity</span></code> to create a new identity and to link new logins (that is, user credentials issued by a public provider or developer provider) to an existing identity. When you want to create a new identity, the <code class="docutils literal"><span class="pre">IdentityId</span></code> should be null. When you want to associate a new login with an existing authenticated/unauthenticated identity, you can do so by providing the existing <code class="docutils literal"><span class="pre">IdentityId</span></code> . This API will create the identity in the specified <code class="docutils literal"><span class="pre">IdentityPoolId</span></code> .</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_open_id_token_for_developer_identity</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Logins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="n">TokenDuration</span><span class="o">=</span><span class="mi">123</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; A unique identifier in the format REGION:GUID.</li>
+<li><strong>Logins</strong> (<em>dict</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A set of optional name-value pairs that map provider names to provider tokens. Each name-value pair represents a user from a public provider or developer provider. If the user is from a developer provider, the name-value pair will follow the syntax <code class="docutils literal"><span class="pre">&quot;developer_provider_name&quot;:</span> <span class="pre">&quot;developer_user_identifier&quot;</span></code> . The developer provider is the &#8220;domain&#8221; by which Cognito will refer to your users; you provided this domain while creating/updating the identity pool. The developer user identifier is an identifier from your backend that uniquely identifies a user. When you create an identity pool, you can specify the supported logins.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>TokenDuration</strong> (<em>integer</em>) &#8211; The expiration time of the token, in seconds. You can specify a custom expiration time for the token so that you can cache it. If you don&#8217;t provide an expiration time, the token is valid for 15 minutes. You can exchange the token with Amazon STS for temporary AWS credentials, which are valid for a maximum of one hour. The maximum token duration you can set is 24 hours. You should take care in setting the expiration time for a token, as there are significant security implications: an attacker could use a leaked token to access your AWS resources for the token&#8217;s duration.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Token&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Returned in response to a successful <code class="docutils literal"><span class="pre">GetOpenIdTokenForDeveloperIdentity</span></code> request.</p>
+<ul>
+<li><p class="first"><strong>IdentityId</strong> <em>(string) &#8211;</em></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>Token</strong> <em>(string) &#8211;</em></p>
+<p>An OpenID token.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_paginator">
+<code class="descname">get_paginator</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a paginator for an operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>OperationNotPageableError</strong> &#8211; Raised if the operation is not
+pageable.  You can use the <code class="docutils literal"><span class="pre">client.can_paginate</span></code> method to
+check if an operation is pageable.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">L{botocore.paginate.Paginator}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A paginator object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.get_waiter">
+<code class="descname">get_waiter</code><span class="sig-paren">(</span><em>waiter_name</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.list_identities">
+<code class="descname">list_identities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Lists the identities in a pool.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_identities</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">MaxResults</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">NextToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">HideDisabled</span><span class="o">=</span><span class="bp">True</span><span class="o">|</span><span class="bp">False</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> An identity pool ID in the format REGION:GUID.</li>
+<li><strong>MaxResults</strong> (<em>integer</em>) &#8211; <strong>[REQUIRED]</strong> The maximum number of identities to return.</li>
+<li><strong>NextToken</strong> (<em>string</em>) &#8211; A pagination token.</li>
+<li><strong>HideDisabled</strong> (<em>boolean</em>) &#8211; An optional boolean parameter that allows you to hide disabled identities. If omitted, the ListIdentities API will include disabled identities in the response.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Identities&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Logins&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;CreationDate&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="s1">&#39;LastModifiedDate&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em> The response to a ListIdentities request.</p>
+<ul>
+<li><p class="first"><strong>IdentityPoolId</strong> <em>(string) &#8211;</em> An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>Identities</strong> <em>(list) &#8211;</em> An object containing a set of identities and associated mappings.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em> A description of the identity.</p>
+<ul>
+<li><p class="first"><strong>IdentityId</strong> <em>(string) &#8211;</em> A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>Logins</strong> <em>(list) &#8211;</em> A set of optional name-value pairs that map provider names to provider tokens.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><p class="first"><strong>CreationDate</strong> <em>(datetime) &#8211;</em></p>
+<p>Date on which the identity was created.</p>
+</li>
+<li><p class="first"><strong>LastModifiedDate</strong> <em>(datetime) &#8211;</em></p>
+<p>Date on which the identity was last modified.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>NextToken</strong> <em>(string) &#8211;</em> A pagination token.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.list_identity_pools">
+<code class="descname">list_identity_pools</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Lists all of the Cognito identity pools registered for your account.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_identity_pools</span><span class="p">(</span>
+    <span class="n">MaxResults</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">NextToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MaxResults</strong> (<em>integer</em>) &#8211; <strong>[REQUIRED]</strong> The maximum number of identities to return.</li>
+<li><strong>NextToken</strong> (<em>string</em>) &#8211; A pagination token.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPools&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;IdentityPoolName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul class="simple">
+<li><em>(dict) &#8211;</em> The result of a successful ListIdentityPools action.<ul>
+<li><strong>IdentityPools</strong> <em>(list) &#8211;</em> The identity pools returned by the ListIdentityPools action.<ul>
+<li><em>(dict) &#8211;</em> A description of the identity pool.<ul>
+<li><strong>IdentityPoolId</strong> <em>(string) &#8211;</em> An identity pool ID in the format REGION:GUID.</li>
+<li><strong>IdentityPoolName</strong> <em>(string) &#8211;</em> A string that you provide.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>NextToken</strong> <em>(string) &#8211;</em> A pagination token.</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.lookup_developer_identity">
+<code class="descname">lookup_developer_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves the <code class="docutils literal"><span class="pre">IdentityID</span></code> associated with a <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> or the list of <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> s associated with an <code class="docutils literal"><span class="pre">IdentityId</span></code> for an existing identity. Either <code class="docutils literal"><span class="pre">IdentityID</span></code> or <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> must not be null. If you supply only one of these values, the other value will be searched in the database and returned as a part of the response. If you supply both, <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> will be matched against <code class="docutils literal"><span class="pre">IdentityID</span></code> . If the values are verified against the database, the response returns both values and is the same as the request. Otherwise a <code class="docutils literal"><span class="pre">ResourceConflictException</span></code> is thrown.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">lookup_developer_identity</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DeveloperUserIdentifier</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">MaxResults</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">NextToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; A unique identifier in the format REGION:GUID.</li>
+<li><strong>DeveloperUserIdentifier</strong> (<em>string</em>) &#8211; A unique ID used by your backend authentication process to identify a user. Typically, a developer identity provider would issue many developer user identifiers, in keeping with the number of users.</li>
+<li><strong>MaxResults</strong> (<em>integer</em>) &#8211; The maximum number of identities to return.</li>
+<li><strong>NextToken</strong> (<em>string</em>) &#8211; A pagination token. The first call you make will have <code class="docutils literal"><span class="pre">NextToken</span></code> set to null. After that the service will return <code class="docutils literal"><span class="pre">NextToken</span></code> values as needed. For example, let&#8217;s say you make a request with <code class="docutils literal"><span class="pre">MaxResults</span></code> set to 10, and there are 20 matches in the database. The service will return a pagination token as a part of the response. This token can be used to call the API again and get results starting from the 11th match.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DeveloperUserIdentifierList&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Returned in response to a successful <code class="docutils literal"><span class="pre">LookupDeveloperIdentity</span></code> action.</p>
+<ul>
+<li><p class="first"><strong>IdentityId</strong> <em>(string) &#8211;</em></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>DeveloperUserIdentifierList</strong> <em>(list) &#8211;</em></p>
+<p>This is the list of developer user identifiers associated with an identity ID. Cognito supports the association of multiple developer user identifiers with an identity ID.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><p class="first"><strong>NextToken</strong> <em>(string) &#8211;</em></p>
+<p>A pagination token. The first call you make will have <code class="docutils literal"><span class="pre">NextToken</span></code> set to null. After that the service will return <code class="docutils literal"><span class="pre">NextToken</span></code> values as needed. For example, let&#8217;s say you make a request with <code class="docutils literal"><span class="pre">MaxResults</span></code> set to 10, and there are 20 matches in the database. The service will return a pagination token as a part of the response. This token can be used to call the API again and get results starting from the 11th match.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.merge_developer_identities">
+<code class="descname">merge_developer_identities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Merges two users having different <code class="docutils literal"><span class="pre">IdentityId</span></code> s, existing in the same identity pool, and identified by the same developer provider. You can use this action to request that discrete users be merged and identified as a single user in the Cognito environment. Cognito associates the given source user (<code class="docutils literal"><span class="pre">SourceUserIdentifier</span></code> ) with the <code class="docutils literal"><span class="pre">IdentityId</span></code> of the <code class="docutils literal"><span class="pre">DestinationUserIdentifier</span></code> . Only developer-authenticated users can be merged. If the users to be merged are associated with the same public provider, but as two different users, an exception will be thrown.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">merge_developer_identities</span><span class="p">(</span>
+    <span class="n">SourceUserIdentifier</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DestinationUserIdentifier</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DeveloperProviderName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>SourceUserIdentifier</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>User identifier for the source user. The value should be a <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> .</p>
+</li>
+<li><strong>DestinationUserIdentifier</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>User identifier for the destination user. The value should be a <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> .</p>
+</li>
+<li><strong>DeveloperProviderName</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The &#8220;domain&#8221; by which Cognito will refer to your users. This is a (pseudo) domain name that you provide while creating an identity pool. This name acts as a placeholder that allows your backend and the Cognito service to communicate about the developer provider. For the <code class="docutils literal"><span class="pre">DeveloperProviderName</span></code> , you can use letters as well as period (.), underscore (_), and dash (-).</p>
+</li>
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Returned in response to a successful <code class="docutils literal"><span class="pre">MergeDeveloperIdentities</span></code> action.</p>
+<ul>
+<li><p class="first"><strong>IdentityId</strong> <em>(string) &#8211;</em></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.set_identity_pool_roles">
+<code class="descname">set_identity_pool_roles</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Sets the roles for an identity pool. These roles are used when making calls to <code class="docutils literal"><span class="pre">GetCredentialsForIdentity</span></code> action.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">set_identity_pool_roles</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Roles</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><strong>Roles</strong> (<em>dict</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The map of roles associated with this pool. For a given role, the key will be either &#8220;authenticated&#8221; or &#8220;unauthenticated&#8221; and the value will be the Role ARN.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.unlink_developer_identity">
+<code class="descname">unlink_developer_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Unlinks a <code class="docutils literal"><span class="pre">DeveloperUserIdentifier</span></code> from an existing identity. Unlinked developer users will be considered new identities next time they are seen. If, for a given Cognito identity, you remove all federated identities as well as the developer user identifier, the Cognito identity becomes inaccessible.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">unlink_developer_identity</span><span class="p">(</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DeveloperProviderName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DeveloperUserIdentifier</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A unique identifier in the format REGION:GUID.</p>
+</li>
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><strong>DeveloperProviderName</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The &#8220;domain&#8221; by which Cognito will refer to your users.</p>
+</li>
+<li><strong>DeveloperUserIdentifier</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> A unique ID used by your backend authentication process to identify a user.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.unlink_identity">
+<code class="descname">unlink_identity</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Unlinks a federated identity from an existing account. Unlinked logins will be considered new identities next time they are seen. Removing the last linked login will make this identity inaccessible.</p>
+<p>This is a public API. You do not need any credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">unlink_identity</span><span class="p">(</span>
+    <span class="n">IdentityId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Logins</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="n">LoginsToRemove</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> A unique identifier in the format REGION:GUID.</li>
+<li><strong>Logins</strong> (<em>dict</em>) &#8211; <p><strong>[REQUIRED]</strong> A set of optional name-value pairs that map provider names to provider tokens.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>LoginsToRemove</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong> Provider names to unlink from this identity.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="CognitoIdentity.Client.update_identity_pool">
+<code class="descname">update_identity_pool</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Updates a user pool.</p>
+<p>You must use AWS Developer credentials to call this API.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">update_identity_pool</span><span class="p">(</span>
+    <span class="n">IdentityPoolId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IdentityPoolName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">AllowUnauthenticatedIdentities</span><span class="o">=</span><span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">,</span>
+    <span class="n">SupportedLoginProviders</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="n">DeveloperProviderName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">OpenIdConnectProviderARNs</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">CognitoIdentityProviders</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;ProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ClientId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">SamlProviderARNs</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>IdentityPoolId</strong> (<em>string</em>) &#8211; <strong>[REQUIRED]</strong> An identity pool ID in the format REGION:GUID.</li>
+<li><strong>IdentityPoolName</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>A string that you provide.</p>
+</li>
+<li><strong>AllowUnauthenticatedIdentities</strong> (<em>boolean</em>) &#8211; <strong>[REQUIRED]</strong> TRUE if the identity pool supports unauthenticated logins.</li>
+<li><strong>SupportedLoginProviders</strong> (<em>dict</em>) &#8211; <p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+<ul>
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>DeveloperProviderName</strong> (<em>string</em>) &#8211; The &#8220;domain&#8221; by which Cognito will refer to your users.</li>
+<li><strong>OpenIdConnectProviderARNs</strong> (<em>list</em>) &#8211; <p>A list of OpendID Connect provider ARNs.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>CognitoIdentityProviders</strong> (<em>list</em>) &#8211; <p>A list representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A provider representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><strong>ProviderName</strong> <em>(string) &#8211;</em><p>The provider name for an Amazon Cognito Identity User Pool. For example, <code class="docutils literal"><span class="pre">cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</span></code> .</p>
+</li>
+<li><strong>ClientId</strong> <em>(string) &#8211;</em><p>The client ID for the Amazon Cognito Identity User Pool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>SamlProviderARNs</strong> (<em>list</em>) &#8211; <p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;IdentityPoolId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IdentityPoolName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AllowUnauthenticatedIdentities&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="o">|</span><span class="bp">False</span><span class="p">,</span>
+    <span class="s1">&#39;SupportedLoginProviders&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;DeveloperProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;OpenIdConnectProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;CognitoIdentityProviders&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;ProviderName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ClientId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;SamlProviderARNs&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em> An object representing a Cognito identity pool.</p>
+<ul>
+<li><p class="first"><strong>IdentityPoolId</strong> <em>(string) &#8211;</em> An identity pool ID in the format REGION:GUID.</p>
+</li>
+<li><p class="first"><strong>IdentityPoolName</strong> <em>(string) &#8211;</em></p>
+<p>A string that you provide.</p>
+</li>
+<li><p class="first"><strong>AllowUnauthenticatedIdentities</strong> <em>(boolean) &#8211;</em> TRUE if the identity pool supports unauthenticated logins.</p>
+</li>
+<li><p class="first"><strong>SupportedLoginProviders</strong> <em>(dict) &#8211;</em></p>
+<p>Optional key:value pairs mapping provider names to provider app IDs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em><ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>DeveloperProviderName</strong> <em>(string) &#8211;</em></p>
+<p>The &#8220;domain&#8221; by which Cognito will refer to your users.</p>
+</li>
+<li><p class="first"><strong>OpenIdConnectProviderARNs</strong> <em>(list) &#8211;</em></p>
+<p>A list of OpendID Connect provider ARNs.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><p class="first"><strong>CognitoIdentityProviders</strong> <em>(list) &#8211;</em></p>
+<p>A list representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>A provider representing an Amazon Cognito Identity User Pool and its client ID.</p>
+<ul>
+<li><p class="first"><strong>ProviderName</strong> <em>(string) &#8211;</em></p>
+<p>The provider name for an Amazon Cognito Identity User Pool. For example, <code class="docutils literal"><span class="pre">cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789</span></code> .</p>
+</li>
+<li><p class="first"><strong>ClientId</strong> <em>(string) &#8211;</em></p>
+<p>The client ID for the Amazon Cognito Identity User Pool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>SamlProviderARNs</strong> <em>(list) &#8211;</em></p>
+<p>An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cognito-idp.html" class="btn btn-neutral float-right" title="CognitoIdentityProvider" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="codepipeline.html" class="btn btn-neutral" title="CodePipeline" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 13, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

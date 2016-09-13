@@ -1,0 +1,1966 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ACM</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../../index.html"/>
+        <link rel="up" title="Available Services" href="index.html"/>
+        <link rel="next" title="APIGateway" href="apigateway.html"/>
+        <link rel="prev" title="Available Services" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Boto3 API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cloudfront.html">Generate a signed URL for Amazon CloudFront</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../s3.html">s3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">User Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#migration-guides">Migration Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/new.html">What&#8217;s New</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/new.html#major-features">Major Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/migration.html">Migrating from Boto 2.x</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#high-level-concepts">High Level Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#installation-configuration">Installation &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/upgrading.html">Upgrading Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/upgrading.html#id1">1.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#general-feature-guides">General Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/resources.html">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#identifiers-attributes-intro">Identifiers &amp; Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#actions">Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#sub-resources">Sub-resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#waiters">Waiters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#multithreading">Multithreading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/collections.html">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#chainability">Chainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#limiting-results">Limiting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#controlling-page-size">Controlling Page Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#batch-actions">Batch Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/clients.html">Low-level Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#creating-clients">Creating Clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#service-operations">Service Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#handling-responses">Handling Responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/paginators.html">Paginators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#creating-paginators">Creating Paginators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#filtering-results">Filtering results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#default-session">Default Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#custom-session">Custom Session</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#interactive-configuration">Interactive Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#configuring-credentials">Configuring Credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#environment-variable-configuration">Environment Variable Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/events.html">Extensibility Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#an-introduction-to-the-event-system">An Introduction to the Event System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#a-hierarchical-structure">A Hierarchical Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#wildcard-matching">Wildcard Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#isolation-of-event-systems">Isolation of Event Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#boto3-specific-events">Boto3 Specific Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#service-feature-guides">Service Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-table">Creating a New Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#using-an-existing-table">Using an Existing Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-item">Creating a New Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#getting-an-item">Getting an Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#updating-item">Updating Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-item">Deleting Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#batch-writing">Batch Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#querying-and-scanning">Querying and Scanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-a-table">Deleting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/s3.html">S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#changing-the-addressing-style">Changing the Addressing Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#using-the-transfer-manager">Using the Transfer Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-urls">Generating Presigned URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-posts">Generating Presigned POSTs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/boto3.html">Boto3 Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/collections.html">Collections Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/resources.html">Resources Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.model">Resource Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.params">Request Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.response">Response Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.action">Resource Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.base">Resource Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.factory">Resource Factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/session.html">Session Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customizations/index.html">Customization References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/dynamodb.html">DynamoDB Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#valid-dynamodb-types">Valid DynamoDB Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#custom-boto3-types">Custom Boto3 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#dynamodb-conditions">DynamoDB Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/s3.html">S3 Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/s3.html#s3-transfers">S3 Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Available Services</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">ACM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">APIGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="application-autoscaling.html">ApplicationAutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application-autoscaling.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">AutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudformation.html">CloudFormation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#event">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresource">StackResource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresourcesummary">StackResourceSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudfront.html">CloudFront</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cloudfront.html#generate-a-signed-url-for-amazon-cloudfront">Generate a signed URL for Amazon CloudFront</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudhsm.html">CloudHSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudhsm.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearch.html">CloudSearch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearch.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearchdomain.html">CloudSearchDomain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearchdomain.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudtrail.html">CloudTrail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudtrail.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudwatch.html">CloudWatch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#alarm">Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#metric">Metric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codecommit.html">CodeCommit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codedeploy.html">CodeDeploy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codepipeline.html">CodePipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codepipeline.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-identity.html">CognitoIdentity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-identity.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-idp.html">CognitoIdentityProvider</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-idp.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-sync.html">CognitoSync</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-sync.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">ConfigService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datapipeline.html">DataPipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="devicefarm.html">DeviceFarm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="directconnect.html">DirectConnect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="directconnect.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="discovery.html">ApplicationDiscoveryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="discovery.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dms.html">DatabaseMigrationService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dms.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ds.html">DirectoryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ds.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#table">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodbstreams.html">DynamoDBStreams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodbstreams.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ec2.html">EC2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#classicaddress">ClassicAddress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#dhcpoptions">DhcpOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#instance">Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#internetgateway">InternetGateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypair">KeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypairinfo">KeyPairInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkacl">NetworkAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterface">NetworkInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterfaceassociation">NetworkInterfaceAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#placementgroup">PlacementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#route">Route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetable">RouteTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetableassociation">RouteTableAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#securitygroup">SecurityGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#snapshot">Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#subnet">Subnet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#tag">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#volume">Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpc">Vpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcpeeringconnection">VpcPeeringConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcaddress">VpcAddress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecr.html">ECR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecs.html">ECS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="efs.html">EFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="efs.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticache.html">ElastiCache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticbeanstalk.html">ElasticBeanstalk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elastictranscoder.html">ElasticTranscoder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elb.html">ElasticLoadBalancing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elbv2.html">ElasticLoadBalancingv2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emr.html">EMR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="es.html">ElasticsearchService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="es.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">CloudWatchEvents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="events.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="firehose.html">Firehose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="firehose.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gamelift.html">GameLift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gamelift.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="glacier.html">Glacier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#account">Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#archive">Archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#job">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#notification">Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#vault">Vault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iam.html">IAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskey">AccessKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskeypair">AccessKeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountpasswordpolicy">AccountPasswordPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountsummary">AccountSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#assumerolepolicy">AssumeRolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#currentuser">CurrentUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#group">Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#grouppolicy">GroupPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#instanceprofile">InstanceProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#loginprofile">LoginProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#mfadevice">MfaDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policy">Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policyversion">PolicyVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#role">Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#rolepolicy">RolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#samlprovider">SamlProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#servercertificate">ServerCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#signingcertificate">SigningCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#user">User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#userpolicy">UserPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#virtualmfadevice">VirtualMfaDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="importexport.html">ImportExport</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inspector.html">Inspector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="inspector.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot.html">IoT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot-data.html">IoTDataPlane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot-data.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesis.html">Kinesis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesisanalytics.html">KinesisAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesisanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kms.html">KMS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lambda.html">Lambda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">CloudWatchLogs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machinelearning.html">MachineLearning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="marketplacecommerceanalytics.html">MarketplaceCommerceAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="marketplacecommerceanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meteringmarketplace.html">MarketplaceMetering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteringmarketplace.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opsworks.html">OpsWorks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#layer">Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stacksummary">StackSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rds.html">RDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="redshift.html">Redshift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53.html">Route53</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53domains.html">Route53Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="s3.html">S3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucket">Bucket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketacl">BucketAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketcors">BucketCors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlifecycle">BucketLifecycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlogging">BucketLogging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketnotification">BucketNotification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketpolicy">BucketPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketrequestpayment">BucketRequestPayment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#buckettagging">BucketTagging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketversioning">BucketVersioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketwebsite">BucketWebsite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartuploadpart">MultipartUploadPart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#object">Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectacl">ObjectAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectsummary">ObjectSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectversion">ObjectVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdb.html">SimpleDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="servicecatalog.html">ServiceCatalog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="servicecatalog.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ses.html">SES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="snowball.html">Snowball</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="snowball.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sns.html">SNS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformapplication">PlatformApplication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformendpoint">PlatformEndpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#subscription">Subscription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#topic">Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqs.html">SQS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#message">Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#queue">Queue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ssm.html">SSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="storagegateway.html">StorageGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sts.html">STS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sts.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="swf.html">SWF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">WAF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="waf.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workspaces.html">WorkSpaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html#client">Client</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autogenerated API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.client.html"><code class="docutils literal"><span class="pre">boto3.client()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resource.html"><code class="docutils literal"><span class="pre">boto3.resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.set_stream_logger.html"><code class="docutils literal"><span class="pre">boto3.set_stream_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.setup_default_session.html"><code class="docutils literal"><span class="pre">boto3.setup_default_session()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.NullHandler.html"><code class="docutils literal"><span class="pre">boto3.NullHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.Session.html"><code class="docutils literal"><span class="pre">boto3.Session</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.session.html"><code class="docutils literal"><span class="pre">boto3.session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Config.html"><code class="docutils literal"><span class="pre">boto3.session.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.session.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Session.html"><code class="docutils literal"><span class="pre">boto3.session.Session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.DataNotFoundError.html">boto3.session.DataNotFoundError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.ResourceNotExistsError.html">boto3.session.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownAPIVersionError.html">boto3.session.UnknownAPIVersionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownServiceError.html">boto3.session.UnknownServiceError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.exceptions.html"><code class="docutils literal"><span class="pre">boto3.exceptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.exceptions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.Boto3Error.html">boto3.exceptions.Boto3Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsConditionError.html">boto3.exceptions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsKeyConditionError.html">boto3.exceptions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBOperationNotSupportedError.html">boto3.exceptions.DynamoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynanmoDBOperationNotSupportedError.html">boto3.exceptions.DynanmoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.NoVersionFound.html">boto3.exceptions.NoVersionFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceLoadException.html">boto3.exceptions.ResourceLoadException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceNotExistsError.html">boto3.exceptions.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.RetriesExceededError.html">boto3.exceptions.RetriesExceededError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3TransferFailedError.html">boto3.exceptions.S3TransferFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3UploadFailedError.html">boto3.exceptions.S3UploadFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.UnknownAPIVersionError.html">boto3.exceptions.UnknownAPIVersionError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.utils.html"><code class="docutils literal"><span class="pre">boto3.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.import_module.html"><code class="docutils literal"><span class="pre">boto3.utils.import_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.utils.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.lazy_call.html"><code class="docutils literal"><span class="pre">boto3.utils.lazy_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.utils.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.LazyLoadedWaiterModel.html"><code class="docutils literal"><span class="pre">boto3.utils.LazyLoadedWaiterModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.ServiceContext.html"><code class="docutils literal"><span class="pre">boto3.utils.ServiceContext</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_ec2.html"><code class="docutils literal"><span class="pre">botos3.ecs2</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.create_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.inject_create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.inject_create_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.delete_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.inject_delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.inject_delete_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.CustomModeledAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_s3.html"><code class="docutils literal"><span class="pre">botos3.s3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.inject.html"><code class="docutils literal"><span class="pre">boto3.s3.inject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_bucket_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_bucket_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_summary_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_summary_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_s3_transfer_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_s3_transfer_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_summary_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_summary_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_fileobj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.ProgressCallbackInvoker.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.ProgressCallbackInvoker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.S3Transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.S3Transfer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferConfig.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferManager.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.inject.ClientError.html">boto3.s3.inject.ClientError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.transfer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_resources.html"><code class="docutils literal"><span class="pre">resources</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.action.html"><code class="docutils literal"><span class="pre">boto3.resources.action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.action.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.resources.action.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.action.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.action.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ActionDocstring.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ActionDocstring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.CustomModeledAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.WaiterAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.base.html"><code class="docutils literal"><span class="pre">boto3.resources.base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.base.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ServiceResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.collection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.merge_dicts.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.merge_dicts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionManager.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceCollection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.factory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.build_identifiers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.WaiterAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.partial.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.partial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.factory.ResourceLoadException.html">boto3.resources.factory.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.model.html"><code class="docutils literal"><span class="pre">boto3.resources.model</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.model.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Collection.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Collection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.DefinitionWithParams.html"><code class="docutils literal"><span class="pre">boto3.resources.model.DefinitionWithParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Identifier.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Parameter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Request.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResponseResource.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResponseResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Waiter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Waiter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.params.html"><code class="docutils literal"><span class="pre">boto3.resources.params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.build_param_structure.html"><code class="docutils literal"><span class="pre">boto3.resources.params.build_param_structure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.params.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.params.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.params.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.params.ResourceLoadException.html">boto3.resources.params.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.response.html"><code class="docutils literal"><span class="pre">boto3.resources.response</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.all_not_none.html"><code class="docutils literal"><span class="pre">boto3.resources.response.all_not_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_empty_response.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_empty_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.response.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.response.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.And.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.And</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Attr.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Attr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeNotExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeNotExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeType.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BeginsWith.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BeginsWith</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Between.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Between</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BuiltConditionExpression.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BuiltConditionExpression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ComparisonCondition.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ComparisonCondition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionAttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionAttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Contains.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Contains</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Equals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Equals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.In.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.In</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Key.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Not.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.NotEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.NotEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Or.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Size.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError.html">boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.register_table_methods.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.register_table_methods()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.BatchWriter.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.BatchWriter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.TableResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.TableResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.copy_dynamodb_params.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.copy_dynamodb_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.register_high_level_interface.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.register_high_level_interface()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionTransformation.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionTransformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DocumentModifiedShape.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DocumentModifiedShape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DynamoDBHighLevelResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DynamoDBHighLevelResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.MutableSequence.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.MutableSequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ParameterTransformer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ParameterTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TransformationInjector.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TransformationInjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Binary.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Binary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Context.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Decimal.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Decimal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Set.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Clamped.html">boto3.dynamodb.types.Clamped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Inexact.html">boto3.dynamodb.types.Inexact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Overflow.html">boto3.dynamodb.types.Overflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Rounded.html">boto3.dynamodb.types.Rounded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Underflow.html">boto3.dynamodb.types.Underflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Boto3 API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Available Services</a> &raquo;</li>
+      
+    <li>ACM</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/services/acm.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="acm">
+<h1><a class="toc-backref" href="#id3">ACM</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#acm" id="id3">ACM</a><ul>
+<li><a class="reference internal" href="#client" id="id4">Client</a></li>
+<li><a class="reference internal" href="#paginators" id="id5">Paginators</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="client">
+<h2><a class="toc-backref" href="#id4">Client</a></h2>
+<dl class="class">
+<dt id="ACM.Client">
+<em class="property">class </em><code class="descclassname">ACM.</code><code class="descname">Client</code></dt>
+<dd><p>A low-level client representing AWS Certificate Manager (ACM):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;acm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These are the available methods:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ACM.Client.add_tags_to_certificate" title="ACM.Client.add_tags_to_certificate"><code class="xref py py-meth docutils literal"><span class="pre">add_tags_to_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.can_paginate" title="ACM.Client.can_paginate"><code class="xref py py-meth docutils literal"><span class="pre">can_paginate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.delete_certificate" title="ACM.Client.delete_certificate"><code class="xref py py-meth docutils literal"><span class="pre">delete_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.describe_certificate" title="ACM.Client.describe_certificate"><code class="xref py py-meth docutils literal"><span class="pre">describe_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.generate_presigned_url" title="ACM.Client.generate_presigned_url"><code class="xref py py-meth docutils literal"><span class="pre">generate_presigned_url()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.get_certificate" title="ACM.Client.get_certificate"><code class="xref py py-meth docutils literal"><span class="pre">get_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.get_paginator" title="ACM.Client.get_paginator"><code class="xref py py-meth docutils literal"><span class="pre">get_paginator()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.get_waiter" title="ACM.Client.get_waiter"><code class="xref py py-meth docutils literal"><span class="pre">get_waiter()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.list_certificates" title="ACM.Client.list_certificates"><code class="xref py py-meth docutils literal"><span class="pre">list_certificates()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.list_tags_for_certificate" title="ACM.Client.list_tags_for_certificate"><code class="xref py py-meth docutils literal"><span class="pre">list_tags_for_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.remove_tags_from_certificate" title="ACM.Client.remove_tags_from_certificate"><code class="xref py py-meth docutils literal"><span class="pre">remove_tags_from_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.request_certificate" title="ACM.Client.request_certificate"><code class="xref py py-meth docutils literal"><span class="pre">request_certificate()</span></code></a></li>
+<li><a class="reference internal" href="#ACM.Client.resend_validation_email" title="ACM.Client.resend_validation_email"><code class="xref py py-meth docutils literal"><span class="pre">resend_validation_email()</span></code></a></li>
+</ul>
+<dl class="method">
+<dt id="ACM.Client.add_tags_to_certificate">
+<code class="descname">add_tags_to_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Adds one or more tags to an ACM Certificate. Tags are labels that you can use to identify and organize your AWS resources. Each tag consists of a <code class="docutils literal"><span class="pre">key</span></code> and an optional <code class="docutils literal"><span class="pre">value</span></code> . You specify the certificate on input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair.</p>
+<p>You can apply a tag to just one certificate if you want to identify a specific characteristic of that certificate, or you can apply the same tag to multiple certificates if you want to filter for a common relationship among those certificates. Similarly, you can apply the same tag to multiple resources if you want to specify a relationship among those resources. For example, you can add the same tag to an ACM Certificate and an Elastic Load Balancing load balancer to indicate that they are both used by the same website. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/acm/latest/userguide/tags.html">Tagging ACM Certificates</a> .</p>
+<p>To remove one or more tags, use the  RemoveTagsFromCertificate action. To view all of the tags that have been applied to the certificate, use the  ListTagsForCertificate action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">add_tags_to_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains the ARN of the ACM Certificate to which the tag is to be applied. This must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</li>
+<li><strong>Tags</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The key-value pair that defines the tag. The tag value is optional.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A key-value pair that identifies or specifies metadata about an ACM resource.</p>
+<ul>
+<li><strong>Key</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>The key of the tag.</p>
+</li>
+<li><strong>Value</strong> <em>(string) &#8211;</em><p>The value of the tag.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.can_paginate">
+<code class="descname">can_paginate</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Check if an operation can be paginated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the operation can be paginated,
+<code class="docutils literal"><span class="pre">False</span></code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.delete_certificate">
+<code class="descname">delete_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes an ACM Certificate and its associated private key. If this action succeeds, the certificate no longer appears in the list of ACM Certificates that can be displayed by calling the  ListCertificates action or be retrieved by calling the  GetCertificate action. The certificate will not be available for use by other AWS services.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot delete an ACM Certificate that is being used by another AWS service. To delete a certificate that is in use, the certificate association must first be removed.</p>
+</div>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains the ARN of the ACM Certificate to be deleted. This must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.describe_certificate">
+<code class="descname">describe_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns a list of the fields contained in the specified ACM Certificate. For example, this action returns the certificate status, a flag that indicates whether the certificate is associated with any other AWS service, and the date at which the certificate request was created. You specify the ACM Certificate on input by its Amazon Resource Name (ARN).</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains an ACM Certificate ARN. The ARN must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Certificate&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;CertificateArn&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;DomainName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;SubjectAlternativeNames&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;DomainValidationOptions&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;DomainName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;ValidationEmails&#39;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+                <span class="p">],</span>
+                <span class="s1">&#39;ValidationDomain&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;Serial&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Subject&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Issuer&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;CreatedAt&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;IssuedAt&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;Status&#39;</span><span class="p">:</span> <span class="s1">&#39;PENDING_VALIDATION&#39;</span><span class="o">|</span><span class="s1">&#39;ISSUED&#39;</span><span class="o">|</span><span class="s1">&#39;INACTIVE&#39;</span><span class="o">|</span><span class="s1">&#39;EXPIRED&#39;</span><span class="o">|</span><span class="s1">&#39;VALIDATION_TIMED_OUT&#39;</span><span class="o">|</span><span class="s1">&#39;REVOKED&#39;</span><span class="o">|</span><span class="s1">&#39;FAILED&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;RevokedAt&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;RevocationReason&#39;</span><span class="p">:</span> <span class="s1">&#39;UNSPECIFIED&#39;</span><span class="o">|</span><span class="s1">&#39;KEY_COMPROMISE&#39;</span><span class="o">|</span><span class="s1">&#39;CA_COMPROMISE&#39;</span><span class="o">|</span><span class="s1">&#39;AFFILIATION_CHANGED&#39;</span><span class="o">|</span><span class="s1">&#39;SUPERCEDED&#39;</span><span class="o">|</span><span class="s1">&#39;CESSATION_OF_OPERATION&#39;</span><span class="o">|</span><span class="s1">&#39;CERTIFICATE_HOLD&#39;</span><span class="o">|</span><span class="s1">&#39;REMOVE_FROM_CRL&#39;</span><span class="o">|</span><span class="s1">&#39;PRIVILEGE_WITHDRAWN&#39;</span><span class="o">|</span><span class="s1">&#39;A_A_COMPROMISE&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NotBefore&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;NotAfter&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s1">&#39;KeyAlgorithm&#39;</span><span class="p">:</span> <span class="s1">&#39;RSA_2048&#39;</span><span class="o">|</span><span class="s1">&#39;EC_prime256v1&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;SignatureAlgorithm&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;InUseBy&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;FailureReason&#39;</span><span class="p">:</span> <span class="s1">&#39;NO_AVAILABLE_CONTACTS&#39;</span><span class="o">|</span><span class="s1">&#39;ADDITIONAL_VERIFICATION_REQUIRED&#39;</span><span class="o">|</span><span class="s1">&#39;DOMAIN_NOT_ALLOWED&#39;</span><span class="o">|</span><span class="s1">&#39;INVALID_PUBLIC_DOMAIN&#39;</span><span class="o">|</span><span class="s1">&#39;OTHER&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><ul>
+<li><strong>Certificate</strong> <em>(dict) &#8211;</em><p>Contains a  CertificateDetail structure that lists the fields of an ACM Certificate.</p>
+<ul>
+<li><strong>CertificateArn</strong> <em>(string) &#8211;</em><p>The Amazon Resource Name (ARN) of the certificate. For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</li>
+<li><strong>DomainName</strong> <em>(string) &#8211;</em><p>The fully qualified domain name (FQDN) for the certificate, such as www.example.com or example.com.</p>
+</li>
+<li><strong>SubjectAlternativeNames</strong> <em>(list) &#8211;</em><p>One or more domain names (subject alternative names) included in the certificate request. After the certificate is issued, this list includes the domain names bound to the public key contained in the certificate. The subject alternative names include the canonical domain name (CN) of the certificate and additional domain names that can be used to connect to the website.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>DomainValidationOptions</strong> <em>(list) &#8211;</em><p>Contains information about the email address or addresses used for domain validation.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>Structure that contains the domain name, the base validation domain to which validation email is sent, and the email addresses used to validate the domain identity.</p>
+<ul>
+<li><strong>DomainName</strong> <em>(string) &#8211;</em><p>Fully Qualified Domain Name (FQDN) of the form <code class="docutils literal"><span class="pre">www.example.com</span> <span class="pre">or</span></code>  <code class="docutils literal"><span class="pre">example.com</span></code> .</p>
+</li>
+<li><strong>ValidationEmails</strong> <em>(list) &#8211;</em><p>A list of contact address for the domain registrant.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>ValidationDomain</strong> <em>(string) &#8211;</em><p>The base validation domain that acts as the suffix of the email addresses that are used to send the emails.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Serial</strong> <em>(string) &#8211;</em><p>The serial number of the certificate.</p>
+</li>
+<li><strong>Subject</strong> <em>(string) &#8211;</em><p>The X.500 distinguished name of the entity associated with the public key contained in the certificate.</p>
+</li>
+<li><strong>Issuer</strong> <em>(string) &#8211;</em><p>The X.500 distinguished name of the CA that issued and signed the certificate.</p>
+</li>
+<li><strong>CreatedAt</strong> <em>(datetime) &#8211;</em><p>The time at which the certificate was requested.</p>
+</li>
+<li><strong>IssuedAt</strong> <em>(datetime) &#8211;</em><p>The time at which the certificate was issued.</p>
+</li>
+<li><strong>Status</strong> <em>(string) &#8211;</em><p>The status of the certificate.</p>
+</li>
+<li><strong>RevokedAt</strong> <em>(datetime) &#8211;</em><p>The time at which the certificate was revoked. This value exists only when the certificate status is <code class="docutils literal"><span class="pre">REVOKED</span></code> .</p>
+</li>
+<li><strong>RevocationReason</strong> <em>(string) &#8211;</em><p>The reason the certificate was revoked. This value exists only when the certificate status is <code class="docutils literal"><span class="pre">REVOKED</span></code> .</p>
+</li>
+<li><strong>NotBefore</strong> <em>(datetime) &#8211;</em><p>The time before which the certificate is not valid.</p>
+</li>
+<li><strong>NotAfter</strong> <em>(datetime) &#8211;</em><p>The time after which the certificate is not valid.</p>
+</li>
+<li><strong>KeyAlgorithm</strong> <em>(string) &#8211;</em><p>The algorithm used to generate the key pair (the public and private key). Currently the only supported value is <code class="docutils literal"><span class="pre">RSA_2048</span></code> .</p>
+</li>
+<li><strong>SignatureAlgorithm</strong> <em>(string) &#8211;</em><p>The algorithm used to generate a signature. Currently the only supported value is <code class="docutils literal"><span class="pre">SHA256WITHRSA</span></code> .</p>
+</li>
+<li><strong>InUseBy</strong> <em>(list) &#8211;</em><p>A list of ARNs for the resources that are using the certificate. An ACM Certificate can be used by multiple AWS resources.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>FailureReason</strong> <em>(string) &#8211;</em><p>The reason the certificate request failed. This value exists only when the structure&#8217;s <code class="docutils literal"><span class="pre">Status</span></code> is <code class="docutils literal"><span class="pre">FAILED</span></code> . For more information, see <a class="reference external" href="http://docs.aws.amazon.com/acm/latest/userguide/troubleshooting.html#troubleshooting-failed">Certificate Request Failed</a> in the <em>AWS Certificate Manager User Guide</em> .</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.generate_presigned_url">
+<code class="descname">generate_presigned_url</code><span class="sig-paren">(</span><em>ClientMethod</em>, <em>Params=None</em>, <em>ExpiresIn=3600</em>, <em>HttpMethod=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Generate a presigned url given a client, its method, and arguments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ClientMethod</strong> (<em>string</em>) &#8211; The client method to presign for</li>
+<li><strong>Params</strong> (<em>dict</em>) &#8211; The parameters normally passed to
+<code class="docutils literal"><span class="pre">ClientMethod</span></code>.</li>
+<li><strong>ExpiresIn</strong> (<em>int</em>) &#8211; The number of seconds the presigned url is valid
+for. By default it expires in an hour (3600 seconds)</li>
+<li><strong>HttpMethod</strong> (<em>string</em>) &#8211; The http method to use on the generated url. By
+default, the http method is whatever is used in the method&#8217;s model.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The presigned url</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.get_certificate">
+<code class="descname">get_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves an ACM Certificate and certificate chain for the certificate specified by an ARN. The chain is an ordered list of certificates that contains the root certificate, intermediate certificates of subordinate CAs, and the ACM Certificate. The certificate and certificate chain are base64 encoded. If you want to decode the certificate chain to see the individual certificate fields, you can use OpenSSL.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, ACM Certificates can be used only with Elastic Load Balancing and Amazon CloudFront.</p>
+</div>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains a certificate ARN in the following format:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Certificate&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CertificateChain&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><ul>
+<li><strong>Certificate</strong> <em>(string) &#8211;</em><p>String that contains the ACM Certificate represented by the ARN specified at input.</p>
+</li>
+<li><strong>CertificateChain</strong> <em>(string) &#8211;</em><p>The certificate chain that contains the root certificate issued by the certificate authority (CA).</p>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.get_paginator">
+<code class="descname">get_paginator</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a paginator for an operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>OperationNotPageableError</strong> &#8211; Raised if the operation is not
+pageable.  You can use the <code class="docutils literal"><span class="pre">client.can_paginate</span></code> method to
+check if an operation is pageable.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">L{botocore.paginate.Paginator}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A paginator object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.get_waiter">
+<code class="descname">get_waiter</code><span class="sig-paren">(</span><em>waiter_name</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.list_certificates">
+<code class="descname">list_certificates</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Retrieves a list of ACM Certificates and the domain name for each. You can optionally filter the list to return only the certificates that match the specified status.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_certificates</span><span class="p">(</span>
+    <span class="n">CertificateStatuses</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;PENDING_VALIDATION&#39;</span><span class="o">|</span><span class="s1">&#39;ISSUED&#39;</span><span class="o">|</span><span class="s1">&#39;INACTIVE&#39;</span><span class="o">|</span><span class="s1">&#39;EXPIRED&#39;</span><span class="o">|</span><span class="s1">&#39;VALIDATION_TIMED_OUT&#39;</span><span class="o">|</span><span class="s1">&#39;REVOKED&#39;</span><span class="o">|</span><span class="s1">&#39;FAILED&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">NextToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">MaxItems</span><span class="o">=</span><span class="mi">123</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CertificateStatuses</strong> (<em>list</em>) &#8211; <p>The status or statuses on which to filter the list of ACM Certificates.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>NextToken</strong> (<em>string</em>) &#8211; Use this parameter only when paginating results and only in a subsequent request after you receive a response with truncated results. Set it to the value of <code class="docutils literal"><span class="pre">NextToken</span></code> from the response you just received.</li>
+<li><strong>MaxItems</strong> (<em>integer</em>) &#8211; Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <code class="docutils literal"><span class="pre">NextToken</span></code> element is sent in the response. Use this <code class="docutils literal"><span class="pre">NextToken</span></code> value in a subsequent request to retrieve additional items.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;NextToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CertificateSummaryList&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;CertificateArn&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;DomainName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>NextToken</strong> <em>(string) &#8211;</em></p>
+<p>When the list is truncated, this value is present and contains the value to use for the <code class="docutils literal"><span class="pre">NextToken</span></code> parameter in a subsequent pagination request.</p>
+</li>
+<li><p class="first"><strong>CertificateSummaryList</strong> <em>(list) &#8211;</em></p>
+<p>A list of ACM Certificates.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>This structure is returned in the response object of  ListCertificates action.</p>
+<ul>
+<li><p class="first"><strong>CertificateArn</strong> <em>(string) &#8211;</em></p>
+<p>Amazon Resource Name (ARN) of the certificate. This is of the form:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></p>
+</div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</li>
+<li><p class="first"><strong>DomainName</strong> <em>(string) &#8211;</em></p>
+<p>Fully qualified domain name (FQDN), such as www.example.com or example.com, for the certificate.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.list_tags_for_certificate">
+<code class="descname">list_tags_for_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Lists the tags that have been applied to the ACM Certificate. Use the certificate ARN to specify the certificate. To add a tag to an ACM Certificate, use the  AddTagsToCertificate action. To delete a tag, use the  RemoveTagsFromCertificate action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_tags_for_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains the ARN of the ACM Certificate for which you want to list the tags. This must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Tags&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><ul>
+<li><strong>Tags</strong> <em>(list) &#8211;</em><p>The key-value pairs that define the applied tags.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A key-value pair that identifies or specifies metadata about an ACM resource.</p>
+<ul>
+<li><strong>Key</strong> <em>(string) &#8211;</em><p>The key of the tag.</p>
+</li>
+<li><strong>Value</strong> <em>(string) &#8211;</em><p>The value of the tag.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.remove_tags_from_certificate">
+<code class="descname">remove_tags_from_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Remove one or more tags from an ACM Certificate. A tag consists of a key-value pair. If you do not specify the value portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the tag is removed only if it is associated with the specified value.</p>
+<p>To add tags to a certificate, use the  AddTagsToCertificate action. To view all of the tags that have been applied to a specific ACM Certificate, use the  ListTagsForCertificate action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">remove_tags_from_certificate</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains the ARN of the ACM Certificate with one or more tags that you want to remove. This must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</li>
+<li><strong>Tags</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The key-value pair that defines the tag to remove.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A key-value pair that identifies or specifies metadata about an ACM resource.</p>
+<ul>
+<li><strong>Key</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>The key of the tag.</p>
+</li>
+<li><strong>Value</strong> <em>(string) &#8211;</em><p>The value of the tag.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.request_certificate">
+<code class="descname">request_certificate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Requests an ACM Certificate for use with other AWS services. To request an ACM Certificate, you must specify the fully qualified domain name (FQDN) for your site. You can also specify additional FQDNs if users can reach your site by using other names. For each domain name you specify, email is sent to the domain owner to request approval to issue the certificate. After receiving approval from the domain owner, the ACM Certificate is issued. For more information, see the <a class="reference external" href="http://docs.aws.amazon.com/acm/latest/userguide/overview.html">AWS Certificate Manager User Guide</a> .</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">request_certificate</span><span class="p">(</span>
+    <span class="n">DomainName</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">SubjectAlternativeNames</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">IdempotencyToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">DomainValidationOptions</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;DomainName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ValidationDomain&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>DomainName</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>Fully qualified domain name (FQDN), such as www.example.com, of the site you want to secure with an ACM Certificate. Use an asterisk (*) to create a wildcard certificate that protects several sites in the same domain. For example, <a href="#id1"><span class="problematic" id="id2">*</span></a>.example.com protects www.example.com, site.example.com, and images.example.com.</p>
+</li>
+<li><strong>SubjectAlternativeNames</strong> (<em>list</em>) &#8211; <p>Additional FQDNs to be included in the Subject Alternative Name extension of the ACM Certificate. For example, add the name www.example.net to a certificate for which the <code class="docutils literal"><span class="pre">DomainName</span></code> field is www.example.com if users can reach your site by using either name.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>IdempotencyToken</strong> (<em>string</em>) &#8211; Customer chosen string that can be used to distinguish between calls to <code class="docutils literal"><span class="pre">RequestCertificate</span></code> . Idempotency tokens time out after one hour. Therefore, if you call <code class="docutils literal"><span class="pre">RequestCertificate</span></code> multiple times with the same idempotency token within one hour, ACM recognizes that you are requesting only one certificate and will issue only one. If you change the idempotency token for each call, ACM recognizes that you are requesting multiple certificates.</li>
+<li><strong>DomainValidationOptions</strong> (<em>list</em>) &#8211; <p>The base validation domain that will act as the suffix of the email addresses that are used to send the emails. This must be the same as the <code class="docutils literal"><span class="pre">Domain</span></code> value or a superdomain of the <code class="docutils literal"><span class="pre">Domain</span></code> value. For example, if you requested a certificate for <code class="docutils literal"><span class="pre">test.example.com</span></code> and specify <strong>DomainValidationOptions</strong> of <code class="docutils literal"><span class="pre">example.com</span></code> , ACM sends email to the domain registrant, technical contact, and administrative contact in WHOIS and the following five addresses:</p>
+<ul>
+<li><a class="reference external" href="mailto:admin&#37;&#52;&#48;example&#46;com">admin<span>&#64;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:administrator&#37;&#52;&#48;example&#46;com">administrator<span>&#64;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:hostmaster&#37;&#52;&#48;example&#46;com">hostmaster<span>&#64;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:postmaster&#37;&#52;&#48;example&#46;com">postmaster<span>&#64;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:webmaster&#37;&#52;&#48;example&#46;com">webmaster<span>&#64;</span>example<span>&#46;</span>com</a></li>
+</ul>
+<ul>
+<li><em>(dict) &#8211;</em><p>This structure is used in the request object of the  RequestCertificate action.</p>
+<ul>
+<li><strong>DomainName</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>Fully Qualified Domain Name (FQDN) of the certificate being requested.</p>
+</li>
+<li><strong>ValidationDomain</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>The domain to which validation email is sent. This is the base validation domain that will act as the suffix of the email addresses. This must be the same as the <code class="docutils literal"><span class="pre">DomainName</span></code> value or a superdomain of the <code class="docutils literal"><span class="pre">DomainName</span></code> value. For example, if you requested a certificate for <code class="docutils literal"><span class="pre">site.subdomain.example.com</span></code> and specify a <strong>ValidationDomain</strong> of <code class="docutils literal"><span class="pre">subdomain.example.com</span></code> , ACM sends email to the domain registrant, technical contact, and administrative contact in WHOIS for the base domain and the following five addresses:</p>
+<ul>
+<li><a class="reference external" href="mailto:admin&#37;&#52;&#48;subdomain&#46;example&#46;com">admin<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:administrator&#37;&#52;&#48;subdomain&#46;example&#46;com">administrator<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:hostmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">hostmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:postmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">postmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:webmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">webmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;CertificateArn&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>CertificateArn</strong> <em>(string) &#8211;</em></p>
+<p>String that contains the ARN of the issued certificate. This must be of the form:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ACM.Client.resend_validation_email">
+<code class="descname">resend_validation_email</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Resends the email that requests domain ownership validation. The domain owner or an authorized representative must approve the ACM Certificate before it can be issued. The certificate can be approved by clicking a link in the mail to navigate to the Amazon certificate approval website and then clicking <strong>I Approve</strong> . However, the validation email can be blocked by spam filters. Therefore, if you do not receive the original mail, you can request that the mail be resent within 72 hours of requesting the ACM Certificate. If more than 72 hours have elapsed since your original request or since your last attempt to resend validation mail, you must request a new certificate.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">resend_validation_email</span><span class="p">(</span>
+    <span class="n">CertificateArn</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Domain</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">ValidationDomain</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CertificateArn</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String that contains the ARN of the requested certificate. The certificate ARN is generated and returned by the  RequestCertificate action as soon as the request is made. By default, using this parameter causes email to be sent to all top-level domains you specified in the certificate request.</p>
+<p>The ARN must be of the form:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></div></blockquote>
+</li>
+<li><strong>Domain</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The Fully Qualified Domain Name (FQDN) of the certificate that needs to be validated.</p>
+</li>
+<li><strong>ValidationDomain</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>The base validation domain that will act as the suffix of the email addresses that are used to send the emails. This must be the same as the <code class="docutils literal"><span class="pre">Domain</span></code> value or a superdomain of the <code class="docutils literal"><span class="pre">Domain</span></code> value. For example, if you requested a certificate for <code class="docutils literal"><span class="pre">site.subdomain.example.com</span></code> and specify a <strong>ValidationDomain</strong> of <code class="docutils literal"><span class="pre">subdomain.example.com</span></code> , ACM sends email to the domain registrant, technical contact, and administrative contact in WHOIS and the following five addresses:</p>
+<ul>
+<li><a class="reference external" href="mailto:admin&#37;&#52;&#48;subdomain&#46;example&#46;com">admin<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:administrator&#37;&#52;&#48;subdomain&#46;example&#46;com">administrator<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:hostmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">hostmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:postmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">postmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+<li><a class="reference external" href="mailto:webmaster&#37;&#52;&#48;subdomain&#46;example&#46;com">webmaster<span>&#64;</span>subdomain<span>&#46;</span>example<span>&#46;</span>com</a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="paginators">
+<h2><a class="toc-backref" href="#id5">Paginators</a></h2>
+<p>The available paginators are:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ACM.Paginator.ListCertificates" title="ACM.Paginator.ListCertificates"><code class="xref py py-class docutils literal"><span class="pre">ACM.Paginator.ListCertificates</span></code></a></li>
+</ul>
+<dl class="class">
+<dt id="ACM.Paginator.ListCertificates">
+<em class="property">class </em><code class="descclassname">ACM.Paginator.</code><code class="descname">ListCertificates</code></dt>
+<dd><div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">paginator</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_paginator</span><span class="p">(</span><span class="s1">&#39;list_certificates&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="ACM.Paginator.ListCertificates.paginate">
+<code class="descname">paginate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Creates an iterator that will paginate through responses from <a class="reference internal" href="#ACM.Client.list_certificates" title="ACM.Client.list_certificates"><code class="xref py py-meth docutils literal"><span class="pre">ACM.Client.list_certificates()</span></code></a>.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response_iterator</span> <span class="o">=</span> <span class="n">paginator</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span>
+    <span class="n">CertificateStatuses</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;PENDING_VALIDATION&#39;</span><span class="o">|</span><span class="s1">&#39;ISSUED&#39;</span><span class="o">|</span><span class="s1">&#39;INACTIVE&#39;</span><span class="o">|</span><span class="s1">&#39;EXPIRED&#39;</span><span class="o">|</span><span class="s1">&#39;VALIDATION_TIMED_OUT&#39;</span><span class="o">|</span><span class="s1">&#39;REVOKED&#39;</span><span class="o">|</span><span class="s1">&#39;FAILED&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">PaginationConfig</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;MaxItems&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+        <span class="s1">&#39;PageSize&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+        <span class="s1">&#39;StartingToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CertificateStatuses</strong> (<em>list</em>) &#8211; <p>The status or statuses on which to filter the list of ACM Certificates.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+<li><strong>PaginationConfig</strong> (<em>dict</em>) &#8211; <p>A dictionary that provides parameters to control pagination.</p>
+<ul>
+<li><strong>MaxItems</strong> <em>(integer) &#8211;</em><p>The total number of items to return. If the total number of items available is more than the value specified in max-items then a <code class="docutils literal"><span class="pre">NextToken</span></code> will be provided in the output that you can use to resume pagination.</p>
+</li>
+<li><strong>PageSize</strong> <em>(integer) &#8211;</em><p>The size of each page.</p>
+</li>
+<li><strong>StartingToken</strong> <em>(string) &#8211;</em><p>A token to specify where to start paginating. This is the <code class="docutils literal"><span class="pre">NextToken</span></code> from a previous response.</p>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;CertificateSummaryList&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;CertificateArn&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;DomainName&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>CertificateSummaryList</strong> <em>(list) &#8211;</em></p>
+<p>A list of ACM Certificates.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>This structure is returned in the response object of  ListCertificates action.</p>
+<ul>
+<li><p class="first"><strong>CertificateArn</strong> <em>(string) &#8211;</em></p>
+<p>Amazon Resource Name (ARN) of the certificate. This is of the form:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012</span></code></p>
+</div></blockquote>
+<p>For more information about ARNs, see <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service Namespaces</a> .</p>
+</li>
+<li><p class="first"><strong>DomainName</strong> <em>(string) &#8211;</em></p>
+<p>Fully qualified domain name (FQDN), such as www.example.com or example.com, for the certificate.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apigateway.html" class="btn btn-neutral float-right" title="APIGateway" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Available Services" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 13, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

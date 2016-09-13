@@ -11,7 +11,7 @@ All modules for which code is available (`link <./_modules/index.html>`_)
    guide/index.rst
    core/index.rst
    customizations/index.rst
-   services/index.rst
+   reference/services/index.rst
 
 .. toctree::
    :maxdepth: 1

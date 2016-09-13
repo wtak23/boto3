@@ -1,0 +1,2051 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EFS</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../../index.html"/>
+        <link rel="up" title="Available Services" href="index.html"/>
+        <link rel="next" title="ElastiCache" href="elasticache.html"/>
+        <link rel="prev" title="ECS" href="ecs.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Boto3 API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../cloudfront.html">Generate a signed URL for Amazon CloudFront</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../s3.html">s3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">User Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#migration-guides">Migration Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/new.html">What&#8217;s New</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/new.html#major-features">Major Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/migration.html">Migrating from Boto 2.x</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#high-level-concepts">High Level Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#installation-configuration">Installation &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/upgrading.html">Upgrading Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/upgrading.html#id1">1.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#general-feature-guides">General Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/resources.html">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#identifiers-attributes-intro">Identifiers &amp; Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#actions">Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#sub-resources">Sub-resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#waiters">Waiters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#multithreading">Multithreading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/collections.html">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#chainability">Chainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#limiting-results">Limiting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#controlling-page-size">Controlling Page Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#batch-actions">Batch Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/clients.html">Low-level Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#creating-clients">Creating Clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#service-operations">Service Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#handling-responses">Handling Responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/paginators.html">Paginators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#creating-paginators">Creating Paginators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#filtering-results">Filtering results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#default-session">Default Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#custom-session">Custom Session</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#interactive-configuration">Interactive Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#configuring-credentials">Configuring Credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#environment-variable-configuration">Environment Variable Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/events.html">Extensibility Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#an-introduction-to-the-event-system">An Introduction to the Event System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#a-hierarchical-structure">A Hierarchical Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#wildcard-matching">Wildcard Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#isolation-of-event-systems">Isolation of Event Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#boto3-specific-events">Boto3 Specific Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#service-feature-guides">Service Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-table">Creating a New Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#using-an-existing-table">Using an Existing Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-item">Creating a New Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#getting-an-item">Getting an Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#updating-item">Updating Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-item">Deleting Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#batch-writing">Batch Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#querying-and-scanning">Querying and Scanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-a-table">Deleting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/s3.html">S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#changing-the-addressing-style">Changing the Addressing Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#using-the-transfer-manager">Using the Transfer Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-urls">Generating Presigned URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-posts">Generating Presigned POSTs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/boto3.html">Boto3 Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/collections.html">Collections Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/resources.html">Resources Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.model">Resource Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.params">Request Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.response">Response Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.action">Resource Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.base">Resource Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.factory">Resource Factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/session.html">Session Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customizations/index.html">Customization References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/dynamodb.html">DynamoDB Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#valid-dynamodb-types">Valid DynamoDB Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#custom-boto3-types">Custom Boto3 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#dynamodb-conditions">DynamoDB Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/s3.html">S3 Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/s3.html#s3-transfers">S3 Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Available Services</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="acm.html">ACM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="acm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="acm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apigateway.html">APIGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apigateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="application-autoscaling.html">ApplicationAutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application-autoscaling.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoscaling.html">AutoScaling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoscaling.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudformation.html">CloudFormation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#event">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresource">StackResource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudformation.html#stackresourcesummary">StackResourceSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudfront.html">CloudFront</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudfront.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cloudfront.html#generate-a-signed-url-for-amazon-cloudfront">Generate a signed URL for Amazon CloudFront</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudhsm.html">CloudHSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudhsm.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearch.html">CloudSearch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearch.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudsearchdomain.html">CloudSearchDomain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudsearchdomain.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudtrail.html">CloudTrail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudtrail.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloudwatch.html">CloudWatch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#alarm">Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloudwatch.html#metric">Metric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codecommit.html">CodeCommit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codecommit.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codedeploy.html">CodeDeploy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="codedeploy.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="codepipeline.html">CodePipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="codepipeline.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-identity.html">CognitoIdentity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-identity.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-idp.html">CognitoIdentityProvider</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-idp.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cognito-sync.html">CognitoSync</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cognito-sync.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">ConfigService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datapipeline.html">DataPipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datapipeline.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="devicefarm.html">DeviceFarm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicefarm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="directconnect.html">DirectConnect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="directconnect.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="discovery.html">ApplicationDiscoveryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="discovery.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dms.html">DatabaseMigrationService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dms.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ds.html">DirectoryService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ds.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html#table">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamodbstreams.html">DynamoDBStreams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dynamodbstreams.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ec2.html">EC2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#classicaddress">ClassicAddress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#dhcpoptions">DhcpOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#instance">Instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#internetgateway">InternetGateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypair">KeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#keypairinfo">KeyPairInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkacl">NetworkAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterface">NetworkInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#networkinterfaceassociation">NetworkInterfaceAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#placementgroup">PlacementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#route">Route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetable">RouteTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#routetableassociation">RouteTableAssociation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#securitygroup">SecurityGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#snapshot">Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#subnet">Subnet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#tag">Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#volume">Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpc">Vpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcpeeringconnection">VpcPeeringConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ec2.html#vpcaddress">VpcAddress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecr.html">ECR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecr.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecs.html">ECS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ecs.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">EFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticache.html">ElastiCache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticache.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elasticbeanstalk.html">ElasticBeanstalk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elasticbeanstalk.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elastictranscoder.html">ElasticTranscoder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elastictranscoder.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elb.html">ElasticLoadBalancing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="elbv2.html">ElasticLoadBalancingv2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="elbv2.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emr.html">EMR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emr.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="es.html">ElasticsearchService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="es.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">CloudWatchEvents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="events.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="firehose.html">Firehose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="firehose.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gamelift.html">GameLift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gamelift.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="glacier.html">Glacier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#account">Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#archive">Archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#job">Job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#notification">Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glacier.html#vault">Vault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iam.html">IAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskey">AccessKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accesskeypair">AccessKeyPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountpasswordpolicy">AccountPasswordPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#accountsummary">AccountSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#assumerolepolicy">AssumeRolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#currentuser">CurrentUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#group">Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#grouppolicy">GroupPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#instanceprofile">InstanceProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#loginprofile">LoginProfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#mfadevice">MfaDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policy">Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#policyversion">PolicyVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#role">Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#rolepolicy">RolePolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#samlprovider">SamlProvider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#servercertificate">ServerCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#signingcertificate">SigningCertificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#user">User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#userpolicy">UserPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iam.html#virtualmfadevice">VirtualMfaDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="importexport.html">ImportExport</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="importexport.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inspector.html">Inspector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="inspector.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot.html">IoT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iot-data.html">IoTDataPlane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iot-data.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesis.html">Kinesis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinesis.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinesisanalytics.html">KinesisAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinesisanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kms.html">KMS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kms.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lambda.html">Lambda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lambda.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">CloudWatchLogs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logs.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="machinelearning.html">MachineLearning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="machinelearning.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="marketplacecommerceanalytics.html">MarketplaceCommerceAnalytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="marketplacecommerceanalytics.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="meteringmarketplace.html">MarketplaceMetering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="meteringmarketplace.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="opsworks.html">OpsWorks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#layer">Layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stack">Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="opsworks.html#stacksummary">StackSummary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rds.html">RDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rds.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="redshift.html">Redshift</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="redshift.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53.html">Route53</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="route53domains.html">Route53Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="route53domains.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="s3.html">S3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#waiters">Waiters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucket">Bucket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketacl">BucketAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketcors">BucketCors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlifecycle">BucketLifecycle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketlogging">BucketLogging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketnotification">BucketNotification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketpolicy">BucketPolicy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketrequestpayment">BucketRequestPayment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#buckettagging">BucketTagging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketversioning">BucketVersioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#bucketwebsite">BucketWebsite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartupload">MultipartUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#multipartuploadpart">MultipartUploadPart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#object">Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectacl">ObjectAcl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectsummary">ObjectSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#objectversion">ObjectVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="s3.html#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdb.html">SimpleDB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdb.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="servicecatalog.html">ServiceCatalog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="servicecatalog.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ses.html">SES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ses.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="snowball.html">Snowball</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="snowball.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sns.html">SNS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#paginators">Paginators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformapplication">PlatformApplication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#platformendpoint">PlatformEndpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#subscription">Subscription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sns.html#topic">Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sqs.html">SQS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#service-resource">Service Resource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#message">Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sqs.html#queue">Queue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ssm.html">SSM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssm.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="storagegateway.html">StorageGateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storagegateway.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sts.html">STS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sts.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="swf.html">SWF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#client">Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swf.html#paginators">Paginators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="waf.html">WAF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="waf.html#client">Client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workspaces.html">WorkSpaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workspaces.html#client">Client</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autogenerated API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.client.html"><code class="docutils literal"><span class="pre">boto3.client()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resource.html"><code class="docutils literal"><span class="pre">boto3.resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.set_stream_logger.html"><code class="docutils literal"><span class="pre">boto3.set_stream_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.setup_default_session.html"><code class="docutils literal"><span class="pre">boto3.setup_default_session()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.NullHandler.html"><code class="docutils literal"><span class="pre">boto3.NullHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.Session.html"><code class="docutils literal"><span class="pre">boto3.Session</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.session.html"><code class="docutils literal"><span class="pre">boto3.session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Config.html"><code class="docutils literal"><span class="pre">boto3.session.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.session.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.session.Session.html"><code class="docutils literal"><span class="pre">boto3.session.Session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.session.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.DataNotFoundError.html">boto3.session.DataNotFoundError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.ResourceNotExistsError.html">boto3.session.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownAPIVersionError.html">boto3.session.UnknownAPIVersionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.session.UnknownServiceError.html">boto3.session.UnknownServiceError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.exceptions.html"><code class="docutils literal"><span class="pre">boto3.exceptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.exceptions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.Boto3Error.html">boto3.exceptions.Boto3Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsConditionError.html">boto3.exceptions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBNeedsKeyConditionError.html">boto3.exceptions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynamoDBOperationNotSupportedError.html">boto3.exceptions.DynamoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.DynanmoDBOperationNotSupportedError.html">boto3.exceptions.DynanmoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.NoVersionFound.html">boto3.exceptions.NoVersionFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceLoadException.html">boto3.exceptions.ResourceLoadException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.ResourceNotExistsError.html">boto3.exceptions.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.RetriesExceededError.html">boto3.exceptions.RetriesExceededError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3TransferFailedError.html">boto3.exceptions.S3TransferFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.S3UploadFailedError.html">boto3.exceptions.S3UploadFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.exceptions.UnknownAPIVersionError.html">boto3.exceptions.UnknownAPIVersionError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.utils.html"><code class="docutils literal"><span class="pre">boto3.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.import_module.html"><code class="docutils literal"><span class="pre">boto3.utils.import_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.utils.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.lazy_call.html"><code class="docutils literal"><span class="pre">boto3.utils.lazy_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.utils.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.utils.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.LazyLoadedWaiterModel.html"><code class="docutils literal"><span class="pre">boto3.utils.LazyLoadedWaiterModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.utils.ServiceContext.html"><code class="docutils literal"><span class="pre">boto3.utils.ServiceContext</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_ec2.html"><code class="docutils literal"><span class="pre">botos3.ecs2</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.createtags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.create_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.createtags.inject_create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.inject_create_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.delete_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.inject_delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.inject_delete_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.ec2.deletetags.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.ec2.deletetags.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.CustomModeledAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_s3.html"><code class="docutils literal"><span class="pre">botos3.s3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.inject.html"><code class="docutils literal"><span class="pre">boto3.s3.inject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.bucket_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_bucket_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_bucket_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_object_summary_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_summary_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.inject_s3_transfer_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_s3_transfer_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_summary_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_summary_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.object_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_fileobj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.ProgressCallbackInvoker.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.ProgressCallbackInvoker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.S3Transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.S3Transfer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferConfig.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.s3.inject.TransferManager.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.inject.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.inject.ClientError.html">boto3.s3.inject.ClientError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.s3.transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.transfer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.s3.transfer.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_resources.html"><code class="docutils literal"><span class="pre">resources</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.action.html"><code class="docutils literal"><span class="pre">boto3.resources.action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.action.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.resources.action.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.action.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.action.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.action.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ActionDocstring.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ActionDocstring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.CustomModeledAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.action.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.WaiterAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.base.html"><code class="docutils literal"><span class="pre">boto3.resources.base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.base.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.base.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ServiceResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.collection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.merge_dicts.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.merge_dicts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.collection.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.CollectionManager.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceCollection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.collection.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.factory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.build_identifiers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.WaiterAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.factory.partial.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.partial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.factory.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.factory.ResourceLoadException.html">boto3.resources.factory.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.model.html"><code class="docutils literal"><span class="pre">boto3.resources.model</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.model.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.model.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Collection.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Collection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.DefinitionWithParams.html"><code class="docutils literal"><span class="pre">boto3.resources.model.DefinitionWithParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Identifier.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Parameter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Request.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.ResponseResource.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResponseResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.model.Waiter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Waiter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.params.html"><code class="docutils literal"><span class="pre">boto3.resources.params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.build_param_structure.html"><code class="docutils literal"><span class="pre">boto3.resources.params.build_param_structure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.params.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.params.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.params.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.params.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.params.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.resources.params.ResourceLoadException.html">boto3.resources.params.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.resources.response.html"><code class="docutils literal"><span class="pre">boto3.resources.response</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.all_not_none.html"><code class="docutils literal"><span class="pre">boto3.resources.response.all_not_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_empty_response.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_empty_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.response.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.response.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.resources.response.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.resources.response.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.And.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.And</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Attr.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Attr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeNotExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeNotExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.AttributeType.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BeginsWith.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BeginsWith</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Between.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Between</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.BuiltConditionExpression.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BuiltConditionExpression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ComparisonCondition.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ComparisonCondition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionAttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionAttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Contains.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Contains</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Equals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Equals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.GreaterThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.In.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.In</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Key.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.LessThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Not.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.NotEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.NotEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Or.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.conditions.Size.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError.html">boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.register_table_methods.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.register_table_methods()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.table.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.BatchWriter.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.BatchWriter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.table.TableResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.TableResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.copy_dynamodb_params.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.copy_dynamodb_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.register_high_level_interface.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.register_high_level_interface()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.transform.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ConditionExpressionTransformation.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionTransformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DocumentModifiedShape.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DocumentModifiedShape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.DynamoDBHighLevelResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DynamoDBHighLevelResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.MutableSequence.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.MutableSequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.ParameterTransformer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ParameterTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TransformationInjector.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TransformationInjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.transform.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Binary.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Binary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Context.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Decimal.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Decimal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.Set.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/generated/boto3.dynamodb.types.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/boto3.dynamodb.types.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Clamped.html">boto3.dynamodb.types.Clamped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Inexact.html">boto3.dynamodb.types.Inexact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Overflow.html">boto3.dynamodb.types.Overflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Rounded.html">boto3.dynamodb.types.Rounded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../generated/boto3.dynamodb.types.Underflow.html">boto3.dynamodb.types.Underflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Boto3 API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Available Services</a> &raquo;</li>
+      
+    <li>EFS</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/services/efs.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="efs">
+<h1><a class="toc-backref" href="#id1">EFS</a></h1>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#efs" id="id1">EFS</a><ul>
+<li><a class="reference internal" href="#client" id="id2">Client</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="client">
+<h2><a class="toc-backref" href="#id2">Client</a></h2>
+<dl class="class">
+<dt id="EFS.Client">
+<em class="property">class </em><code class="descclassname">EFS.</code><code class="descname">Client</code></dt>
+<dd><p>A low-level client representing Amazon Elastic File System (EFS):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;efs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These are the available methods:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#EFS.Client.can_paginate" title="EFS.Client.can_paginate"><code class="xref py py-meth docutils literal"><span class="pre">can_paginate()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.create_file_system" title="EFS.Client.create_file_system"><code class="xref py py-meth docutils literal"><span class="pre">create_file_system()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.create_mount_target" title="EFS.Client.create_mount_target"><code class="xref py py-meth docutils literal"><span class="pre">create_mount_target()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.create_tags" title="EFS.Client.create_tags"><code class="xref py py-meth docutils literal"><span class="pre">create_tags()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.delete_file_system" title="EFS.Client.delete_file_system"><code class="xref py py-meth docutils literal"><span class="pre">delete_file_system()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.delete_mount_target" title="EFS.Client.delete_mount_target"><code class="xref py py-meth docutils literal"><span class="pre">delete_mount_target()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.delete_tags" title="EFS.Client.delete_tags"><code class="xref py py-meth docutils literal"><span class="pre">delete_tags()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.describe_file_systems" title="EFS.Client.describe_file_systems"><code class="xref py py-meth docutils literal"><span class="pre">describe_file_systems()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.describe_mount_target_security_groups" title="EFS.Client.describe_mount_target_security_groups"><code class="xref py py-meth docutils literal"><span class="pre">describe_mount_target_security_groups()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.describe_mount_targets" title="EFS.Client.describe_mount_targets"><code class="xref py py-meth docutils literal"><span class="pre">describe_mount_targets()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.describe_tags" title="EFS.Client.describe_tags"><code class="xref py py-meth docutils literal"><span class="pre">describe_tags()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.generate_presigned_url" title="EFS.Client.generate_presigned_url"><code class="xref py py-meth docutils literal"><span class="pre">generate_presigned_url()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.get_paginator" title="EFS.Client.get_paginator"><code class="xref py py-meth docutils literal"><span class="pre">get_paginator()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.get_waiter" title="EFS.Client.get_waiter"><code class="xref py py-meth docutils literal"><span class="pre">get_waiter()</span></code></a></li>
+<li><a class="reference internal" href="#EFS.Client.modify_mount_target_security_groups" title="EFS.Client.modify_mount_target_security_groups"><code class="xref py py-meth docutils literal"><span class="pre">modify_mount_target_security_groups()</span></code></a></li>
+</ul>
+<dl class="method">
+<dt id="EFS.Client.can_paginate">
+<code class="descname">can_paginate</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Check if an operation can be paginated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the operation can be paginated,
+<code class="docutils literal"><span class="pre">False</span></code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.create_file_system">
+<code class="descname">create_file_system</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently exist that is owned by the caller&#8217;s AWS account with the specified creation token, this operation does the following:</p>
+<ul class="simple">
+<li>Creates a new, empty file system. The file system will have an Amazon EFS assigned ID, and an initial lifecycle state <code class="docutils literal"><span class="pre">creating</span></code> .</li>
+<li>Returns with the description of the created file system.</li>
+</ul>
+<p>Otherwise, this operation returns a <code class="docutils literal"><span class="pre">FileSystemAlreadyExists</span></code> error with the ID of the existing file system.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For basic use cases, you can use a randomly generated UUID for the creation token.</p>
+</div>
+<p>The idempotent operation allows you to retry a <code class="docutils literal"><span class="pre">CreateFileSystem</span></code> call without risk of creating an extra file system. This can happen when an initial call fails in a way that leaves it uncertain whether or not a file system was actually created. An example might be that a transport level timeout occurred or your connection was reset. As long as you use the same creation token, if the initial call had succeeded in creating a file system, the client can learn of its existence from the <code class="docutils literal"><span class="pre">FileSystemAlreadyExists</span></code> error.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">CreateFileSystem</span></code> call returns while the file system&#8217;s lifecycle state is still <code class="docutils literal"><span class="pre">creating</span></code> . You can check the file system creation status by calling the  DescribeFileSystems operation, which among other things returns the file system state.</p>
+</div>
+<p>This operation also takes an optional <code class="docutils literal"><span class="pre">PerformanceMode</span></code> parameter that you choose for your file system. We recommend <code class="docutils literal"><span class="pre">generalPurpose</span></code> performance mode for most file systems. File systems using the <code class="docutils literal"><span class="pre">maxIO</span></code> performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. The performance mode can&#8217;t be changed after the file system has been created. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS: Performance Modes</a> .</p>
+<p>After the file system is fully created, Amazon EFS sets its lifecycle state to <code class="docutils literal"><span class="pre">available</span></code> , at which point you can create one or more mount targets for the file system in your VPC. For more information, see  CreateMountTarget . You mount your Amazon EFS file system on an EC2 instances in your VPC via the mount target. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it Works</a> .</p>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:CreateFileSystem</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_file_system</span><span class="p">(</span>
+    <span class="n">CreationToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">PerformanceMode</span><span class="o">=</span><span class="s1">&#39;generalPurpose&#39;</span><span class="o">|</span><span class="s1">&#39;maxIO&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CreationToken</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>String of up to 64 ASCII characters. Amazon EFS uses this to ensure idempotent creation.</p>
+</li>
+<li><strong>PerformanceMode</strong> (<em>string</em>) &#8211; The <code class="docutils literal"><span class="pre">PerformanceMode</span></code> of the file system. We recommend <code class="docutils literal"><span class="pre">generalPurpose</span></code> performance mode for most file systems. File systems using the <code class="docutils literal"><span class="pre">maxIO</span></code> performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. This can&#8217;t be changed after the file system has been created.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;OwnerId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CreationToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FileSystemId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CreationTime&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="s1">&#39;LifeCycleState&#39;</span><span class="p">:</span> <span class="s1">&#39;creating&#39;</span><span class="o">|</span><span class="s1">&#39;available&#39;</span><span class="o">|</span><span class="s1">&#39;deleting&#39;</span><span class="o">|</span><span class="s1">&#39;deleted&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NumberOfMountTargets&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+    <span class="s1">&#39;SizeInBytes&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+        <span class="s1">&#39;Timestamp&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;PerformanceMode&#39;</span><span class="p">:</span> <span class="s1">&#39;generalPurpose&#39;</span><span class="o">|</span><span class="s1">&#39;maxIO&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Description of the file system.</p>
+<ul>
+<li><p class="first"><strong>OwnerId</strong> <em>(string) &#8211;</em></p>
+<p>AWS account that created the file system. If the file system was created by an IAM user, the parent account to which the user belongs is the owner.</p>
+</li>
+<li><p class="first"><strong>CreationToken</strong> <em>(string) &#8211;</em></p>
+<p>Opaque string specified in the request.</p>
+</li>
+<li><p class="first"><strong>FileSystemId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the file system, assigned by Amazon EFS.</p>
+</li>
+<li><p class="first"><strong>CreationTime</strong> <em>(datetime) &#8211;</em></p>
+<p>Time that the file system was created, in seconds (since 1970-01-01T00:00:00Z).</p>
+</li>
+<li><p class="first"><strong>LifeCycleState</strong> <em>(string) &#8211;</em></p>
+<p>Lifecycle phase of the file system.</p>
+</li>
+<li><p class="first"><strong>Name</strong> <em>(string) &#8211;</em></p>
+<p>You can add tags to a file system, including a <code class="docutils literal"><span class="pre">Name</span></code> tag. For more information, see  CreateTags . If the file system has a <code class="docutils literal"><span class="pre">Name</span></code> tag, Amazon EFS returns the value in this field.</p>
+</li>
+<li><p class="first"><strong>NumberOfMountTargets</strong> <em>(integer) &#8211;</em></p>
+<p>Current number of mount targets that the file system has. For more information, see  CreateMountTarget .</p>
+</li>
+<li><p class="first"><strong>SizeInBytes</strong> <em>(dict) &#8211;</em></p>
+<p>Latest known metered size (in bytes) of data stored in the file system, in bytes, in its <code class="docutils literal"><span class="pre">Value</span></code> field, and the time at which that size was determined in its <code class="docutils literal"><span class="pre">Timestamp</span></code> field. The <code class="docutils literal"><span class="pre">Timestamp</span></code> value is the integer number of seconds since 1970-01-01T00:00:00Z. Note that the value does not represent the size of a consistent snapshot of the file system, but it is eventually consistent when there are no writes to the file system. That is, the value will represent actual size only if the file system is not modified for a period longer than a couple of hours. Otherwise, the value is not the exact size the file system was at any instant in time.</p>
+<ul>
+<li><p class="first"><strong>Value</strong> <em>(integer) &#8211;</em></p>
+<p>Latest known metered size (in bytes) of data stored in the file system.</p>
+</li>
+<li><p class="first"><strong>Timestamp</strong> <em>(datetime) &#8211;</em></p>
+<p>Time at which the size of data, returned in the <code class="docutils literal"><span class="pre">Value</span></code> field, was determined. The value is the integer number of seconds since 1970-01-01T00:00:00Z.</p>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>PerformanceMode</strong> <em>(string) &#8211;</em></p>
+<p>The <code class="docutils literal"><span class="pre">PerformanceMode</span></code> of the file system.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.create_mount_target">
+<code class="descname">create_mount_target</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount target.</p>
+<p>You can create one mount target in each Availability Zone in your VPC. All EC2 instances in a VPC within a given Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount target in order to access their file system. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it Works</a> .</p>
+<p>In the request, you also specify a file system ID for which you are creating the mount target and the file system&#8217;s lifecycle state must be <code class="docutils literal"><span class="pre">available</span></code> . For more information, see  DescribeFileSystems .</p>
+<p>In the request, you also provide a subnet ID, which determines the following:</p>
+<ul class="simple">
+<li>VPC in which Amazon EFS creates the mount target</li>
+<li>Availability Zone in which Amazon EFS creates the mount target</li>
+<li>IP address range from which Amazon EFS selects the IP address of the mount target (if you don&#8217;t specify an IP address in the request)</li>
+</ul>
+<p>After creating the mount target, Amazon EFS returns a response that includes, a <code class="docutils literal"><span class="pre">MountTargetId</span></code> and an <code class="docutils literal"><span class="pre">IpAddress</span></code> . You use this IP address when mounting the file system in an EC2 instance. You can also use the mount target&#8217;s DNS name when mounting the file system. The EC2 instance on which you mount the file system via the mount target can resolve the mount target&#8217;s DNS name to its IP address. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html#how-it-works-implementation">How it Works: Implementation Overview</a> .</p>
+<p>Note that you can create mount targets for a file system in only one VPC, and there can be only one mount target per Availability Zone. That is, if the file system already has one or more mount targets created for it, the subnet specified in the request to add another mount target must meet the following requirements:</p>
+<ul class="simple">
+<li>Must belong to the same VPC as the subnets of the existing mount targets</li>
+<li>Must not be in the same Availability Zone as any of the subnets of the existing mount targets</li>
+</ul>
+<p>If the request satisfies the requirements, Amazon EFS does the following:</p>
+<ul class="simple">
+<li>Creates a new mount target in the specified subnet.</li>
+<li>Also creates a new network interface in the subnet as follows:<ul>
+<li>If the request provides an <code class="docutils literal"><span class="pre">IpAddress</span></code> , Amazon EFS assigns that IP address to the network interface. Otherwise, Amazon EFS assigns a free address in the subnet (in the same way that the Amazon EC2 <code class="docutils literal"><span class="pre">CreateNetworkInterface</span></code> call does when a request does not specify a primary private IP address).</li>
+<li>If the request provides <code class="docutils literal"><span class="pre">SecurityGroups</span></code> , this network interface is associated with those security groups. Otherwise, it belongs to the default security group for the subnet&#8217;s VPC.</li>
+<li>Assigns the description <code class="docutils literal"><span class="pre">Mount</span> <span class="pre">target</span> <span class="pre">*fsmt-id*</span> <span class="pre">for</span> <span class="pre">file</span> <span class="pre">system</span> <span class="pre">*fs-id*</span> <span class="pre">``</span> <span class="pre">where</span> <span class="pre">``</span> <span class="pre">*fsmt-id*</span> <span class="pre">``</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">mount</span> <span class="pre">target</span> <span class="pre">ID,</span> <span class="pre">and</span> <span class="pre">``</span> <span class="pre">*fs-id*</span> <span class="pre">``</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">``FileSystemId</span></code> .</li>
+<li>Sets the <code class="docutils literal"><span class="pre">requesterManaged</span></code> property of the network interface to <code class="docutils literal"><span class="pre">true</span></code> , and the <code class="docutils literal"><span class="pre">requesterId</span></code> value to <code class="docutils literal"><span class="pre">EFS</span></code> .</li>
+</ul>
+</li>
+</ul>
+<p>Each Amazon EFS mount target has one corresponding requestor-managed EC2 network interface. After the network interface is created, Amazon EFS sets the <code class="docutils literal"><span class="pre">NetworkInterfaceId</span></code> field in the mount target&#8217;s description to the network interface ID, and the <code class="docutils literal"><span class="pre">IpAddress</span></code> field to its address. If network interface creation fails, the entire <code class="docutils literal"><span class="pre">CreateMountTarget</span></code> operation fails.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">CreateMountTarget</span></code> call returns only after creating the network interface, but while the mount target state is still <code class="docutils literal"><span class="pre">creating</span></code> . You can check the mount target creation status by calling the  DescribeFileSystems operation, which among other things returns the mount target state.</p>
+</div>
+<p>We recommend you create a mount target in each of the Availability Zones. There are cost considerations for using a file system in an Availability Zone through a mount target created in another Availability Zone. For more information, see <a class="reference external" href="http://aws.amazon.com/efs/">Amazon EFS</a> . In addition, by always using a mount target local to the instance&#8217;s Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount target is created goes down, then you won&#8217;t be able to access your file system through that mount target.</p>
+<p>This operation requires permissions for the following action on the file system:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">elasticfilesystem:CreateMountTarget</span></code></li>
+</ul>
+<p>This operation also requires permissions for the following Amazon EC2 actions:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ec2:DescribeSubnets</span></code></li>
+<li><code class="docutils literal"><span class="pre">ec2:DescribeNetworkInterfaces</span></code></li>
+<li><code class="docutils literal"><span class="pre">ec2:CreateNetworkInterface</span></code></li>
+</ul>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_mount_target</span><span class="p">(</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">SubnetId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">IpAddress</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">SecurityGroups</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the file system for which to create the mount target.</p>
+</li>
+<li><strong>SubnetId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the subnet to add the mount target in.</p>
+</li>
+<li><strong>IpAddress</strong> (<em>string</em>) &#8211; Valid IPv4 address within the address range of the specified subnet.</li>
+<li><strong>SecurityGroups</strong> (<em>list</em>) &#8211; <p>Up to five VPC security group IDs, of the form <code class="docutils literal"><span class="pre">sg-xxxxxxxx</span></code> . These must be for the same VPC as subnet specified.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;OwnerId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;MountTargetId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FileSystemId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SubnetId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;LifeCycleState&#39;</span><span class="p">:</span> <span class="s1">&#39;creating&#39;</span><span class="o">|</span><span class="s1">&#39;available&#39;</span><span class="o">|</span><span class="s1">&#39;deleting&#39;</span><span class="o">|</span><span class="s1">&#39;deleted&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;IpAddress&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NetworkInterfaceId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Provides a description of a mount target.</p>
+<ul>
+<li><p class="first"><strong>OwnerId</strong> <em>(string) &#8211;</em></p>
+<p>AWS account ID that owns the resource.</p>
+</li>
+<li><p class="first"><strong>MountTargetId</strong> <em>(string) &#8211;</em></p>
+<p>System-assigned mount target ID.</p>
+</li>
+<li><p class="first"><strong>FileSystemId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the file system for which the mount target is intended.</p>
+</li>
+<li><p class="first"><strong>SubnetId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the mount target&#8217;s subnet.</p>
+</li>
+<li><p class="first"><strong>LifeCycleState</strong> <em>(string) &#8211;</em></p>
+<p>Lifecycle state of the mount target.</p>
+</li>
+<li><p class="first"><strong>IpAddress</strong> <em>(string) &#8211;</em></p>
+<p>Address at which the file system may be mounted via the mount target.</p>
+</li>
+<li><p class="first"><strong>NetworkInterfaceId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the network interface that Amazon EFS created when it created the mount target.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.create_tags">
+<code class="descname">create_tags</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the request already exists on the file system, this operation overwrites its value with the value provided in the request. If you add the <code class="docutils literal"><span class="pre">Name</span></code> tag to your file system, Amazon EFS returns it in the response to the  DescribeFileSystems operation.</p>
+<p>This operation requires permission for the <code class="docutils literal"><span class="pre">elasticfilesystem:CreateTags</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_tags</span><span class="p">(</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">Tags</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the file system whose tags you want to modify (String). This operation modifies the tags only, not the file system.</p>
+</li>
+<li><strong>Tags</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>Array of <code class="docutils literal"><span class="pre">Tag</span></code> objects to add. Each <code class="docutils literal"><span class="pre">Tag</span></code> object is a key-value pair.</p>
+<ul>
+<li><em>(dict) &#8211;</em><p>A tag is a key-value pair. Allowed characters: letters, whitespace, and numbers, representable in UTF-8, and the following characters:<code class="docutils literal"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">=</span> <span class="pre">.</span> <span class="pre">_</span> <span class="pre">:</span> <span class="pre">/</span></code></p>
+<ul>
+<li><strong>Key</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>Tag key (String). The key can&#8217;t start with <code class="docutils literal"><span class="pre">aws:</span></code> .</p>
+</li>
+<li><strong>Value</strong> <em>(string) &#8211;</em> <strong>[REQUIRED]</strong><p>Value of the tag key.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.delete_file_system">
+<code class="descname">delete_file_system</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and you can&#8217;t access any contents of the deleted file system.</p>
+<p>You can&#8217;t delete a file system that is in use. That is, if the file system has any mount targets, you must first delete them. For more information, see  DescribeMountTargets and  DeleteMountTarget .</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">DeleteFileSystem</span></code> call returns while the file system state is still <code class="docutils literal"><span class="pre">deleting</span></code> . You can check the file system deletion status by calling the  DescribeFileSystems operation, which returns a list of file systems in your account. If you pass file system ID or creation token for the deleted file system, the  DescribeFileSystems returns a <code class="docutils literal"><span class="pre">404</span> <span class="pre">FileSystemNotFound</span></code> error.</p>
+</div>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:DeleteFileSystem</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_file_system</span><span class="p">(</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>FileSystemId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the file system you want to delete.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.delete_mount_target">
+<code class="descname">delete_mount_target</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes the specified mount target.</p>
+<p>This operation forcibly breaks any mounts of the file system via the mount target that is being deleted, which might disrupt instances or applications using those mounts. To avoid applications getting cut off abruptly, you might consider unmounting any mounts of the mount target, if feasible. The operation also deletes the associated network interface. Uncommitted writes may be lost, but breaking a mount target using this operation does not corrupt the file system itself. The file system you created remains. You can mount an EC2 instance in your VPC via another mount target.</p>
+<p>This operation requires permissions for the following action on the file system:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">elasticfilesystem:DeleteMountTarget</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">DeleteMountTarget</span></code> call returns while the mount target state is still <code class="docutils literal"><span class="pre">deleting</span></code> . You can check the mount target deletion by calling the  DescribeMountTargets operation, which returns a list of mount target descriptions for the given file system.</p>
+</div>
+<p>The operation also requires permissions for the following Amazon EC2 action on the mount target&#8217;s network interface:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ec2:DeleteNetworkInterface</span></code></li>
+</ul>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_mount_target</span><span class="p">(</span>
+    <span class="n">MountTargetId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>MountTargetId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the mount target to delete (String).</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.delete_tags">
+<code class="descname">delete_tags</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Deletes the specified tags from a file system. If the <code class="docutils literal"><span class="pre">DeleteTags</span></code> request includes a tag key that does not exist, Amazon EFS ignores it and doesn&#8217;t cause an error. For more information about tags and related restrictions, see <a class="reference external" href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the <em>AWS Billing and Cost Management User Guide</em> .</p>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:DeleteTags</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">delete_tags</span><span class="p">(</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">TagKeys</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the file system whose tags you want to delete (String).</p>
+</li>
+<li><strong>TagKeys</strong> (<em>list</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>List of tag keys to delete.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.describe_file_systems">
+<code class="descname">describe_file_systems</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns the description of a specific Amazon EFS file system if either the file system <code class="docutils literal"><span class="pre">CreationToken</span></code> or the <code class="docutils literal"><span class="pre">FileSystemId</span></code> is provided. Otherwise, it returns descriptions of all file systems owned by the caller&#8217;s AWS account in the AWS Region of the endpoint that you&#8217;re calling.</p>
+<p>When retrieving all file system descriptions, you can optionally specify the <code class="docutils literal"><span class="pre">MaxItems</span></code> parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon EFS returns a <code class="docutils literal"><span class="pre">NextMarker</span></code> , an opaque token, in the response. In this case, you should send a subsequent request with the <code class="docutils literal"><span class="pre">Marker</span></code> request parameter set to the value of <code class="docutils literal"><span class="pre">NextMarker</span></code> .</p>
+<p>To retrieve a list of your file system descriptions, this operation is used in an iterative process, where <code class="docutils literal"><span class="pre">DescribeFileSystems</span></code> is called first without the <code class="docutils literal"><span class="pre">Marker</span></code> and then the operation continues to call it with the <code class="docutils literal"><span class="pre">Marker</span></code> parameter set to the value of the <code class="docutils literal"><span class="pre">NextMarker</span></code> from the previous response until the response has no <code class="docutils literal"><span class="pre">NextMarker</span></code> .</p>
+<p>The implementation may return fewer than <code class="docutils literal"><span class="pre">MaxItems</span></code> file system descriptions while still including a <code class="docutils literal"><span class="pre">NextMarker</span></code> value.</p>
+<p>The order of file systems returned in the response of one <code class="docutils literal"><span class="pre">DescribeFileSystems</span></code> call and the order of file systems returned across the responses of a multi-call iteration is unspecified.</p>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:DescribeFileSystems</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_file_systems</span><span class="p">(</span>
+    <span class="n">MaxItems</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">Marker</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">CreationToken</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MaxItems</strong> (<em>integer</em>) &#8211; (Optional) Specifies the maximum number of file systems to return in the response (integer). This parameter value must be greater than 0. The number of items that Amazon EFS returns is the minimum of the <code class="docutils literal"><span class="pre">MaxItems</span></code> parameter specified in the request and the service&#8217;s internal maximum number of items per page.</li>
+<li><strong>Marker</strong> (<em>string</em>) &#8211; (Optional) Opaque pagination token returned from a previous <code class="docutils literal"><span class="pre">DescribeFileSystems</span></code> operation (String). If present, specifies to continue the list from where the returning call had left off.</li>
+<li><strong>CreationToken</strong> (<em>string</em>) &#8211; (Optional) Restricts the list to the file system with this creation token (String). You specify a creation token when you create an Amazon EFS file system.</li>
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; (Optional) ID of the file system whose description you want to retrieve (String).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Marker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FileSystems&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;OwnerId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CreationToken&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;FileSystemId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CreationTime&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="s1">&#39;LifeCycleState&#39;</span><span class="p">:</span> <span class="s1">&#39;creating&#39;</span><span class="o">|</span><span class="s1">&#39;available&#39;</span><span class="o">|</span><span class="s1">&#39;deleting&#39;</span><span class="o">|</span><span class="s1">&#39;deleted&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;NumberOfMountTargets&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+            <span class="s1">&#39;SizeInBytes&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+                <span class="s1">&#39;Timestamp&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;PerformanceMode&#39;</span><span class="p">:</span> <span class="s1">&#39;generalPurpose&#39;</span><span class="o">|</span><span class="s1">&#39;maxIO&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextMarker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>Marker</strong> <em>(string) &#8211;</em></p>
+<p>Present if provided by caller in the request (String).</p>
+</li>
+<li><p class="first"><strong>FileSystems</strong> <em>(list) &#8211;</em></p>
+<p>Array of file system descriptions.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Description of the file system.</p>
+<ul>
+<li><p class="first"><strong>OwnerId</strong> <em>(string) &#8211;</em></p>
+<p>AWS account that created the file system. If the file system was created by an IAM user, the parent account to which the user belongs is the owner.</p>
+</li>
+<li><p class="first"><strong>CreationToken</strong> <em>(string) &#8211;</em></p>
+<p>Opaque string specified in the request.</p>
+</li>
+<li><p class="first"><strong>FileSystemId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the file system, assigned by Amazon EFS.</p>
+</li>
+<li><p class="first"><strong>CreationTime</strong> <em>(datetime) &#8211;</em></p>
+<p>Time that the file system was created, in seconds (since 1970-01-01T00:00:00Z).</p>
+</li>
+<li><p class="first"><strong>LifeCycleState</strong> <em>(string) &#8211;</em></p>
+<p>Lifecycle phase of the file system.</p>
+</li>
+<li><p class="first"><strong>Name</strong> <em>(string) &#8211;</em></p>
+<p>You can add tags to a file system, including a <code class="docutils literal"><span class="pre">Name</span></code> tag. For more information, see  CreateTags . If the file system has a <code class="docutils literal"><span class="pre">Name</span></code> tag, Amazon EFS returns the value in this field.</p>
+</li>
+<li><p class="first"><strong>NumberOfMountTargets</strong> <em>(integer) &#8211;</em></p>
+<p>Current number of mount targets that the file system has. For more information, see  CreateMountTarget .</p>
+</li>
+<li><p class="first"><strong>SizeInBytes</strong> <em>(dict) &#8211;</em></p>
+<p>Latest known metered size (in bytes) of data stored in the file system, in bytes, in its <code class="docutils literal"><span class="pre">Value</span></code> field, and the time at which that size was determined in its <code class="docutils literal"><span class="pre">Timestamp</span></code> field. The <code class="docutils literal"><span class="pre">Timestamp</span></code> value is the integer number of seconds since 1970-01-01T00:00:00Z. Note that the value does not represent the size of a consistent snapshot of the file system, but it is eventually consistent when there are no writes to the file system. That is, the value will represent actual size only if the file system is not modified for a period longer than a couple of hours. Otherwise, the value is not the exact size the file system was at any instant in time.</p>
+<ul>
+<li><p class="first"><strong>Value</strong> <em>(integer) &#8211;</em></p>
+<p>Latest known metered size (in bytes) of data stored in the file system.</p>
+</li>
+<li><p class="first"><strong>Timestamp</strong> <em>(datetime) &#8211;</em></p>
+<p>Time at which the size of data, returned in the <code class="docutils literal"><span class="pre">Value</span></code> field, was determined. The value is the integer number of seconds since 1970-01-01T00:00:00Z.</p>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>PerformanceMode</strong> <em>(string) &#8211;</em></p>
+<p>The <code class="docutils literal"><span class="pre">PerformanceMode</span></code> of the file system.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>NextMarker</strong> <em>(string) &#8211;</em></p>
+<p>Present if there are more file systems than returned in the response (String). You can use the <code class="docutils literal"><span class="pre">NextMarker</span></code> in the subsequent request to fetch the descriptions.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.describe_mount_target_security_groups">
+<code class="descname">describe_mount_target_security_groups</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns the security groups currently in effect for a mount target. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not <code class="docutils literal"><span class="pre">deleted</span></code> .</p>
+<p>This operation requires permissions for the following actions:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">elasticfilesystem:DescribeMountTargetSecurityGroups</span></code> action on the mount target&#8217;s file system.</li>
+<li><code class="docutils literal"><span class="pre">ec2:DescribeNetworkInterfaceAttribute</span></code> action on the mount target&#8217;s network interface.</li>
+</ul>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_mount_target_security_groups</span><span class="p">(</span>
+    <span class="n">MountTargetId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>MountTargetId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the mount target whose security groups you want to retrieve.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>Response Syntax</strong><div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;SecurityGroups&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><em>(dict) &#8211;</em><ul>
+<li><strong>SecurityGroups</strong> <em>(list) &#8211;</em><p>Array of security groups.</p>
+<ul class="simple">
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.describe_mount_targets">
+<code class="descname">describe_mount_targets</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When requesting all of the current mount targets, the order of mount targets returned in the response is unspecified.</p>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:DescribeMountTargets</span></code> action, on either the file system ID that you specify in <code class="docutils literal"><span class="pre">FileSystemId</span></code> , or on the file system of the mount target that you specify in <code class="docutils literal"><span class="pre">MountTargetId</span></code> .</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_mount_targets</span><span class="p">(</span>
+    <span class="n">MaxItems</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">Marker</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">MountTargetId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MaxItems</strong> (<em>integer</em>) &#8211; (Optional) Maximum number of mount targets to return in the response. It must be an integer with a value greater than zero.</li>
+<li><strong>Marker</strong> (<em>string</em>) &#8211; (Optional) Opaque pagination token returned from a previous <code class="docutils literal"><span class="pre">DescribeMountTargets</span></code> operation (String). If present, it specifies to continue the list from where the previous returning call left off.</li>
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; (Optional) ID of the file system whose mount targets you want to list (String). It must be included in your request if <code class="docutils literal"><span class="pre">MountTargetId</span></code> is not included.</li>
+<li><strong>MountTargetId</strong> (<em>string</em>) &#8211; (Optional) ID of the mount target that you want to have described (String). It must be included in your request if <code class="docutils literal"><span class="pre">FileSystemId</span></code> is not included.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Marker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;MountTargets&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;OwnerId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;MountTargetId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;FileSystemId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;SubnetId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;LifeCycleState&#39;</span><span class="p">:</span> <span class="s1">&#39;creating&#39;</span><span class="o">|</span><span class="s1">&#39;available&#39;</span><span class="o">|</span><span class="s1">&#39;deleting&#39;</span><span class="o">|</span><span class="s1">&#39;deleted&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;IpAddress&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;NetworkInterfaceId&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextMarker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>Marker</strong> <em>(string) &#8211;</em></p>
+<p>If the request included the <code class="docutils literal"><span class="pre">Marker</span></code> , the response returns that value in this field.</p>
+</li>
+<li><p class="first"><strong>MountTargets</strong> <em>(list) &#8211;</em></p>
+<p>Returns the file system&#8217;s mount targets as an array of <code class="docutils literal"><span class="pre">MountTargetDescription</span></code> objects.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>Provides a description of a mount target.</p>
+<ul>
+<li><p class="first"><strong>OwnerId</strong> <em>(string) &#8211;</em></p>
+<p>AWS account ID that owns the resource.</p>
+</li>
+<li><p class="first"><strong>MountTargetId</strong> <em>(string) &#8211;</em></p>
+<p>System-assigned mount target ID.</p>
+</li>
+<li><p class="first"><strong>FileSystemId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the file system for which the mount target is intended.</p>
+</li>
+<li><p class="first"><strong>SubnetId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the mount target&#8217;s subnet.</p>
+</li>
+<li><p class="first"><strong>LifeCycleState</strong> <em>(string) &#8211;</em></p>
+<p>Lifecycle state of the mount target.</p>
+</li>
+<li><p class="first"><strong>IpAddress</strong> <em>(string) &#8211;</em></p>
+<p>Address at which the file system may be mounted via the mount target.</p>
+</li>
+<li><p class="first"><strong>NetworkInterfaceId</strong> <em>(string) &#8211;</em></p>
+<p>ID of the network interface that Amazon EFS created when it created the mount target.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>NextMarker</strong> <em>(string) &#8211;</em></p>
+<p>If a value is present, there are more mount targets to return. In a subsequent request, you can provide <code class="docutils literal"><span class="pre">Marker</span></code> in your request with this value to retrieve the next set of mount targets.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.describe_tags">
+<code class="descname">describe_tags</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Returns the tags associated with a file system. The order of tags returned in the response of one <code class="docutils literal"><span class="pre">DescribeTags</span></code> call and the order of tags returned across the responses of a multi-call iteration (when using pagination) is unspecified.</p>
+<p>This operation requires permissions for the <code class="docutils literal"><span class="pre">elasticfilesystem:DescribeTags</span></code> action.</p>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_tags</span><span class="p">(</span>
+    <span class="n">MaxItems</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">Marker</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">FileSystemId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MaxItems</strong> (<em>integer</em>) &#8211; (Optional) Maximum number of file system tags to return in the response. It must be an integer with a value greater than zero.</li>
+<li><strong>Marker</strong> (<em>string</em>) &#8211; (Optional) Opaque pagination token returned from a previous <code class="docutils literal"><span class="pre">DescribeTags</span></code> operation (String). If present, it specifies to continue the list from where the previous call left off.</li>
+<li><strong>FileSystemId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the file system whose tag set you want to retrieve.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">dict</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><strong>Response Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;Marker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Tags&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;NextMarker&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Structure</strong></p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<ul>
+<li><p class="first"><strong>Marker</strong> <em>(string) &#8211;</em></p>
+<p>If the request included a <code class="docutils literal"><span class="pre">Marker</span></code> , the response returns that value in this field.</p>
+</li>
+<li><p class="first"><strong>Tags</strong> <em>(list) &#8211;</em></p>
+<p>Returns tags associated with the file system as an array of <code class="docutils literal"><span class="pre">Tag</span></code> objects.</p>
+<ul>
+<li><p class="first"><em>(dict) &#8211;</em></p>
+<p>A tag is a key-value pair. Allowed characters: letters, whitespace, and numbers, representable in UTF-8, and the following characters:<code class="docutils literal"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">=</span> <span class="pre">.</span> <span class="pre">_</span> <span class="pre">:</span> <span class="pre">/</span></code></p>
+<ul>
+<li><p class="first"><strong>Key</strong> <em>(string) &#8211;</em></p>
+<p>Tag key (String). The key can&#8217;t start with <code class="docutils literal"><span class="pre">aws:</span></code> .</p>
+</li>
+<li><p class="first"><strong>Value</strong> <em>(string) &#8211;</em></p>
+<p>Value of the tag key.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>NextMarker</strong> <em>(string) &#8211;</em></p>
+<p>If a value is present, there are more tags to return. In a subsequent request, you can provide the value of <code class="docutils literal"><span class="pre">NextMarker</span></code> as the value of the <code class="docutils literal"><span class="pre">Marker</span></code> parameter in your next request to retrieve the next set of tags.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.generate_presigned_url">
+<code class="descname">generate_presigned_url</code><span class="sig-paren">(</span><em>ClientMethod</em>, <em>Params=None</em>, <em>ExpiresIn=3600</em>, <em>HttpMethod=None</em><span class="sig-paren">)</span></dt>
+<dd><p>Generate a presigned url given a client, its method, and arguments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ClientMethod</strong> (<em>string</em>) &#8211; The client method to presign for</li>
+<li><strong>Params</strong> (<em>dict</em>) &#8211; The parameters normally passed to
+<code class="docutils literal"><span class="pre">ClientMethod</span></code>.</li>
+<li><strong>ExpiresIn</strong> (<em>int</em>) &#8211; The number of seconds the presigned url is valid
+for. By default it expires in an hour (3600 seconds)</li>
+<li><strong>HttpMethod</strong> (<em>string</em>) &#8211; The http method to use on the generated url. By
+default, the http method is whatever is used in the method&#8217;s model.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The presigned url</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.get_paginator">
+<code class="descname">get_paginator</code><span class="sig-paren">(</span><em>operation_name</em><span class="sig-paren">)</span></dt>
+<dd><p>Create a paginator for an operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation_name</strong> (<em>string</em>) &#8211; The operation name.  This is the same name
+as the method name on the client.  For example, if the
+method name is <code class="docutils literal"><span class="pre">create_foo</span></code>, and you&#8217;d normally invoke the
+operation as <code class="docutils literal"><span class="pre">client.create_foo(**kwargs)</span></code>, if the
+<code class="docutils literal"><span class="pre">create_foo</span></code> operation can be paginated, you can use the
+call <code class="docutils literal"><span class="pre">client.get_paginator(&quot;create_foo&quot;)</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><strong>OperationNotPageableError</strong> &#8211; Raised if the operation is not
+pageable.  You can use the <code class="docutils literal"><span class="pre">client.can_paginate</span></code> method to
+check if an operation is pageable.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">L{botocore.paginate.Paginator}</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A paginator object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.get_waiter">
+<code class="descname">get_waiter</code><span class="sig-paren">(</span><em>waiter_name</em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EFS.Client.modify_mount_target_security_groups">
+<code class="descname">modify_mount_target_security_groups</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span></dt>
+<dd><p>Modifies the set of security groups in effect for a mount target.</p>
+<p>When you create a mount target, Amazon EFS also creates a new network interface. For more information, see  CreateMountTarget . This operation replaces the security groups in effect for the network interface associated with a mount target, with the <code class="docutils literal"><span class="pre">SecurityGroups</span></code> provided in the request. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not <code class="docutils literal"><span class="pre">deleted</span></code> .</p>
+<p>The operation requires permissions for the following actions:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">elasticfilesystem:ModifyMountTargetSecurityGroups</span></code> action on the mount target&#8217;s file system.</li>
+<li><code class="docutils literal"><span class="pre">ec2:ModifyNetworkInterfaceAttribute</span></code> action on the mount target&#8217;s network interface.</li>
+</ul>
+<p><strong>Request Syntax</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">modify_mount_target_security_groups</span><span class="p">(</span>
+    <span class="n">MountTargetId</span><span class="o">=</span><span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="n">SecurityGroups</span><span class="o">=</span><span class="p">[</span>
+        <span class="s1">&#39;string&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>MountTargetId</strong> (<em>string</em>) &#8211; <p><strong>[REQUIRED]</strong></p>
+<p>ID of the mount target whose security groups you want to modify.</p>
+</li>
+<li><strong>SecurityGroups</strong> (<em>list</em>) &#8211; <p>Array of up to five VPC security group IDs.</p>
+<ul>
+<li><em>(string) &#8211;</em></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="elasticache.html" class="btn btn-neutral float-right" title="ElastiCache" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ecs.html" class="btn btn-neutral" title="ECS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 13, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
