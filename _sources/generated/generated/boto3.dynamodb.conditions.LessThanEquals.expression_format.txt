@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.LessThanEquals.expression_format
+==========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: LessThanEquals.expression_format

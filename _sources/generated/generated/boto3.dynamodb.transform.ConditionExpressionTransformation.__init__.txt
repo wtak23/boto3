@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.ConditionExpressionTransformation.__init__
+===================================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: ConditionExpressionTransformation.__init__

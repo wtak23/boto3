@@ -1,0 +1,6 @@
+:func:`boto3.utils.lazy_call`
+=============================
+
+.. currentmodule:: boto3.utils
+
+.. autofunction:: lazy_call

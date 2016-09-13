@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeType.expression_format
+=========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: AttributeType.expression_format

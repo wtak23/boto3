@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.NotEquals`
+============================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: NotEquals
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~NotEquals.__init__
+   ~NotEquals.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~NotEquals.expression_format
+   ~NotEquals.expression_operator
+   ~NotEquals.has_grouped_values
+

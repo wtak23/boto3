@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.quantize
+=====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.quantize

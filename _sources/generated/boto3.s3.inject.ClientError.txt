@@ -1,0 +1,6 @@
+boto3.s3.inject.ClientError
+===========================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autoexception:: ClientError

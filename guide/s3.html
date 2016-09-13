@@ -1,0 +1,1208 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>S3</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../index.html"/>
+        <link rel="up" title="User Guides" href="index.html"/>
+        <link rel="next" title="Core References" href="../core/index.html"/>
+        <link rel="prev" title="DynamoDB" href="dynamodb.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Boto3 API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../cloudfront.html">Generate a signed URL for Amazon CloudFront</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../s3.html">s3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#migration-guides">Migration Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new.html">What&#8217;s New</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="new.html#major-features">Major Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="migration.html">Migrating from Boto 2.x</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="migration.html#high-level-concepts">High Level Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="migration.html#installation-configuration">Installation &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="migration.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="upgrading.html">Upgrading Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="upgrading.html#id1">1.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#general-feature-guides">General Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resources.html">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#identifiers-attributes-intro">Identifiers &amp; Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#actions">Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#sub-resources">Sub-resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#waiters">Waiters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="resources.html#multithreading">Multithreading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="collections.html">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#chainability">Chainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#limiting-results">Limiting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#controlling-page-size">Controlling Page Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collections.html#batch-actions">Batch Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="clients.html">Low-level Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="clients.html#creating-clients">Creating Clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clients.html#service-operations">Service Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clients.html#handling-responses">Handling Responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="clients.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="paginators.html">Paginators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="paginators.html#creating-paginators">Creating Paginators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="paginators.html#filtering-results">Filtering results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="session.html#default-session">Default Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="session.html#custom-session">Custom Session</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuration.html#interactive-configuration">Interactive Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration.html#configuring-credentials">Configuring Credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuration.html#environment-variable-configuration">Environment Variable Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="events.html">Extensibility Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="events.html#an-introduction-to-the-event-system">An Introduction to the Event System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="events.html#a-hierarchical-structure">A Hierarchical Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="events.html#wildcard-matching">Wildcard Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="events.html#isolation-of-event-systems">Isolation of Event Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="events.html#boto3-specific-events">Boto3 Specific Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#service-feature-guides">Service Feature Guides</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#creating-a-new-table">Creating a New Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#using-an-existing-table">Using an Existing Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#creating-a-new-item">Creating a New Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#getting-an-item">Getting an Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#updating-item">Updating Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#deleting-item">Deleting Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#batch-writing">Batch Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#querying-and-scanning">Querying and Scanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamodb.html#deleting-a-table">Deleting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#changing-the-addressing-style">Changing the Addressing Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-transfer-manager">Using the Transfer Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generating-presigned-urls">Generating Presigned URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generating-presigned-posts">Generating Presigned POSTs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../core/boto3.html">Boto3 Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/collections.html">Collections Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/resources.html">Resources Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.model">Resource Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.params">Request Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.response">Response Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.action">Resource Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.base">Resource Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/resources.html#module-boto3.resources.factory">Resource Factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../core/session.html">Session Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../customizations/index.html">Customization References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../customizations/dynamodb.html">DynamoDB Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../customizations/dynamodb.html#valid-dynamodb-types">Valid DynamoDB Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../customizations/dynamodb.html#custom-boto3-types">Custom Boto3 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../customizations/dynamodb.html#dynamodb-conditions">DynamoDB Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../customizations/s3.html">S3 Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../customizations/s3.html#s3-transfers">S3 Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../services/index.html">Available Services</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autogenerated API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.client.html"><code class="docutils literal"><span class="pre">boto3.client()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resource.html"><code class="docutils literal"><span class="pre">boto3.resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.set_stream_logger.html"><code class="docutils literal"><span class="pre">boto3.set_stream_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.setup_default_session.html"><code class="docutils literal"><span class="pre">boto3.setup_default_session()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.NullHandler.html"><code class="docutils literal"><span class="pre">boto3.NullHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.Session.html"><code class="docutils literal"><span class="pre">boto3.Session</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.session.html"><code class="docutils literal"><span class="pre">boto3.session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.session.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.session.Config.html"><code class="docutils literal"><span class="pre">boto3.session.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.session.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.session.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.session.Session.html"><code class="docutils literal"><span class="pre">boto3.session.Session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.session.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.session.DataNotFoundError.html">boto3.session.DataNotFoundError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.session.ResourceNotExistsError.html">boto3.session.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.session.UnknownAPIVersionError.html">boto3.session.UnknownAPIVersionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.session.UnknownServiceError.html">boto3.session.UnknownServiceError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.exceptions.html"><code class="docutils literal"><span class="pre">boto3.exceptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.exceptions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.Boto3Error.html">boto3.exceptions.Boto3Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.DynamoDBNeedsConditionError.html">boto3.exceptions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.DynamoDBNeedsKeyConditionError.html">boto3.exceptions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.DynamoDBOperationNotSupportedError.html">boto3.exceptions.DynamoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.DynanmoDBOperationNotSupportedError.html">boto3.exceptions.DynanmoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.NoVersionFound.html">boto3.exceptions.NoVersionFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.ResourceLoadException.html">boto3.exceptions.ResourceLoadException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.ResourceNotExistsError.html">boto3.exceptions.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.RetriesExceededError.html">boto3.exceptions.RetriesExceededError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.S3TransferFailedError.html">boto3.exceptions.S3TransferFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.S3UploadFailedError.html">boto3.exceptions.S3UploadFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.exceptions.UnknownAPIVersionError.html">boto3.exceptions.UnknownAPIVersionError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.utils.html"><code class="docutils literal"><span class="pre">boto3.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.utils.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.import_module.html"><code class="docutils literal"><span class="pre">boto3.utils.import_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.utils.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.lazy_call.html"><code class="docutils literal"><span class="pre">boto3.utils.lazy_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.utils.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.utils.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.LazyLoadedWaiterModel.html"><code class="docutils literal"><span class="pre">boto3.utils.LazyLoadedWaiterModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.utils.ServiceContext.html"><code class="docutils literal"><span class="pre">boto3.utils.ServiceContext</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_ec2.html"><code class="docutils literal"><span class="pre">botos3.ecs2</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.ec2.createtags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.ec2.createtags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.ec2.createtags.create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.create_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.ec2.createtags.inject_create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.inject_create_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.ec2.deletetags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.ec2.deletetags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.ec2.deletetags.delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.delete_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.ec2.deletetags.inject_delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.inject_delete_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.ec2.deletetags.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.ec2.deletetags.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.CustomModeledAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_s3.html"><code class="docutils literal"><span class="pre">botos3.s3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.s3.inject.html"><code class="docutils literal"><span class="pre">boto3.s3.inject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.s3.inject.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.bucket_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.inject_bucket_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_bucket_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.inject_object_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.inject_object_summary_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_summary_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.inject_s3_transfer_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_s3_transfer_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_summary_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_summary_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.object_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_fileobj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.s3.inject.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.ProgressCallbackInvoker.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.ProgressCallbackInvoker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.S3Transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.S3Transfer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.TransferConfig.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.s3.inject.TransferManager.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.s3.inject.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.s3.inject.ClientError.html">boto3.s3.inject.ClientError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.s3.transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.transfer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.s3.transfer.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.s3.transfer.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.s3.transfer.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_resources.html"><code class="docutils literal"><span class="pre">resources</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.action.html"><code class="docutils literal"><span class="pre">boto3.resources.action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.action.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.action.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.resources.action.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.action.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.action.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.action.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.ActionDocstring.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ActionDocstring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.CustomModeledAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.action.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.WaiterAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.base.html"><code class="docutils literal"><span class="pre">boto3.resources.base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.base.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.base.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.base.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ServiceResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.collection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.collection.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.merge_dicts.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.merge_dicts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.collection.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.CollectionManager.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.ResourceCollection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.collection.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.factory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.factory.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.build_identifiers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.factory.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.WaiterAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.factory.partial.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.partial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.factory.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.resources.factory.ResourceLoadException.html">boto3.resources.factory.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.model.html"><code class="docutils literal"><span class="pre">boto3.resources.model</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.model.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.model.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.model.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Collection.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Collection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.DefinitionWithParams.html"><code class="docutils literal"><span class="pre">boto3.resources.model.DefinitionWithParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Identifier.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Parameter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Request.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.ResponseResource.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResponseResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.model.Waiter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Waiter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.params.html"><code class="docutils literal"><span class="pre">boto3.resources.params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.params.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.params.build_param_structure.html"><code class="docutils literal"><span class="pre">boto3.resources.params.build_param_structure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.params.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.params.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.params.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.params.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.params.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.params.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.params.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.resources.params.ResourceLoadException.html">boto3.resources.params.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.resources.response.html"><code class="docutils literal"><span class="pre">boto3.resources.response</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.response.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.all_not_none.html"><code class="docutils literal"><span class="pre">boto3.resources.response.all_not_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.build_empty_response.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_empty_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.response.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.response.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.resources.response.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.resources.response.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.And.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.And</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Attr.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Attr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.AttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.AttributeExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.AttributeNotExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeNotExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.AttributeType.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.BeginsWith.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BeginsWith</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Between.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Between</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.BuiltConditionExpression.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BuiltConditionExpression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.ComparisonCondition.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ComparisonCondition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.ConditionAttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionAttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Contains.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Contains</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Equals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Equals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.GreaterThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.GreaterThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.In.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.In</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Key.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.LessThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.LessThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Not.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.NotEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.NotEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Or.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.conditions.Size.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.DynamoDBNeedsConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError.html">boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.dynamodb.table.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.table.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.table.register_table_methods.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.register_table_methods()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.table.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.table.BatchWriter.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.BatchWriter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.table.TableResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.TableResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.dynamodb.transform.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.transform.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.copy_dynamodb_params.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.copy_dynamodb_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.register_high_level_interface.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.register_high_level_interface()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.transform.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.ConditionExpressionTransformation.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionTransformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.DocumentModifiedShape.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DocumentModifiedShape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.DynamoDBHighLevelResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DynamoDBHighLevelResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.MutableSequence.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.MutableSequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.ParameterTransformer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ParameterTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.TransformationInjector.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TransformationInjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.transform.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.types.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.Binary.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Binary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.Context.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.Decimal.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Decimal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.Set.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/generated/boto3.dynamodb.types.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../generated/boto3.dynamodb.types.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.types.Clamped.html">boto3.dynamodb.types.Clamped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.types.Inexact.html">boto3.dynamodb.types.Inexact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.types.Overflow.html">boto3.dynamodb.types.Overflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.types.Rounded.html">boto3.dynamodb.types.Rounded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../generated/boto3.dynamodb.types.Underflow.html">boto3.dynamodb.types.Underflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Boto3 API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">User Guides</a> &raquo;</li>
+      
+    <li>S3</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/guide/s3.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="s3">
+<span id="s3-guide"></span><h1>S3</h1>
+<p>By following this guide, you will learn how to use features of S3 client that
+are unique to the SDK, specifically the generation and use of pre-signed URLs,
+pre-signed POSTs, and the use of the transfer manager. You will also learn how
+to use a few common, but important, settings specific to S3.</p>
+<div class="section" id="changing-the-addressing-style">
+<h2>Changing the Addressing Style</h2>
+<p>S3 supports two different ways to address a bucket, Virtual Host Style and Path
+Style. This guide won&#8217;t cover all the details of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html">virtual host addressing</a>, but
+you can read up on that in S3&#8217;s docs. In general, the SDK will handle the
+decision of what style to use for you, but there are some cases where you may
+want to set it yourself. For instance, if you have a CORS configured bucket
+that is only a few hours old, you may need to use path style addressing for
+generating pre-signed POSTs and URLs until the necessary DNS changes have time
+to propagagte.</p>
+<p>Note: if you set the addressing style to path style, you HAVE to set the correct
+region.</p>
+<p>The preferred way to set the addressing style is to use the <code class="docutils literal"><span class="pre">addressing_style</span></code>
+config parameter when you create your client or resource.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">from</span> <span class="nn">botocore.client</span> <span class="kn">import</span> <span class="n">Config</span>
+
+<span class="c1"># Other valid options here are &#39;auto&#39; (default) and &#39;virtual&#39;</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="s1">&#39;us-west-2&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">Config</span><span class="p">(</span><span class="n">s3</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;addressing_style&#39;</span><span class="p">:</span> <span class="s1">&#39;path&#39;</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-transfer-manager">
+<h2>Using the Transfer Manager</h2>
+<p><code class="docutils literal"><span class="pre">boto3</span></code> provides interfaces for managing various types of transfers with
+S3. Functionality includes:</p>
+<ul class="simple">
+<li>Automatically managing multipart and non-multipart uploads</li>
+<li>Automatically managing multipart and non-multipart downloads</li>
+<li>Automatically managing multipart and non-multipart copies</li>
+<li>Uploading from:<ul>
+<li>a file name</li>
+<li>a readable file-like object</li>
+</ul>
+</li>
+<li>Downloading to:<ul>
+<li>a file name</li>
+<li>a writeable file-like object</li>
+</ul>
+</li>
+<li>Tracking progress of individual transfers</li>
+<li>Managing retries of transfers</li>
+<li>Configuring various transfer settings such as:<ul>
+<li>Max request concurrency</li>
+<li>Multipart transfer thresholds</li>
+<li>Multipart transfer part sizes</li>
+<li>Number of download retry attempts</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="uploads">
+<h3>Uploads</h3>
+<p>The managed upload methods are exposed in both the client and resource
+interfaces of <code class="docutils literal"><span class="pre">boto3</span></code>:</p>
+<ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Client</span></code> method to upload a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.upload_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Client</span></code> method to upload a readable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.upload_fileobj()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Bucket</span></code> method to upload a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Bucket.upload_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Bucket</span></code> method to upload a readable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Bucket.upload_fileobj()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Object</span></code> method to upload a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Object.upload_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Object</span></code> method to upload a readable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Object.upload_fileobj()</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though there is an <code class="docutils literal"><span class="pre">upload_file</span></code> and <code class="docutils literal"><span class="pre">upload_fileobj</span></code> method for
+a variety of classes, they all share the exact same functionality.
+Other than for convenience, there are no benefits from using one method from
+one class over using the same method for a different class.</p>
+</div>
+<p>To upload a file by name, use one of the <code class="docutils literal"><span class="pre">upload_file</span></code> methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Upload tmp.txt to bucket-name at key-name</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To upload a readable file-like object, use one of the <code class="docutils literal"><span class="pre">upload_fileobj</span></code>
+methods. Note that this file-like object <strong>must</strong> produce binary when read
+from, <strong>not</strong> text:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Upload a file-like object to bucket-name at key-name</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">s3</span><span class="o">.</span><span class="n">upload_fileobj</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To upload a file using any extra parameters such as user metadata, use the
+<code class="docutils literal"><span class="pre">ExtraArgs</span></code> parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Upload tmp.txt to bucket-name at key-name</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span>
+    <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span>
+    <span class="n">ExtraArgs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Metadata&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;mykey&quot;</span><span class="p">:</span> <span class="s2">&quot;myvalue&quot;</span><span class="p">}}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>All valid <code class="docutils literal"><span class="pre">ExtraArgs</span></code> are listed at <a class="reference internal" href="../generated/generated/boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS.html#boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS" title="boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS"><code class="xref py py-attr docutils literal"><span class="pre">boto3.s3.transfer.S3Transfer.ALLOWED_UPLOAD_ARGS</span></code></a></p>
+<p>To track the progess of a transfer, a progress callback can be provided such
+that the callback gets invoked each time progress is made on the transfer:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="k">class</span> <span class="nc">ProgressPercentage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bytes_amount</span><span class="p">):</span>
+        <span class="c1"># To simplify we&#39;ll assume this is hooked up</span>
+        <span class="c1"># to a single filename.</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">+=</span> <span class="n">bytes_amount</span>
+            <span class="n">percentage</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2">  </span><span class="si">%s</span><span class="s2"> / </span><span class="si">%s</span><span class="s2">  (</span><span class="si">%.2f%%</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span><span class="p">,</span>
+                    <span class="n">percentage</span><span class="p">))</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Upload tmp.txt to bucket-name at key-name</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span>
+    <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span>
+    <span class="n">Callback</span><span class="o">=</span><span class="n">ProgressPercentage</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="downloads">
+<h3>Downloads</h3>
+<p>The managed download methods are exposed in both the client and resource
+interfaces of <code class="docutils literal"><span class="pre">boto3</span></code>:</p>
+<ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Client</span></code> method to download an object to a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.download_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Client</span></code> method to download an object to a writeable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.download_fileobj()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Bucket</span></code> method to download an object to a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Bucket.download_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Bucket</span></code> method to download an object to a writeable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Bucket.download_fileobj()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Object</span></code> method to download an object to a file by name: <code class="xref py py-meth docutils literal"><span class="pre">S3.Object.download_file()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Object</span></code> method to download an object to a writeable file-like object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Object.download_fileobj()</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though there is a <code class="docutils literal"><span class="pre">download_file</span></code> and <code class="docutils literal"><span class="pre">download_fileobj</span></code> method for
+a variety of classes, they all share the exact same functionality.
+Other than for convenience, there are no benefits from using one method from
+one class over using the same method for a different class.</p>
+</div>
+<p>To download to a file by name, use one of the <code class="docutils literal"><span class="pre">download_file</span></code>
+methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to tmp.txt</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;tmp.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To download to a writeable file-like object, use one of the
+<code class="docutils literal"><span class="pre">download_fileobj</span></code> methods. Note that this file-like object <strong>must</strong>
+allow binary to be written to it, <strong>not</strong> just text:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to file-like object</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">s3</span><span class="o">.</span><span class="n">download_fileobj</span><span class="p">(</span><span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To download using any extra parameters such as version ids, use the
+<code class="docutils literal"><span class="pre">ExtraArgs</span></code> parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to tmp.txt</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span>
+    <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span>
+    <span class="n">ExtraArgs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;VersionId&quot;</span><span class="p">:</span> <span class="s2">&quot;my-version-id&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>All valid <code class="docutils literal"><span class="pre">ExtraArgs</span></code> are listed at <a class="reference internal" href="../generated/generated/boto3.s3.transfer.S3Transfer.ALLOWED_DOWNLOAD_ARGS.html#boto3.s3.transfer.S3Transfer.ALLOWED_DOWNLOAD_ARGS" title="boto3.s3.transfer.S3Transfer.ALLOWED_DOWNLOAD_ARGS"><code class="xref py py-attr docutils literal"><span class="pre">boto3.s3.transfer.S3Transfer.ALLOWED_DOWNLOAD_ARGS</span></code></a></p>
+<p>To track the progess of a transfer, a progress callback can be provided such
+that the callback gets invoked each time progress is made on the transfer:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="k">class</span> <span class="nc">ProgressPercentage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bytes_amount</span><span class="p">):</span>
+        <span class="c1"># To simplify we&#39;ll assume this is hooked up</span>
+        <span class="c1"># to a single filename.</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">+=</span> <span class="n">bytes_amount</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2"> --&gt; </span><span class="si">%s</span><span class="s2"> bytes transferred&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span><span class="p">))</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to tmp.txt</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span>
+    <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span>
+    <span class="n">Callback</span><span class="o">=</span><span class="n">ProgressPercentage</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copies">
+<h3>Copies</h3>
+<p>The managed copy methods are exposed in both the client and resource
+interfaces of <code class="docutils literal"><span class="pre">boto3</span></code>:</p>
+<ul class="simple">
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Client</span></code> method to copy an s3 object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.copy()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Bucket</span></code> method to copy an s3 object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.copy()</span></code></li>
+<li><code class="xref py py-class docutils literal"><span class="pre">S3.Object</span></code> method to copy an s3 object: <code class="xref py py-meth docutils literal"><span class="pre">S3.Object.copy()</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though there is a <code class="docutils literal"><span class="pre">copy</span></code> method for a variety of classes,
+they all share the exact same functionality.
+Other than for convenience, there are no benefits from using one method from
+one class over using the same method for a different class.</p>
+</div>
+<p>To do a managed copy, use one of the <code class="docutils literal"><span class="pre">copy</span></code> methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Copies object located in mybucket at mykey</span>
+<span class="c1"># to the location otherbucket at otherkey</span>
+<span class="n">copy_source</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;mybucket&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;mykey&#39;</span>
+<span class="p">}</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">copy_source</span><span class="p">,</span> <span class="s1">&#39;otherbucket&#39;</span><span class="p">,</span> <span class="s1">&#39;otherkey&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To do a managed copy where the region of the source bucket is different than
+the region of the final bucket, provide a <code class="docutils literal"><span class="pre">SourceClient</span></code> that shares the
+same region as the source bucket:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get a service client for us-west-2 region</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="s1">&#39;us-west-2&#39;</span><span class="p">)</span>
+<span class="c1"># Get a service client for the eu-central-1 region</span>
+<span class="n">source_client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="s1">&#39;eu-central-1&#39;</span><span class="p">)</span>
+
+<span class="c1"># Copies object located in mybucket at mykey in eu-central-1 region</span>
+<span class="c1"># to the location otherbucket at otherkey in the us-west-2 region</span>
+<span class="n">copy_source</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;mybucket&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;mykey&#39;</span>
+<span class="p">}</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">copy_source</span><span class="p">,</span> <span class="s1">&#39;otherbucket&#39;</span><span class="p">,</span> <span class="s1">&#39;otherkey&#39;</span><span class="p">,</span> <span class="n">SourceClient</span><span class="o">=</span><span class="n">source_client</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To copy using any extra parameters such as replacing user metadata on an
+existing object, use the <code class="docutils literal"><span class="pre">ExtraArgs</span></code> parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Copies object located in mybucket at mykey</span>
+<span class="c1"># to the location otherbucket at otherkey</span>
+<span class="n">copy_source</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;mybucket&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;mykey&#39;</span>
+<span class="p">}</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+    <span class="n">copy_source</span><span class="p">,</span> <span class="s1">&#39;bucket&#39;</span><span class="p">,</span> <span class="s1">&#39;mykey&#39;</span><span class="p">,</span>
+    <span class="n">ExtraArgs</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;my-new-key&quot;</span><span class="p">:</span> <span class="s2">&quot;my-new-value&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;MetadataDirective&quot;</span><span class="p">:</span> <span class="s2">&quot;REPLACE&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>To track the progess of a transfer, a progress callback can be provided such
+that the callback gets invoked each time progress is made on the transfer:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="k">class</span> <span class="nc">ProgressPercentage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bytes_amount</span><span class="p">):</span>
+        <span class="c1"># To simplify we&#39;ll assume this is hooked up</span>
+        <span class="c1"># to a single filename.</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span> <span class="o">+=</span> <span class="n">bytes_amount</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s2"> --&gt; </span><span class="si">%s</span><span class="s2"> bytes transferred&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seen_so_far</span><span class="p">))</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Copies object located in mybucket at mykey</span>
+<span class="c1"># to the location otherbucket at otherkey</span>
+<span class="n">copy_source</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;mybucket&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;mykey&#39;</span>
+<span class="p">}</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">copy_source</span><span class="p">,</span> <span class="s1">&#39;otherbucket&#39;</span><span class="p">,</span> <span class="s1">&#39;otherkey&#39;</span><span class="p">,</span>
+        <span class="n">Callback</span><span class="o">=</span><span class="n">ProgressPercentage</span><span class="p">(</span><span class="s2">&quot;otherbucket/otherkey&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Note that the grainularity of these callbacks will be much larger than the
+upload and download methods because copies are all done server side and so
+there is no local file to track the streaming of data.</p>
+</div>
+<div class="section" id="configuration-settings">
+<h3>Configuration Settings</h3>
+<p>To configure the various managed transfer methods, a
+<a class="reference internal" href="../generated/generated/boto3.s3.transfer.TransferConfig.html#boto3.s3.transfer.TransferConfig" title="boto3.s3.transfer.TransferConfig"><code class="xref py py-class docutils literal"><span class="pre">boto3.s3.transfer.TransferConfig</span></code></a> object can be provided to
+the <code class="docutils literal"><span class="pre">Config</span></code> parameter. Please note that the default configuration should
+be well-suited for most scenarios and a <code class="docutils literal"><span class="pre">Config</span></code> should only be provided
+for specific use cases. Here are some common use cases for configuring the
+managed s3 transfer methods:</p>
+<p>To ensure that multipart uploads only happen when absolutely necessary, you
+can use the <code class="docutils literal"><span class="pre">multipart_threshold</span></code> configuration parameter:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">from</span> <span class="nn">boto3.s3.transfer</span> <span class="kn">import</span> <span class="n">TransferConfig</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="n">GB</span> <span class="o">=</span> <span class="mi">1024</span> <span class="o">**</span> <span class="mi">3</span>
+<span class="c1"># Ensure that multipart uploads only happen if the size of a transfer</span>
+<span class="c1"># is larger than S3&#39;s size limit for nonmultipart uploads, which is 5 GB.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">multipart_threshold</span><span class="o">=</span><span class="mi">5</span> <span class="o">*</span> <span class="n">GB</span><span class="p">)</span>
+
+<span class="c1"># Upload tmp.txt to bucket-name at key-name</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="n">Config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sometimes depending on your connection speed, it is desired to limit or
+increase potential bandwidth usage. Setting the <code class="docutils literal"><span class="pre">max_concurrency</span></code> can help
+tune the potential bandwidth usage by decreasing or increasing the maximum
+amount of concurrent S3 transfer-related API requests:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">from</span> <span class="nn">boto3.s3.transfer</span> <span class="kn">import</span> <span class="n">TransferConfig</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Decrease the max concurrency from 10 to 5 to potentially consume</span>
+<span class="c1"># less downstream bandwidth.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">max_concurrency</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to tmp.txt with the</span>
+<span class="c1"># set configuration</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="n">Config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># Increase the max concurrency to 20 to potentially consume more</span>
+<span class="c1"># downstream bandwidth.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">TransferConfig</span><span class="p">(</span><span class="n">max_concurrency</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Download object at bucket-name with key-name to tmp.txt with the</span>
+<span class="c1"># set configuration</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="s2">&quot;bucket-name&quot;</span><span class="p">,</span> <span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span> <span class="n">Config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="generating-presigned-urls">
+<h2>Generating Presigned URLs</h2>
+<p>Pre-signed URLs allow you to give your users access to a specific object in your
+bucket without requiring them to have AWS security credentials or permissions.
+To generate a pre-signed URL, use the
+<code class="xref py py-meth docutils literal"><span class="pre">S3.Client.generate_presigned_url()</span></code> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Get the service client.</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Generate the URL to get &#39;key-name&#39; from &#39;bucket-name&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">generate_presigned_url</span><span class="p">(</span>
+    <span class="n">ClientMethod</span><span class="o">=</span><span class="s1">&#39;get_object&#39;</span><span class="p">,</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;bucket-name&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;key-name&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Use the URL to perform the GET operation. You can use any method you like</span>
+<span class="c1"># to send the GET, but we will use requests here to keep things simple.</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If your bucket requires the use of signature version 4, you can elect to use it
+to sign your URL. This does not fundamentally change how you use generator,
+you only need to make sure that the client used has signature version 4
+configured.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">from</span> <span class="nn">botocore.client</span> <span class="kn">import</span> <span class="n">Config</span>
+
+<span class="c1"># Get the service client with sigv4 configured</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">Config</span><span class="p">(</span><span class="n">signature_version</span><span class="o">=</span><span class="s1">&#39;s3v4&#39;</span><span class="p">))</span>
+
+<span class="c1"># Generate the URL to get &#39;key-name&#39; from &#39;bucket-name&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">generate_presigned_url</span><span class="p">(</span>
+    <span class="n">ClientMethod</span><span class="o">=</span><span class="s1">&#39;get_object&#39;</span><span class="p">,</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;Bucket&#39;</span><span class="p">:</span> <span class="s1">&#39;bucket-name&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Key&#39;</span><span class="p">:</span> <span class="s1">&#39;key-name&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note: if your bucket is new and you require CORS, it is advised that
+you use path style addressing (which is set by default in signature version 4).</p>
+</div>
+<div class="section" id="generating-presigned-posts">
+<h2>Generating Presigned POSTs</h2>
+<p>Much like pre-signed URLs, pre-signed POSTs allow you to give write access to a
+user without giving them AWS credentials. The information you need to make the
+POST is returned by the <code class="xref py py-meth docutils literal"><span class="pre">S3.Client.generate_presigned_post()</span></code> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Generate the POST attributes</span>
+<span class="n">post</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">generate_presigned_post</span><span class="p">(</span>
+    <span class="n">Bucket</span><span class="o">=</span><span class="s1">&#39;bucket-name&#39;</span><span class="p">,</span>
+    <span class="n">Key</span><span class="o">=</span><span class="s1">&#39;key-name&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Use the returned values to POST an object. Note that you need to use ALL</span>
+<span class="c1"># of the returned fields in your post. You can use any method you like to</span>
+<span class="c1"># send the POST, but we will use requests here to keep things simple.</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;file_content&quot;</span><span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">post</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="n">post</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">],</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When generating these POSTs, you may wish to auto fill certain fields or
+constrain what your users submit. You can do this by providing those fields and
+conditions when you generate the POST data.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="c1"># Get the service client</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Make sure everything posted is publicly readable</span>
+<span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;acl&quot;</span><span class="p">:</span> <span class="s2">&quot;public-read&quot;</span><span class="p">}</span>
+
+<span class="c1"># Ensure that the ACL isn&#39;t changed and restrict the user to a length</span>
+<span class="c1"># between 10 and 100.</span>
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;acl&quot;</span><span class="p">:</span> <span class="s2">&quot;public-read&quot;</span><span class="p">},</span>
+    <span class="p">[</span><span class="s2">&quot;content-length-range&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Generate the POST attributes</span>
+<span class="n">post</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">generate_presigned_post</span><span class="p">(</span>
+    <span class="n">Bucket</span><span class="o">=</span><span class="s1">&#39;bucket-name&#39;</span><span class="p">,</span>
+    <span class="n">Key</span><span class="o">=</span><span class="s1">&#39;key-name&#39;</span><span class="p">,</span>
+    <span class="n">Fields</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span>
+    <span class="n">Conditions</span><span class="o">=</span><span class="n">conditions</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note: if your bucket is new and you require CORS, it is advised that
+you use path style addressing (which is set by default in signature version 4).</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../core/index.html" class="btn btn-neutral float-right" title="Core References" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dynamodb.html" class="btn btn-neutral" title="DynamoDB" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 13, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.ne
+=================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.ne

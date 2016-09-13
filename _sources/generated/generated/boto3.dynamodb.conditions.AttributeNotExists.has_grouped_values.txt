@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeNotExists.has_grouped_values
+===============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: AttributeNotExists.has_grouped_values

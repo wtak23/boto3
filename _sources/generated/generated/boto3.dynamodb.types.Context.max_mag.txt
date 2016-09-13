@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.max_mag
+====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.max_mag

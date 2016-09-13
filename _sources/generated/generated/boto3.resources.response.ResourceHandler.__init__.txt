@@ -1,0 +1,6 @@
+boto3.resources.response.ResourceHandler.__init__
+=================================================
+
+.. currentmodule:: boto3.resources.response
+
+.. automethod:: ResourceHandler.__init__

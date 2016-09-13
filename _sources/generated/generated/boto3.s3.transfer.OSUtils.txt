@@ -1,0 +1,24 @@
+:class:`boto3.s3.transfer.OSUtils`
+==================================
+.. currentmodule:: boto3.s3.transfer
+.. autoclass:: OSUtils
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~OSUtils.get_file_size
+   ~OSUtils.open
+   ~OSUtils.open_file_chunk_reader
+   ~OSUtils.open_file_chunk_reader_from_fileobj
+   ~OSUtils.remove_file
+   ~OSUtils.rename_file
+
+
+
+
+

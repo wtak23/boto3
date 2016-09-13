@@ -1,0 +1,6 @@
+boto3.NullHandler.flush
+=======================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.flush

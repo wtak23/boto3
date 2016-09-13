@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.ConditionExpressionBuilder.build_expression
+====================================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: ConditionExpressionBuilder.build_expression

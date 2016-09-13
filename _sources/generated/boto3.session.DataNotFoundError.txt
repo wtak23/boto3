@@ -1,0 +1,6 @@
+boto3.session.DataNotFoundError
+===============================
+
+.. currentmodule:: boto3.session
+
+.. autoexception:: DataNotFoundError

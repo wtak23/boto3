@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.LessThan.has_grouped_values
+=====================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: LessThan.has_grouped_values

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Binary.__init__
+====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Binary.__init__

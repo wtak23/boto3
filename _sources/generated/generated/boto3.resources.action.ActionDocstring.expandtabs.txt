@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.expandtabs
+=================================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.expandtabs

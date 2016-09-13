@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.TypeDeserializer.deserialize
+=====================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: TypeDeserializer.deserialize

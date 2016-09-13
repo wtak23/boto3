@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.is_subnormal
+=========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.is_subnormal

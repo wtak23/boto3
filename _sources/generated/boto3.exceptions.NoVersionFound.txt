@@ -1,0 +1,6 @@
+boto3.exceptions.NoVersionFound
+===============================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: NoVersionFound

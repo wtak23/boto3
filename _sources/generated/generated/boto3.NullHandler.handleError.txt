@@ -1,0 +1,6 @@
+boto3.NullHandler.handleError
+=============================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.handleError

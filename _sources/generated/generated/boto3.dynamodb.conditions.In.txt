@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.In`
+=====================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: In
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~In.__init__
+   ~In.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~In.expression_format
+   ~In.expression_operator
+   ~In.has_grouped_values
+

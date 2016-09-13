@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.DocumentModifiedShape.replace_documentation_for_matching_shape
+=======================================================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: DocumentModifiedShape.replace_documentation_for_matching_shape

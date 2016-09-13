@@ -1,0 +1,21 @@
+:class:`boto3.resources.factory.partial`
+========================================
+.. currentmodule:: boto3.resources.factory
+.. autoclass:: partial
+   :undoc-members:
+
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~partial.args
+   ~partial.func
+   ~partial.keywords
+

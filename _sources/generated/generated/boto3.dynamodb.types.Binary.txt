@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.types.Binary`
+====================================
+.. currentmodule:: boto3.dynamodb.types
+.. autoclass:: Binary
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Binary.__init__
+
+
+
+
+

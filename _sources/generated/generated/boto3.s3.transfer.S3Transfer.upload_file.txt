@@ -1,0 +1,6 @@
+boto3.s3.transfer.S3Transfer.upload_file
+========================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: S3Transfer.upload_file

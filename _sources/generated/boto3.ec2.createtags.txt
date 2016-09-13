@@ -1,0 +1,35 @@
+:mod:`boto3.ec2.createtags`
+===========================
+
+.. automodule:: boto3.ec2.createtags
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      create_tags
+      inject_create_tags
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.ec2.createtags.create_tags
+       generated/boto3.ec2.createtags.inject_create_tags
+      
+   
+   
+
+   
+   
+   
+
+   
+   
+   

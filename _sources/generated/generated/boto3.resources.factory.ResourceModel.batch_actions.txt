@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceModel.batch_actions
+===================================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. autoattribute:: ResourceModel.batch_actions

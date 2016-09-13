@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Set.isdisjoint
+===================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Set.isdisjoint

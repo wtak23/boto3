@@ -1,0 +1,31 @@
+:class:`boto3.utils.ServiceContext`
+===================================
+.. currentmodule:: boto3.utils
+.. autoclass:: ServiceContext
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ServiceContext.count
+   ~ServiceContext.index
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ServiceContext.resource_json_definitions
+   ~ServiceContext.service_model
+   ~ServiceContext.service_name
+   ~ServiceContext.service_waiter_model
+

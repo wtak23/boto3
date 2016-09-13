@@ -1,0 +1,6 @@
+:func:`boto3.resources.factory.build_identifiers`
+=================================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. autofunction:: build_identifiers

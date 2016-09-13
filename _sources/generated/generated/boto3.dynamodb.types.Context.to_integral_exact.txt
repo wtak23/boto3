@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.to_integral_exact
+==============================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.to_integral_exact

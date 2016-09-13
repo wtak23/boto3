@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ComparisonCondition.expression_operator
+=================================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: ComparisonCondition.expression_operator

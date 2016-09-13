@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.same_quantum
+=========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.same_quantum

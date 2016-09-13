@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ConditionAttributeBase.eq
+===================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ConditionAttributeBase.eq

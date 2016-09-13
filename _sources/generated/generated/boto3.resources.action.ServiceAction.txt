@@ -1,0 +1,19 @@
+:class:`boto3.resources.action.ServiceAction`
+=============================================
+.. currentmodule:: boto3.resources.action
+.. autoclass:: ServiceAction
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ServiceAction.__init__
+
+
+
+
+

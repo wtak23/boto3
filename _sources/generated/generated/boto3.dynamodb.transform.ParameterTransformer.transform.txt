@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.ParameterTransformer.transform
+=======================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: ParameterTransformer.transform

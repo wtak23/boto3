@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.is_normal
+======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.is_normal

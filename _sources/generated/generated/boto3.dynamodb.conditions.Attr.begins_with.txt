@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.begins_with
+==========================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.begins_with

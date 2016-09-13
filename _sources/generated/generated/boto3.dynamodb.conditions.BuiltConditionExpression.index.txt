@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.BuiltConditionExpression.index
+========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: BuiltConditionExpression.index

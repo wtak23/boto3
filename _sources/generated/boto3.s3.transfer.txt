@@ -1,0 +1,56 @@
+:mod:`boto3.s3.transfer`
+========================
+
+.. automodule:: boto3.s3.transfer
+
+   
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BaseSubscriber
+      OSUtils
+      ProgressCallbackInvoker
+      S3Transfer
+      S3TransferConfig
+      TransferConfig
+      TransferManager
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.s3.transfer.BaseSubscriber
+       generated/boto3.s3.transfer.OSUtils
+       generated/boto3.s3.transfer.ProgressCallbackInvoker
+       generated/boto3.s3.transfer.S3Transfer
+       generated/boto3.s3.transfer.S3TransferConfig
+       generated/boto3.s3.transfer.TransferConfig
+       generated/boto3.s3.transfer.TransferManager
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      ClientError
+      RetriesExceededError
+      S3TransferRetriesExceededError
+      S3UploadFailedError
+   
+   

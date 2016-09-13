@@ -1,0 +1,28 @@
+:class:`boto3.resources.model.Waiter`
+=====================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Waiter
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Waiter.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Waiter.PREFIX
+   ~Waiter.params
+

@@ -1,0 +1,74 @@
+:mod:`boto3.resources.factory`
+==============================
+
+.. automodule:: boto3.resources.factory
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      build_identifiers
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.factory.build_identifiers
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      CollectionFactory
+      ResourceFactory
+      ResourceHandler
+      ResourceMeta
+      ResourceModel
+      ServiceAction
+      ServiceResource
+      WaiterAction
+      partial
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.factory.CollectionFactory
+       generated/boto3.resources.factory.ResourceFactory
+       generated/boto3.resources.factory.ResourceHandler
+       generated/boto3.resources.factory.ResourceMeta
+       generated/boto3.resources.factory.ResourceModel
+       generated/boto3.resources.factory.ServiceAction
+       generated/boto3.resources.factory.ServiceResource
+       generated/boto3.resources.factory.WaiterAction
+       generated/boto3.resources.factory.partial
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      ResourceLoadException
+   
+   

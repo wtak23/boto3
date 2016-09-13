@@ -1,0 +1,6 @@
+boto3.exceptions.ResourceNotExistsError
+=======================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: ResourceNotExistsError

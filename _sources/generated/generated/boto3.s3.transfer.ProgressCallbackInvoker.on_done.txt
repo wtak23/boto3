@@ -1,0 +1,6 @@
+boto3.s3.transfer.ProgressCallbackInvoker.on_done
+=================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: ProgressCallbackInvoker.on_done

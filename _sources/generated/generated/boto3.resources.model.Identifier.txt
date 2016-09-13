@@ -1,0 +1,19 @@
+:class:`boto3.resources.model.Identifier`
+=========================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Identifier
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Identifier.__init__
+
+
+
+
+

@@ -1,0 +1,6 @@
+boto3.resources.action.WaiterAction.__init__
+============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: WaiterAction.__init__

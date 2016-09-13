@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.decode
+=============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.decode

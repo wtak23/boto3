@@ -1,0 +1,6 @@
+boto3.dynamodb.table.BatchWriter.put_item
+=========================================
+
+.. currentmodule:: boto3.dynamodb.table
+
+.. automethod:: BatchWriter.put_item

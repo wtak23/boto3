@@ -1,0 +1,6 @@
+boto3.resources.factory.partial.func
+====================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. autoattribute:: partial.func

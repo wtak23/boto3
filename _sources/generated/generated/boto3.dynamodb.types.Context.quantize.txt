@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.quantize
+=====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.quantize

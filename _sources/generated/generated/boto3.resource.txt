@@ -1,0 +1,6 @@
+:func:`boto3.resource`
+======================
+
+.. currentmodule:: boto3
+
+.. autofunction:: resource

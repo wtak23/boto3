@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeType.has_grouped_values
+==========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: AttributeType.has_grouped_values

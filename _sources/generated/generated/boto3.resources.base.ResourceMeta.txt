@@ -1,0 +1,20 @@
+:class:`boto3.resources.base.ResourceMeta`
+==========================================
+.. currentmodule:: boto3.resources.base
+.. autoclass:: ResourceMeta
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResourceMeta.__init__
+   ~ResourceMeta.copy
+
+
+
+
+

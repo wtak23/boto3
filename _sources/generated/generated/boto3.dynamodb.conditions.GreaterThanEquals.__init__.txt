@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.GreaterThanEquals.__init__
+====================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: GreaterThanEquals.__init__

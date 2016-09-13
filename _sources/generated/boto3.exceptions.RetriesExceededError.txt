@@ -1,0 +1,6 @@
+boto3.exceptions.RetriesExceededError
+=====================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: RetriesExceededError

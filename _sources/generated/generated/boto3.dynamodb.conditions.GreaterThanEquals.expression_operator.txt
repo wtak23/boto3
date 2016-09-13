@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.GreaterThanEquals.expression_operator
+===============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: GreaterThanEquals.expression_operator

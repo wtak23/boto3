@@ -1,0 +1,6 @@
+boto3.NullHandler.removeFilter
+==============================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.removeFilter

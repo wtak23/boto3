@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.LessThan.__init__
+===========================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: LessThan.__init__

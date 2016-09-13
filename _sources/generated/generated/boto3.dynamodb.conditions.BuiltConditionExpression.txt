@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.BuiltConditionExpression`
+===========================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: BuiltConditionExpression
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BuiltConditionExpression.count
+   ~BuiltConditionExpression.index
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BuiltConditionExpression.attribute_name_placeholders
+   ~BuiltConditionExpression.attribute_value_placeholders
+   ~BuiltConditionExpression.condition_expression
+

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.log10
+==================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.log10

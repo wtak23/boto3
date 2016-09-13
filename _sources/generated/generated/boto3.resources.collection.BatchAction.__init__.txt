@@ -1,0 +1,6 @@
+boto3.resources.collection.BatchAction.__init__
+===============================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. automethod:: BatchAction.__init__

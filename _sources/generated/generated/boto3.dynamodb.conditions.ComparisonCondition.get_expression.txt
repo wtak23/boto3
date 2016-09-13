@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ComparisonCondition.get_expression
+============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ComparisonCondition.get_expression

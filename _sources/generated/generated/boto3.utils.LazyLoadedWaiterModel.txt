@@ -1,0 +1,20 @@
+:class:`boto3.utils.LazyLoadedWaiterModel`
+==========================================
+.. currentmodule:: boto3.utils
+.. autoclass:: LazyLoadedWaiterModel
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LazyLoadedWaiterModel.__init__
+   ~LazyLoadedWaiterModel.get_waiter
+
+
+
+
+

@@ -1,0 +1,58 @@
+:mod:`boto3`
+============
+
+.. automodule:: boto3
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      client
+      resource
+      set_stream_logger
+      setup_default_session
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.client
+       generated/boto3.resource
+       generated/boto3.set_stream_logger
+       generated/boto3.setup_default_session
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      NullHandler
+      Session
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.NullHandler
+       generated/boto3.Session
+
+   
+   
+
+   
+   
+   

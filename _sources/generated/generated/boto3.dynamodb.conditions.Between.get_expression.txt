@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Between.get_expression
+================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Between.get_expression

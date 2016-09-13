@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.TransformationInjector.inject_condition_expressions
+============================================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: TransformationInjector.inject_condition_expressions

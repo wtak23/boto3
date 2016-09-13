@@ -1,0 +1,6 @@
+boto3.s3.inject.ProgressCallbackInvoker.on_queued
+=================================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. automethod:: ProgressCallbackInvoker.on_queued

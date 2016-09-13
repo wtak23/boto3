@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.min_mag
+====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.min_mag

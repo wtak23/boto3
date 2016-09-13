@@ -1,0 +1,6 @@
+boto3.exceptions.S3UploadFailedError
+====================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: S3UploadFailedError

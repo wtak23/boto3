@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.TransformationInjector.__init__
+========================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: TransformationInjector.__init__

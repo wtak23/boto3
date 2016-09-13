@@ -1,0 +1,36 @@
+:class:`boto3.resources.model.ResourceModel`
+============================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: ResourceModel
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResourceModel.__init__
+   ~ResourceModel.get_attributes
+   ~ResourceModel.load_rename_map
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ResourceModel.actions
+   ~ResourceModel.batch_actions
+   ~ResourceModel.collections
+   ~ResourceModel.identifiers
+   ~ResourceModel.load
+   ~ResourceModel.references
+   ~ResourceModel.subresources
+   ~ResourceModel.waiters
+

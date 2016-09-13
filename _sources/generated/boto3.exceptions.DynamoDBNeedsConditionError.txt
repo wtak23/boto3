@@ -1,0 +1,6 @@
+boto3.exceptions.DynamoDBNeedsConditionError
+============================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: DynamoDBNeedsConditionError

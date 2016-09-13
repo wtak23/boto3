@@ -1,0 +1,6 @@
+boto3.resources.collection.ResourceCollection.limit
+===================================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. automethod:: ResourceCollection.limit

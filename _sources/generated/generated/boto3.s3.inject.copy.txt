@@ -1,0 +1,6 @@
+:func:`boto3.s3.inject.copy`
+============================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autofunction:: copy

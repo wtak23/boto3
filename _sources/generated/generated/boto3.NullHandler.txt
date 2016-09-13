@@ -1,0 +1,43 @@
+:class:`boto3.NullHandler`
+==========================
+.. currentmodule:: boto3
+.. autoclass:: NullHandler
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~NullHandler.__init__
+   ~NullHandler.acquire
+   ~NullHandler.addFilter
+   ~NullHandler.close
+   ~NullHandler.createLock
+   ~NullHandler.emit
+   ~NullHandler.filter
+   ~NullHandler.flush
+   ~NullHandler.format
+   ~NullHandler.get_name
+   ~NullHandler.handle
+   ~NullHandler.handleError
+   ~NullHandler.release
+   ~NullHandler.removeFilter
+   ~NullHandler.setFormatter
+   ~NullHandler.setLevel
+   ~NullHandler.set_name
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~NullHandler.name
+

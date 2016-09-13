@@ -1,0 +1,20 @@
+:class:`boto3.resources.action.ResourceHandler`
+===============================================
+.. currentmodule:: boto3.resources.action
+.. autoclass:: ResourceHandler
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResourceHandler.__init__
+   ~ResourceHandler.handle_response_item
+
+
+
+
+

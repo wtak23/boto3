@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Mapping.get
+================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Mapping.get

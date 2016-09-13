@@ -1,0 +1,6 @@
+boto3.Session.resource
+======================
+
+.. currentmodule:: boto3
+
+.. automethod:: Session.resource

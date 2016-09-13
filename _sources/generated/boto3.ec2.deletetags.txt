@@ -1,0 +1,52 @@
+:mod:`boto3.ec2.deletetags`
+===========================
+
+.. automodule:: boto3.ec2.deletetags
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      delete_tags
+      inject_delete_tags
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.ec2.deletetags.delete_tags
+       generated/boto3.ec2.deletetags.inject_delete_tags
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      CustomModeledAction
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.ec2.deletetags.CustomModeledAction
+
+   
+   
+
+   
+   
+   

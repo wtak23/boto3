@@ -1,0 +1,19 @@
+:class:`boto3.resources.collection.BatchAction`
+===============================================
+.. currentmodule:: boto3.resources.collection
+.. autoclass:: BatchAction
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BatchAction.__init__
+
+
+
+
+

@@ -1,0 +1,6 @@
+boto3.s3.inject.TransferManager.delete
+======================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. automethod:: TransferManager.delete

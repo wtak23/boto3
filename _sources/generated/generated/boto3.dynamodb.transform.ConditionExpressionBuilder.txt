@@ -1,0 +1,21 @@
+:class:`boto3.dynamodb.transform.ConditionExpressionBuilder`
+============================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: ConditionExpressionBuilder
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ConditionExpressionBuilder.__init__
+   ~ConditionExpressionBuilder.build_expression
+   ~ConditionExpressionBuilder.reset
+
+
+
+
+

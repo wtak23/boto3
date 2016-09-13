@@ -1,0 +1,6 @@
+boto3.s3.inject.TransferManager.ALLOWED_UPLOAD_ARGS
+===================================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autoattribute:: TransferManager.ALLOWED_UPLOAD_ARGS

@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.is_in
+====================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.is_in

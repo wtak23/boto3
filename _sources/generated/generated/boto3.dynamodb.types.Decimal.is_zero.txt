@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.is_zero
+====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.is_zero

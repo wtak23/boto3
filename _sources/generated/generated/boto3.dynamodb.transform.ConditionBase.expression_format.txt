@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.ConditionBase.expression_format
+========================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. autoattribute:: ConditionBase.expression_format

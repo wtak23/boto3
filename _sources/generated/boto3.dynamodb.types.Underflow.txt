@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Underflow
+==============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoexception:: Underflow

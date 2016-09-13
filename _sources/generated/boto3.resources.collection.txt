@@ -1,0 +1,62 @@
+:mod:`boto3.resources.collection`
+=================================
+
+.. automodule:: boto3.resources.collection
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      create_request_parameters
+      merge_dicts
+      xform_name
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.collection.create_request_parameters
+       generated/boto3.resources.collection.merge_dicts
+       generated/boto3.resources.collection.xform_name
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BatchAction
+      CollectionFactory
+      CollectionManager
+      ResourceCollection
+      ResourceHandler
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.collection.BatchAction
+       generated/boto3.resources.collection.CollectionFactory
+       generated/boto3.resources.collection.CollectionManager
+       generated/boto3.resources.collection.ResourceCollection
+       generated/boto3.resources.collection.ResourceHandler
+
+   
+   
+
+   
+   
+   

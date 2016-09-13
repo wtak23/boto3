@@ -1,0 +1,48 @@
+:mod:`boto3.session`
+====================
+
+.. automodule:: boto3.session
+
+   
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Config
+      ResourceFactory
+      Session
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.session.Config
+       generated/boto3.session.ResourceFactory
+       generated/boto3.session.Session
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      DataNotFoundError
+      ResourceNotExistsError
+      UnknownAPIVersionError
+      UnknownServiceError
+   
+   

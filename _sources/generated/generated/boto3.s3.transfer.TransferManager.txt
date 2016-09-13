@@ -1,0 +1,35 @@
+:class:`boto3.s3.transfer.TransferManager`
+==========================================
+.. currentmodule:: boto3.s3.transfer
+.. autoclass:: TransferManager
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TransferManager.__init__
+   ~TransferManager.copy
+   ~TransferManager.delete
+   ~TransferManager.download
+   ~TransferManager.shutdown
+   ~TransferManager.upload
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~TransferManager.ALLOWED_COPY_ARGS
+   ~TransferManager.ALLOWED_DELETE_ARGS
+   ~TransferManager.ALLOWED_DOWNLOAD_ARGS
+   ~TransferManager.ALLOWED_UPLOAD_ARGS
+

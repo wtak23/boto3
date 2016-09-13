@@ -1,0 +1,19 @@
+:class:`boto3.resources.collection.CollectionFactory`
+=====================================================
+.. currentmodule:: boto3.resources.collection
+.. autoclass:: CollectionFactory
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CollectionFactory.load_from_definition
+
+
+
+
+

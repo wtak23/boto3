@@ -1,0 +1,72 @@
+:mod:`boto3.dynamodb.transform`
+===============================
+
+.. automodule:: boto3.dynamodb.transform
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      copy_dynamodb_params
+      register_high_level_interface
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.dynamodb.transform.copy_dynamodb_params
+       generated/boto3.dynamodb.transform.register_high_level_interface
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      ConditionBase
+      ConditionExpressionBuilder
+      ConditionExpressionTransformation
+      DocumentModifiedShape
+      DynamoDBHighLevelResource
+      Mapping
+      MutableSequence
+      ParameterTransformer
+      TransformationInjector
+      TypeDeserializer
+      TypeSerializer
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.dynamodb.transform.ConditionBase
+       generated/boto3.dynamodb.transform.ConditionExpressionBuilder
+       generated/boto3.dynamodb.transform.ConditionExpressionTransformation
+       generated/boto3.dynamodb.transform.DocumentModifiedShape
+       generated/boto3.dynamodb.transform.DynamoDBHighLevelResource
+       generated/boto3.dynamodb.transform.Mapping
+       generated/boto3.dynamodb.transform.MutableSequence
+       generated/boto3.dynamodb.transform.ParameterTransformer
+       generated/boto3.dynamodb.transform.TransformationInjector
+       generated/boto3.dynamodb.transform.TypeDeserializer
+       generated/boto3.dynamodb.transform.TypeSerializer
+
+   
+   
+
+   
+   
+   

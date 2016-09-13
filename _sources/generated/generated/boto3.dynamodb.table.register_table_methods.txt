@@ -1,0 +1,6 @@
+:func:`boto3.dynamodb.table.register_table_methods`
+===================================================
+
+.. currentmodule:: boto3.dynamodb.table
+
+.. autofunction:: register_table_methods

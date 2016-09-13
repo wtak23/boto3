@@ -1,0 +1,26 @@
+:class:`boto3.dynamodb.transform.MutableSequence`
+=================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: MutableSequence
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~MutableSequence.append
+   ~MutableSequence.count
+   ~MutableSequence.extend
+   ~MutableSequence.index
+   ~MutableSequence.insert
+   ~MutableSequence.pop
+   ~MutableSequence.remove
+   ~MutableSequence.reverse
+
+
+
+
+

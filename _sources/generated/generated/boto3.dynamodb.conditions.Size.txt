@@ -1,0 +1,37 @@
+:class:`boto3.dynamodb.conditions.Size`
+=======================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: Size
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Size.__init__
+   ~Size.begins_with
+   ~Size.between
+   ~Size.eq
+   ~Size.get_expression
+   ~Size.gt
+   ~Size.gte
+   ~Size.lt
+   ~Size.lte
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Size.expression_format
+   ~Size.expression_operator
+   ~Size.has_grouped_values
+

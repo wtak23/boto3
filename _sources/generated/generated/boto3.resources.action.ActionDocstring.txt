@@ -1,0 +1,57 @@
+:class:`boto3.resources.action.ActionDocstring`
+===============================================
+.. currentmodule:: boto3.resources.action
+.. autoclass:: ActionDocstring
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ActionDocstring.__init__
+   ~ActionDocstring.capitalize
+   ~ActionDocstring.center
+   ~ActionDocstring.count
+   ~ActionDocstring.decode
+   ~ActionDocstring.encode
+   ~ActionDocstring.endswith
+   ~ActionDocstring.expandtabs
+   ~ActionDocstring.find
+   ~ActionDocstring.format
+   ~ActionDocstring.index
+   ~ActionDocstring.isalnum
+   ~ActionDocstring.isalpha
+   ~ActionDocstring.isdigit
+   ~ActionDocstring.islower
+   ~ActionDocstring.isspace
+   ~ActionDocstring.istitle
+   ~ActionDocstring.isupper
+   ~ActionDocstring.join
+   ~ActionDocstring.ljust
+   ~ActionDocstring.lower
+   ~ActionDocstring.lstrip
+   ~ActionDocstring.partition
+   ~ActionDocstring.replace
+   ~ActionDocstring.rfind
+   ~ActionDocstring.rindex
+   ~ActionDocstring.rjust
+   ~ActionDocstring.rpartition
+   ~ActionDocstring.rsplit
+   ~ActionDocstring.rstrip
+   ~ActionDocstring.split
+   ~ActionDocstring.splitlines
+   ~ActionDocstring.startswith
+   ~ActionDocstring.strip
+   ~ActionDocstring.swapcase
+   ~ActionDocstring.title
+   ~ActionDocstring.translate
+   ~ActionDocstring.upper
+   ~ActionDocstring.zfill
+
+
+
+
+

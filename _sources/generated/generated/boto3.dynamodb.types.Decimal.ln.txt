@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.ln
+===============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.ln

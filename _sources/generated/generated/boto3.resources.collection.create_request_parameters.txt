@@ -1,0 +1,6 @@
+:func:`boto3.resources.collection.create_request_parameters`
+============================================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. autofunction:: create_request_parameters

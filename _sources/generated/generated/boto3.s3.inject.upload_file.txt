@@ -1,0 +1,6 @@
+:func:`boto3.s3.inject.upload_file`
+===================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autofunction:: upload_file

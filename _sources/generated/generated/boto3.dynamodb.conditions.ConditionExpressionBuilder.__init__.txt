@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ConditionExpressionBuilder.__init__
+=============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ConditionExpressionBuilder.__init__

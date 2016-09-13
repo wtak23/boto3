@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.copy_sign
+======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.copy_sign

@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.BuiltConditionExpression.attribute_value_placeholders
+===============================================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: BuiltConditionExpression.attribute_value_placeholders

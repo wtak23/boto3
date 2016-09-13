@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Size.eq
+=================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Size.eq

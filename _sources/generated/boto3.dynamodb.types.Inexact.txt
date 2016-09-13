@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Inexact
+============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoexception:: Inexact

@@ -1,0 +1,52 @@
+:mod:`boto3.dynamodb.table`
+===========================
+
+.. automodule:: boto3.dynamodb.table
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      register_table_methods
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.dynamodb.table.register_table_methods
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BatchWriter
+      TableResource
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.dynamodb.table.BatchWriter
+       generated/boto3.dynamodb.table.TableResource
+
+   
+   
+
+   
+   
+   

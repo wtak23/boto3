@@ -1,0 +1,21 @@
+:class:`boto3.dynamodb.table.BatchWriter`
+=========================================
+.. currentmodule:: boto3.dynamodb.table
+.. autoclass:: BatchWriter
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BatchWriter.__init__
+   ~BatchWriter.delete_item
+   ~BatchWriter.put_item
+
+
+
+
+

@@ -1,0 +1,6 @@
+:func:`boto3.ec2.createtags.inject_create_tags`
+===============================================
+
+.. currentmodule:: boto3.ec2.createtags
+
+.. autofunction:: inject_create_tags

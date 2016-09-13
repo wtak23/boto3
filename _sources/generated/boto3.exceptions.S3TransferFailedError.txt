@@ -1,0 +1,6 @@
+boto3.exceptions.S3TransferFailedError
+======================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: S3TransferFailedError

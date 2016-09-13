@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.AttributeExists`
+==================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: AttributeExists
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~AttributeExists.__init__
+   ~AttributeExists.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~AttributeExists.expression_format
+   ~AttributeExists.expression_operator
+   ~AttributeExists.has_grouped_values
+

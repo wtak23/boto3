@@ -1,0 +1,6 @@
+boto3.exceptions.Boto3Error
+===========================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: Boto3Error

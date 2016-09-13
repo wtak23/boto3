@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceModel.actions
+=============================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. autoattribute:: ResourceModel.actions

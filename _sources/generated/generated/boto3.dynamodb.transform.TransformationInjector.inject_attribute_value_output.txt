@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.TransformationInjector.inject_attribute_value_output
+=============================================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: TransformationInjector.inject_attribute_value_output

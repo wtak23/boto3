@@ -1,0 +1,36 @@
+:class:`boto3.session.Session`
+==============================
+.. currentmodule:: boto3.session
+.. autoclass:: Session
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Session.__init__
+   ~Session.client
+   ~Session.get_available_partitions
+   ~Session.get_available_regions
+   ~Session.get_available_resources
+   ~Session.get_available_services
+   ~Session.get_credentials
+   ~Session.resource
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Session.events
+   ~Session.profile_name
+   ~Session.region_name
+

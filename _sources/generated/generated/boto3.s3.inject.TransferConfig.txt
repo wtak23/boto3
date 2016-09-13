@@ -1,0 +1,19 @@
+:class:`boto3.s3.inject.TransferConfig`
+=======================================
+.. currentmodule:: boto3.s3.inject
+.. autoclass:: TransferConfig
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TransferConfig.__init__
+
+
+
+
+

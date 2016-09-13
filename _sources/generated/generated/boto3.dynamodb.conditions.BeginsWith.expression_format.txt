@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.BeginsWith.expression_format
+======================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: BeginsWith.expression_format

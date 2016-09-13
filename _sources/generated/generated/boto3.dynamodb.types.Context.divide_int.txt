@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.divide_int
+=======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.divide_int

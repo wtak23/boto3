@@ -1,0 +1,37 @@
+:class:`boto3.dynamodb.conditions.ConditionAttributeBase`
+=========================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: ConditionAttributeBase
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ConditionAttributeBase.__init__
+   ~ConditionAttributeBase.begins_with
+   ~ConditionAttributeBase.between
+   ~ConditionAttributeBase.eq
+   ~ConditionAttributeBase.get_expression
+   ~ConditionAttributeBase.gt
+   ~ConditionAttributeBase.gte
+   ~ConditionAttributeBase.lt
+   ~ConditionAttributeBase.lte
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ConditionAttributeBase.expression_format
+   ~ConditionAttributeBase.expression_operator
+   ~ConditionAttributeBase.has_grouped_values
+

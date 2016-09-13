@@ -1,0 +1,6 @@
+boto3.resources.model.ResourceModel.__init__
+============================================
+
+.. currentmodule:: boto3.resources.model
+
+.. automethod:: ResourceModel.__init__

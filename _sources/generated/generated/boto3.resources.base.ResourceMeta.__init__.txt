@@ -1,0 +1,6 @@
+boto3.resources.base.ResourceMeta.__init__
+==========================================
+
+.. currentmodule:: boto3.resources.base
+
+.. automethod:: ResourceMeta.__init__

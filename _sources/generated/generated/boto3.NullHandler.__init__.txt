@@ -1,0 +1,6 @@
+boto3.NullHandler.__init__
+==========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.__init__

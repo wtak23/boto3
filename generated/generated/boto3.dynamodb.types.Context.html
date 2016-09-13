@@ -1,0 +1,941 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>boto3.dynamodb.types.Context</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="" href="../../index.html"/>
+        <link rel="up" title="boto3.dynamodb.types" href="../boto3.dynamodb.types.html"/>
+        <link rel="next" title="boto3.dynamodb.types.Context.Etiny" href="boto3.dynamodb.types.Context.Etiny.html"/>
+        <link rel="prev" title="boto3.dynamodb.types.Binary.__init__" href="boto3.dynamodb.types.Binary.__init__.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Boto3 API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../cloudfront.html">Generate a signed URL for Amazon CloudFront</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../s3.html">s3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-objects-in-an-amazon-s3-bucket">List objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#list-top-level-common-prefixes-in-amazon-s3-bucket">List top-level common prefixes in Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#restore-glacier-objects-in-an-amazon-s3-bucket">Restore Glacier objects in an Amazon S3 bucket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../s3.html#uploading-downloading-files-using-sse-customer-keys">Uploading/downloading files using SSE Customer Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">User Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#migration-guides">Migration Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/new.html">What&#8217;s New</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/new.html#major-features">Major Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/migration.html">Migrating from Boto 2.x</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#high-level-concepts">High Level Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#installation-configuration">Installation &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/migration.html#services">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/upgrading.html">Upgrading Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/upgrading.html#id1">1.4.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#general-feature-guides">General Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/resources.html">Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#identifiers-attributes-intro">Identifiers &amp; Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#actions">Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#references">References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#sub-resources">Sub-resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#waiters">Waiters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/resources.html#multithreading">Multithreading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/collections.html">Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#filtering">Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#chainability">Chainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#limiting-results">Limiting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#controlling-page-size">Controlling Page Size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/collections.html#batch-actions">Batch Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/clients.html">Low-level Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#creating-clients">Creating Clients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#service-operations">Service Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#handling-responses">Handling Responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/clients.html#waiters">Waiters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/paginators.html">Paginators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#creating-paginators">Creating Paginators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/paginators.html#filtering-results">Filtering results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/session.html">Session</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#default-session">Default Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/session.html#custom-session">Custom Session</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html">Credentials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#interactive-configuration">Interactive Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#configuring-credentials">Configuring Credentials</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/configuration.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/configuration.html#environment-variable-configuration">Environment Variable Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/events.html">Extensibility Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#an-introduction-to-the-event-system">An Introduction to the Event System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#a-hierarchical-structure">A Hierarchical Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#wildcard-matching">Wildcard Matching</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#isolation-of-event-systems">Isolation of Event Systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/events.html#boto3-specific-events">Boto3 Specific Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guide/index.html#service-feature-guides">Service Feature Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/dynamodb.html">DynamoDB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-table">Creating a New Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#using-an-existing-table">Using an Existing Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#creating-a-new-item">Creating a New Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#getting-an-item">Getting an Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#updating-item">Updating Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-item">Deleting Item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#batch-writing">Batch Writing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#querying-and-scanning">Querying and Scanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/dynamodb.html#deleting-a-table">Deleting a Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../guide/s3.html">S3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#changing-the-addressing-style">Changing the Addressing Style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#using-the-transfer-manager">Using the Transfer Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-urls">Generating Presigned URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../guide/s3.html#generating-presigned-posts">Generating Presigned POSTs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../core/boto3.html">Boto3 Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/collections.html">Collections Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/resources.html">Resources Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.model">Resource Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.params">Request Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.response">Response Handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.action">Resource Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.base">Resource Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/resources.html#module-boto3.resources.factory">Resource Factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../core/session.html">Session Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../customizations/index.html">Customization References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/dynamodb.html">DynamoDB Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#valid-dynamodb-types">Valid DynamoDB Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#custom-boto3-types">Custom Boto3 Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/dynamodb.html#dynamodb-conditions">DynamoDB Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../customizations/s3.html">S3 Customization Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../customizations/s3.html#s3-transfers">S3 Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../services/index.html">Available Services</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autogenerated API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../api.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.html"><code class="docutils literal"><span class="pre">boto3</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.client.html"><code class="docutils literal"><span class="pre">boto3.client()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resource.html"><code class="docutils literal"><span class="pre">boto3.resource()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.set_stream_logger.html"><code class="docutils literal"><span class="pre">boto3.set_stream_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.setup_default_session.html"><code class="docutils literal"><span class="pre">boto3.setup_default_session()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.NullHandler.html"><code class="docutils literal"><span class="pre">boto3.NullHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.Session.html"><code class="docutils literal"><span class="pre">boto3.Session</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.session.html"><code class="docutils literal"><span class="pre">boto3.session</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.session.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.session.Config.html"><code class="docutils literal"><span class="pre">boto3.session.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.session.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.session.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.session.Session.html"><code class="docutils literal"><span class="pre">boto3.session.Session</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.session.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.session.DataNotFoundError.html">boto3.session.DataNotFoundError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.session.ResourceNotExistsError.html">boto3.session.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.session.UnknownAPIVersionError.html">boto3.session.UnknownAPIVersionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.session.UnknownServiceError.html">boto3.session.UnknownServiceError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.exceptions.html"><code class="docutils literal"><span class="pre">boto3.exceptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.exceptions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.Boto3Error.html">boto3.exceptions.Boto3Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.DynamoDBNeedsConditionError.html">boto3.exceptions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.DynamoDBNeedsKeyConditionError.html">boto3.exceptions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.DynamoDBOperationNotSupportedError.html">boto3.exceptions.DynamoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.DynanmoDBOperationNotSupportedError.html">boto3.exceptions.DynanmoDBOperationNotSupportedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.NoVersionFound.html">boto3.exceptions.NoVersionFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.ResourceLoadException.html">boto3.exceptions.ResourceLoadException</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.ResourceNotExistsError.html">boto3.exceptions.ResourceNotExistsError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.RetriesExceededError.html">boto3.exceptions.RetriesExceededError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.S3TransferFailedError.html">boto3.exceptions.S3TransferFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.S3UploadFailedError.html">boto3.exceptions.S3UploadFailedError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.exceptions.UnknownAPIVersionError.html">boto3.exceptions.UnknownAPIVersionError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.utils.html"><code class="docutils literal"><span class="pre">boto3.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.utils.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.import_module.html"><code class="docutils literal"><span class="pre">boto3.utils.import_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.utils.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.lazy_call.html"><code class="docutils literal"><span class="pre">boto3.utils.lazy_call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.utils.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.utils.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.LazyLoadedWaiterModel.html"><code class="docutils literal"><span class="pre">boto3.utils.LazyLoadedWaiterModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.utils.ServiceContext.html"><code class="docutils literal"><span class="pre">boto3.utils.ServiceContext</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_ec2.html"><code class="docutils literal"><span class="pre">botos3.ecs2</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.ec2.createtags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.ec2.createtags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.ec2.createtags.create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.create_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.ec2.createtags.inject_create_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.createtags.inject_create_tags()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.ec2.deletetags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.ec2.deletetags.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.ec2.deletetags.delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.delete_tags()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.ec2.deletetags.inject_delete_tags.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.inject_delete_tags()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.ec2.deletetags.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.ec2.deletetags.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.ec2.deletetags.CustomModeledAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_s3.html"><code class="docutils literal"><span class="pre">botos3.s3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.s3.inject.html"><code class="docutils literal"><span class="pre">boto3.s3.inject</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.s3.inject.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.bucket_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.bucket_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.inject_bucket_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_bucket_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.inject_object_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.inject_object_summary_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_object_summary_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.inject_s3_transfer_methods.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.inject_s3_transfer_methods()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_copy.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_download_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_download_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_download_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_summary_load.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_summary_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.object_upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.object_upload_fileobj()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.upload_file.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.upload_fileobj.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.upload_fileobj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.s3.inject.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.ProgressCallbackInvoker.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.ProgressCallbackInvoker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.S3Transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.S3Transfer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.TransferConfig.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferConfig</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.s3.inject.TransferManager.html"><code class="docutils literal"><span class="pre">boto3.s3.inject.TransferManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.s3.inject.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.s3.inject.ClientError.html">boto3.s3.inject.ClientError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.s3.transfer.html"><code class="docutils literal"><span class="pre">boto3.s3.transfer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.s3.transfer.html#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.s3.transfer.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.s3.transfer.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_resources.html"><code class="docutils literal"><span class="pre">resources</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.action.html"><code class="docutils literal"><span class="pre">boto3.resources.action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.action.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.action.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.inject_attribute.html"><code class="docutils literal"><span class="pre">boto3.resources.action.inject_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.action.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.action.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.action.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.ActionDocstring.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ActionDocstring</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.CustomModeledAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.CustomModeledAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.action.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.action.WaiterAction</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.base.html"><code class="docutils literal"><span class="pre">boto3.resources.base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.base.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.base.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.base.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.base.ServiceResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.collection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.collection.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.merge_dicts.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.merge_dicts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.collection.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.BatchAction.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.BatchAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.CollectionManager.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.CollectionManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.ResourceCollection.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceCollection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.collection.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.collection.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.factory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.factory.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.build_identifiers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.factory.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.CollectionFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.CollectionFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ResourceFactory.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ResourceMeta.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceMeta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ServiceAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.ServiceResource.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.ServiceResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.WaiterAction.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.WaiterAction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.factory.partial.html"><code class="docutils literal"><span class="pre">boto3.resources.factory.partial</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.factory.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.resources.factory.ResourceLoadException.html">boto3.resources.factory.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.model.html"><code class="docutils literal"><span class="pre">boto3.resources.model</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.model.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.model.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.model.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Action.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Action</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Collection.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Collection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.DefinitionWithParams.html"><code class="docutils literal"><span class="pre">boto3.resources.model.DefinitionWithParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Identifier.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Identifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Parameter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Parameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Request.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.ResourceModel.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResourceModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.ResponseResource.html"><code class="docutils literal"><span class="pre">boto3.resources.model.ResponseResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.model.Waiter.html"><code class="docutils literal"><span class="pre">boto3.resources.model.Waiter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.params.html"><code class="docutils literal"><span class="pre">boto3.resources.params</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.params.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.params.build_param_structure.html"><code class="docutils literal"><span class="pre">boto3.resources.params.build_param_structure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.params.create_request_parameters.html"><code class="docutils literal"><span class="pre">boto3.resources.params.create_request_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.params.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.params.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.params.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.params.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.params.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.resources.params.ResourceLoadException.html">boto3.resources.params.ResourceLoadException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.resources.response.html"><code class="docutils literal"><span class="pre">boto3.resources.response</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.response.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.all_not_none.html"><code class="docutils literal"><span class="pre">boto3.resources.response.all_not_none()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.build_empty_response.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_empty_response()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.build_identifiers.html"><code class="docutils literal"><span class="pre">boto3.resources.response.build_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.get_data_member.html"><code class="docutils literal"><span class="pre">boto3.resources.response.get_data_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.xform_name.html"><code class="docutils literal"><span class="pre">boto3.resources.response.xform_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.resources.response.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.RawHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.RawHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.resources.response.ResourceHandler.html"><code class="docutils literal"><span class="pre">boto3.resources.response.ResourceHandler</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../boto3.dynamodb.conditions.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.conditions.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.namedtuple.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.namedtuple()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.conditions.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.And.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.And</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Attr.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Attr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.AttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.AttributeExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.AttributeNotExists.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeNotExists</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.AttributeType.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.AttributeType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.BeginsWith.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BeginsWith</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Between.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Between</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.BuiltConditionExpression.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.BuiltConditionExpression</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.ComparisonCondition.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ComparisonCondition</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.ConditionAttributeBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionAttributeBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Contains.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Contains</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Equals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Equals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.GreaterThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.GreaterThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.GreaterThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.In.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.In</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Key.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Key</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.LessThan.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThan</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.LessThanEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.LessThanEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Not.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.NotEquals.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.NotEquals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Or.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Or</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.conditions.Size.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.conditions.Size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.conditions.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.conditions.DynamoDBNeedsConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError.html">boto3.dynamodb.conditions.DynamoDBNeedsKeyConditionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError.html">boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.dynamodb.table.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.table.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.table.register_table_methods.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.register_table_methods()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.table.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.table.BatchWriter.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.BatchWriter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.table.TableResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.table.TableResource</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boto3.dynamodb.transform.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.transform.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.copy_dynamodb_params.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.copy_dynamodb_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.register_high_level_interface.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.register_high_level_interface()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.transform.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.ConditionBase.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.ConditionExpressionBuilder.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.ConditionExpressionTransformation.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ConditionExpressionTransformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.DocumentModifiedShape.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DocumentModifiedShape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.DynamoDBHighLevelResource.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.DynamoDBHighLevelResource</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.MutableSequence.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.MutableSequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.ParameterTransformer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.ParameterTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.TransformationInjector.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TransformationInjector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.transform.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.transform.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../boto3.dynamodb.types.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.Binary.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Binary</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.Decimal.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Decimal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.Mapping.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.Set.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.TypeDeserializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeDeserializer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="boto3.dynamodb.types.TypeSerializer.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types.TypeSerializer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boto3.dynamodb.types.html#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.types.Clamped.html">boto3.dynamodb.types.Clamped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.types.Inexact.html">boto3.dynamodb.types.Inexact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.types.Overflow.html">boto3.dynamodb.types.Overflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.types.Rounded.html">boto3.dynamodb.types.Rounded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boto3.dynamodb.types.Underflow.html">boto3.dynamodb.types.Underflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Boto3 API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../api_dynamo_db.html"><code class="docutils literal"><span class="pre">dynamodb</span></code></a> &raquo;</li>
+      
+          <li><a href="../boto3.dynamodb.types.html"><code class="docutils literal"><span class="pre">boto3.dynamodb.types</span></code></a> &raquo;</li>
+      
+    <li><code class="docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/generated/generated/boto3.dynamodb.types.Context.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="boto3-dynamodb-types-context">
+<h1><a class="reference internal" href="#boto3.dynamodb.types.Context" title="boto3.dynamodb.types.Context"><code class="xref py py-class docutils literal"><span class="pre">boto3.dynamodb.types.Context</span></code></a></h1>
+<dl class="class">
+<dt id="boto3.dynamodb.types.Context">
+<em class="property">class </em><code class="descclassname">boto3.dynamodb.types.</code><code class="descname">Context</code><span class="sig-paren">(</span><em>prec=None</em>, <em>rounding=None</em>, <em>traps=None</em>, <em>flags=None</em>, <em>Emin=None</em>, <em>Emax=None</em>, <em>capitals=None</em>, <em>_clamp=0</em>, <em>_ignored_flags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/decimal.html#Context"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Contains the context for a Decimal instance.</p>
+<p>Contains:
+prec - precision (for use in rounding, division, square roots..)
+rounding - rounding type (how you round)
+traps - If traps[exception] = 1, then the exception is</p>
+<blockquote>
+<div>raised when it is caused.  Otherwise, a value is
+substituted in.</div></blockquote>
+<dl class="docutils">
+<dt>flags  - When an exception is caused, flags[exception] is set.</dt>
+<dd>(Whether or not the trap_enabler is set)
+Should be reset by user of Decimal instance.</dd>
+</dl>
+<p>Emin -   Minimum exponent
+Emax -   Maximum exponent
+capitals -      If 1, 1*10^1 is printed as 1E+1.</p>
+<blockquote>
+<div>If 0, printed as 1e1</div></blockquote>
+<p>_clamp - If 1, change exponents if too high (Default 0)</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods</h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.Etiny.html#boto3.dynamodb.types.Context.Etiny" title="boto3.dynamodb.types.Context.Etiny"><code class="xref py py-obj docutils literal"><span class="pre">Etiny</span></code></a>()</td>
+<td>Returns Etiny (= Emin - prec + 1)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.Etop.html#boto3.dynamodb.types.Context.Etop" title="boto3.dynamodb.types.Context.Etop"><code class="xref py py-obj docutils literal"><span class="pre">Etop</span></code></a>()</td>
+<td>Returns maximum exponent (= Emax - prec + 1)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.__init__.html#boto3.dynamodb.types.Context.__init__" title="boto3.dynamodb.types.Context.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([prec,&nbsp;rounding,&nbsp;traps,&nbsp;flags,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.abs.html#boto3.dynamodb.types.Context.abs" title="boto3.dynamodb.types.Context.abs"><code class="xref py py-obj docutils literal"><span class="pre">abs</span></code></a>(a)</td>
+<td>Returns the absolute value of the operand.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.add.html#boto3.dynamodb.types.Context.add" title="boto3.dynamodb.types.Context.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(a,&nbsp;b)</td>
+<td>Return the sum of the two operands.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.canonical.html#boto3.dynamodb.types.Context.canonical" title="boto3.dynamodb.types.Context.canonical"><code class="xref py py-obj docutils literal"><span class="pre">canonical</span></code></a>(a)</td>
+<td>Returns the same Decimal object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.clear_flags.html#boto3.dynamodb.types.Context.clear_flags" title="boto3.dynamodb.types.Context.clear_flags"><code class="xref py py-obj docutils literal"><span class="pre">clear_flags</span></code></a>()</td>
+<td>Reset all flags to zero</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.compare.html#boto3.dynamodb.types.Context.compare" title="boto3.dynamodb.types.Context.compare"><code class="xref py py-obj docutils literal"><span class="pre">compare</span></code></a>(a,&nbsp;b)</td>
+<td>Compares values numerically.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.compare_signal.html#boto3.dynamodb.types.Context.compare_signal" title="boto3.dynamodb.types.Context.compare_signal"><code class="xref py py-obj docutils literal"><span class="pre">compare_signal</span></code></a>(a,&nbsp;b)</td>
+<td>Compares the values of the two operands numerically.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.compare_total.html#boto3.dynamodb.types.Context.compare_total" title="boto3.dynamodb.types.Context.compare_total"><code class="xref py py-obj docutils literal"><span class="pre">compare_total</span></code></a>(a,&nbsp;b)</td>
+<td>Compares two operands using their abstract representation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.compare_total_mag.html#boto3.dynamodb.types.Context.compare_total_mag" title="boto3.dynamodb.types.Context.compare_total_mag"><code class="xref py py-obj docutils literal"><span class="pre">compare_total_mag</span></code></a>(a,&nbsp;b)</td>
+<td>Compares two operands using their abstract representation ignoring sign.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.copy.html#boto3.dynamodb.types.Context.copy" title="boto3.dynamodb.types.Context.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Returns a deep copy from self.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.copy_abs.html#boto3.dynamodb.types.Context.copy_abs" title="boto3.dynamodb.types.Context.copy_abs"><code class="xref py py-obj docutils literal"><span class="pre">copy_abs</span></code></a>(a)</td>
+<td>Returns a copy of the operand with the sign set to 0.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.copy_decimal.html#boto3.dynamodb.types.Context.copy_decimal" title="boto3.dynamodb.types.Context.copy_decimal"><code class="xref py py-obj docutils literal"><span class="pre">copy_decimal</span></code></a>(a)</td>
+<td>Returns a copy of the decimal object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.copy_negate.html#boto3.dynamodb.types.Context.copy_negate" title="boto3.dynamodb.types.Context.copy_negate"><code class="xref py py-obj docutils literal"><span class="pre">copy_negate</span></code></a>(a)</td>
+<td>Returns a copy of the operand with the sign inverted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.copy_sign.html#boto3.dynamodb.types.Context.copy_sign" title="boto3.dynamodb.types.Context.copy_sign"><code class="xref py py-obj docutils literal"><span class="pre">copy_sign</span></code></a>(a,&nbsp;b)</td>
+<td>Copies the second operand&#8217;s sign to the first one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.create_decimal.html#boto3.dynamodb.types.Context.create_decimal" title="boto3.dynamodb.types.Context.create_decimal"><code class="xref py py-obj docutils literal"><span class="pre">create_decimal</span></code></a>([num])</td>
+<td>Creates a new Decimal instance but using self as context.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.create_decimal_from_float.html#boto3.dynamodb.types.Context.create_decimal_from_float" title="boto3.dynamodb.types.Context.create_decimal_from_float"><code class="xref py py-obj docutils literal"><span class="pre">create_decimal_from_float</span></code></a>(f)</td>
+<td>Creates a new Decimal instance from a float but rounding using self as the context.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.divide.html#boto3.dynamodb.types.Context.divide" title="boto3.dynamodb.types.Context.divide"><code class="xref py py-obj docutils literal"><span class="pre">divide</span></code></a>(a,&nbsp;b)</td>
+<td>Decimal division in a specified context.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.divide_int.html#boto3.dynamodb.types.Context.divide_int" title="boto3.dynamodb.types.Context.divide_int"><code class="xref py py-obj docutils literal"><span class="pre">divide_int</span></code></a>(a,&nbsp;b)</td>
+<td>Divides two numbers and returns the integer part of the result.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.divmod.html#boto3.dynamodb.types.Context.divmod" title="boto3.dynamodb.types.Context.divmod"><code class="xref py py-obj docutils literal"><span class="pre">divmod</span></code></a>(a,&nbsp;b)</td>
+<td>Return (a // b, a % b).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.exp.html#boto3.dynamodb.types.Context.exp" title="boto3.dynamodb.types.Context.exp"><code class="xref py py-obj docutils literal"><span class="pre">exp</span></code></a>(a)</td>
+<td>Returns e ** a.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.fma.html#boto3.dynamodb.types.Context.fma" title="boto3.dynamodb.types.Context.fma"><code class="xref py py-obj docutils literal"><span class="pre">fma</span></code></a>(a,&nbsp;b,&nbsp;c)</td>
+<td>Returns a multiplied by b, plus c.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_canonical.html#boto3.dynamodb.types.Context.is_canonical" title="boto3.dynamodb.types.Context.is_canonical"><code class="xref py py-obj docutils literal"><span class="pre">is_canonical</span></code></a>(a)</td>
+<td>Return True if the operand is canonical; otherwise return False.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_finite.html#boto3.dynamodb.types.Context.is_finite" title="boto3.dynamodb.types.Context.is_finite"><code class="xref py py-obj docutils literal"><span class="pre">is_finite</span></code></a>(a)</td>
+<td>Return True if the operand is finite; otherwise return False.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_infinite.html#boto3.dynamodb.types.Context.is_infinite" title="boto3.dynamodb.types.Context.is_infinite"><code class="xref py py-obj docutils literal"><span class="pre">is_infinite</span></code></a>(a)</td>
+<td>Return True if the operand is infinite; otherwise return False.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_nan.html#boto3.dynamodb.types.Context.is_nan" title="boto3.dynamodb.types.Context.is_nan"><code class="xref py py-obj docutils literal"><span class="pre">is_nan</span></code></a>(a)</td>
+<td>Return True if the operand is a qNaN or sNaN; otherwise return False.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_normal.html#boto3.dynamodb.types.Context.is_normal" title="boto3.dynamodb.types.Context.is_normal"><code class="xref py py-obj docutils literal"><span class="pre">is_normal</span></code></a>(a)</td>
+<td>Return True if the operand is a normal number; otherwise return False.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_qnan.html#boto3.dynamodb.types.Context.is_qnan" title="boto3.dynamodb.types.Context.is_qnan"><code class="xref py py-obj docutils literal"><span class="pre">is_qnan</span></code></a>(a)</td>
+<td>Return True if the operand is a quiet NaN; otherwise return False.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_signed.html#boto3.dynamodb.types.Context.is_signed" title="boto3.dynamodb.types.Context.is_signed"><code class="xref py py-obj docutils literal"><span class="pre">is_signed</span></code></a>(a)</td>
+<td>Return True if the operand is negative; otherwise return False.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_snan.html#boto3.dynamodb.types.Context.is_snan" title="boto3.dynamodb.types.Context.is_snan"><code class="xref py py-obj docutils literal"><span class="pre">is_snan</span></code></a>(a)</td>
+<td>Return True if the operand is a signaling NaN; otherwise return False.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_subnormal.html#boto3.dynamodb.types.Context.is_subnormal" title="boto3.dynamodb.types.Context.is_subnormal"><code class="xref py py-obj docutils literal"><span class="pre">is_subnormal</span></code></a>(a)</td>
+<td>Return True if the operand is subnormal; otherwise return False.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.is_zero.html#boto3.dynamodb.types.Context.is_zero" title="boto3.dynamodb.types.Context.is_zero"><code class="xref py py-obj docutils literal"><span class="pre">is_zero</span></code></a>(a)</td>
+<td>Return True if the operand is a zero; otherwise return False.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.ln.html#boto3.dynamodb.types.Context.ln" title="boto3.dynamodb.types.Context.ln"><code class="xref py py-obj docutils literal"><span class="pre">ln</span></code></a>(a)</td>
+<td>Returns the natural (base e) logarithm of the operand.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.log10.html#boto3.dynamodb.types.Context.log10" title="boto3.dynamodb.types.Context.log10"><code class="xref py py-obj docutils literal"><span class="pre">log10</span></code></a>(a)</td>
+<td>Returns the base 10 logarithm of the operand.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.logb.html#boto3.dynamodb.types.Context.logb" title="boto3.dynamodb.types.Context.logb"><code class="xref py py-obj docutils literal"><span class="pre">logb</span></code></a>(a)</td>
+<td>Returns the exponent of the magnitude of the operand&#8217;s MSD.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.logical_and.html#boto3.dynamodb.types.Context.logical_and" title="boto3.dynamodb.types.Context.logical_and"><code class="xref py py-obj docutils literal"><span class="pre">logical_and</span></code></a>(a,&nbsp;b)</td>
+<td>Applies the logical operation &#8216;and&#8217; between each operand&#8217;s digits.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.logical_invert.html#boto3.dynamodb.types.Context.logical_invert" title="boto3.dynamodb.types.Context.logical_invert"><code class="xref py py-obj docutils literal"><span class="pre">logical_invert</span></code></a>(a)</td>
+<td>Invert all the digits in the operand.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.logical_or.html#boto3.dynamodb.types.Context.logical_or" title="boto3.dynamodb.types.Context.logical_or"><code class="xref py py-obj docutils literal"><span class="pre">logical_or</span></code></a>(a,&nbsp;b)</td>
+<td>Applies the logical operation &#8216;or&#8217; between each operand&#8217;s digits.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.logical_xor.html#boto3.dynamodb.types.Context.logical_xor" title="boto3.dynamodb.types.Context.logical_xor"><code class="xref py py-obj docutils literal"><span class="pre">logical_xor</span></code></a>(a,&nbsp;b)</td>
+<td>Applies the logical operation &#8216;xor&#8217; between each operand&#8217;s digits.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.max.html#boto3.dynamodb.types.Context.max" title="boto3.dynamodb.types.Context.max"><code class="xref py py-obj docutils literal"><span class="pre">max</span></code></a>(a,&nbsp;b)</td>
+<td>max compares two values numerically and returns the maximum.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.max_mag.html#boto3.dynamodb.types.Context.max_mag" title="boto3.dynamodb.types.Context.max_mag"><code class="xref py py-obj docutils literal"><span class="pre">max_mag</span></code></a>(a,&nbsp;b)</td>
+<td>Compares the values numerically with their sign ignored.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.min.html#boto3.dynamodb.types.Context.min" title="boto3.dynamodb.types.Context.min"><code class="xref py py-obj docutils literal"><span class="pre">min</span></code></a>(a,&nbsp;b)</td>
+<td>min compares two values numerically and returns the minimum.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.min_mag.html#boto3.dynamodb.types.Context.min_mag" title="boto3.dynamodb.types.Context.min_mag"><code class="xref py py-obj docutils literal"><span class="pre">min_mag</span></code></a>(a,&nbsp;b)</td>
+<td>Compares the values numerically with their sign ignored.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.minus.html#boto3.dynamodb.types.Context.minus" title="boto3.dynamodb.types.Context.minus"><code class="xref py py-obj docutils literal"><span class="pre">minus</span></code></a>(a)</td>
+<td>Minus corresponds to unary prefix minus in Python.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.multiply.html#boto3.dynamodb.types.Context.multiply" title="boto3.dynamodb.types.Context.multiply"><code class="xref py py-obj docutils literal"><span class="pre">multiply</span></code></a>(a,&nbsp;b)</td>
+<td>multiply multiplies two operands.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.next_minus.html#boto3.dynamodb.types.Context.next_minus" title="boto3.dynamodb.types.Context.next_minus"><code class="xref py py-obj docutils literal"><span class="pre">next_minus</span></code></a>(a)</td>
+<td>Returns the largest representable number smaller than a.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.next_plus.html#boto3.dynamodb.types.Context.next_plus" title="boto3.dynamodb.types.Context.next_plus"><code class="xref py py-obj docutils literal"><span class="pre">next_plus</span></code></a>(a)</td>
+<td>Returns the smallest representable number larger than a.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.next_toward.html#boto3.dynamodb.types.Context.next_toward" title="boto3.dynamodb.types.Context.next_toward"><code class="xref py py-obj docutils literal"><span class="pre">next_toward</span></code></a>(a,&nbsp;b)</td>
+<td>Returns the number closest to a, in direction towards b.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.normalize.html#boto3.dynamodb.types.Context.normalize" title="boto3.dynamodb.types.Context.normalize"><code class="xref py py-obj docutils literal"><span class="pre">normalize</span></code></a>(a)</td>
+<td>normalize reduces an operand to its simplest form.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.number_class.html#boto3.dynamodb.types.Context.number_class" title="boto3.dynamodb.types.Context.number_class"><code class="xref py py-obj docutils literal"><span class="pre">number_class</span></code></a>(a)</td>
+<td>Returns an indication of the class of the operand.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.plus.html#boto3.dynamodb.types.Context.plus" title="boto3.dynamodb.types.Context.plus"><code class="xref py py-obj docutils literal"><span class="pre">plus</span></code></a>(a)</td>
+<td>Plus corresponds to unary prefix plus in Python.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.power.html#boto3.dynamodb.types.Context.power" title="boto3.dynamodb.types.Context.power"><code class="xref py py-obj docutils literal"><span class="pre">power</span></code></a>(a,&nbsp;b[,&nbsp;modulo])</td>
+<td>Raises a to the power of b, to modulo if given.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.quantize.html#boto3.dynamodb.types.Context.quantize" title="boto3.dynamodb.types.Context.quantize"><code class="xref py py-obj docutils literal"><span class="pre">quantize</span></code></a>(a,&nbsp;b)</td>
+<td>Returns a value equal to &#8216;a&#8217; (rounded), having the exponent of &#8216;b&#8217;.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.radix.html#boto3.dynamodb.types.Context.radix" title="boto3.dynamodb.types.Context.radix"><code class="xref py py-obj docutils literal"><span class="pre">radix</span></code></a>()</td>
+<td>Just returns 10, as this is Decimal, :)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.remainder.html#boto3.dynamodb.types.Context.remainder" title="boto3.dynamodb.types.Context.remainder"><code class="xref py py-obj docutils literal"><span class="pre">remainder</span></code></a>(a,&nbsp;b)</td>
+<td>Returns the remainder from integer division.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.remainder_near.html#boto3.dynamodb.types.Context.remainder_near" title="boto3.dynamodb.types.Context.remainder_near"><code class="xref py py-obj docutils literal"><span class="pre">remainder_near</span></code></a>(a,&nbsp;b)</td>
+<td>Returns to be &#8220;a - b * n&#8221;, where n is the integer nearest the exact value of &#8220;x / b&#8221; (if two integers are equally near then the even one is chosen).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.rotate.html#boto3.dynamodb.types.Context.rotate" title="boto3.dynamodb.types.Context.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(a,&nbsp;b)</td>
+<td>Returns a rotated copy of a, b times.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.same_quantum.html#boto3.dynamodb.types.Context.same_quantum" title="boto3.dynamodb.types.Context.same_quantum"><code class="xref py py-obj docutils literal"><span class="pre">same_quantum</span></code></a>(a,&nbsp;b)</td>
+<td>Returns True if the two operands have the same exponent.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.scaleb.html#boto3.dynamodb.types.Context.scaleb" title="boto3.dynamodb.types.Context.scaleb"><code class="xref py py-obj docutils literal"><span class="pre">scaleb</span></code></a>(a,&nbsp;b)</td>
+<td>Returns the first operand after adding the second value its exp.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.shift.html#boto3.dynamodb.types.Context.shift" title="boto3.dynamodb.types.Context.shift"><code class="xref py py-obj docutils literal"><span class="pre">shift</span></code></a>(a,&nbsp;b)</td>
+<td>Returns a shifted copy of a, b times.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.sqrt.html#boto3.dynamodb.types.Context.sqrt" title="boto3.dynamodb.types.Context.sqrt"><code class="xref py py-obj docutils literal"><span class="pre">sqrt</span></code></a>(a)</td>
+<td>Square root of a non-negative number to context precision.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.subtract.html#boto3.dynamodb.types.Context.subtract" title="boto3.dynamodb.types.Context.subtract"><code class="xref py py-obj docutils literal"><span class="pre">subtract</span></code></a>(a,&nbsp;b)</td>
+<td>Return the difference between the two operands.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.to_eng_string.html#boto3.dynamodb.types.Context.to_eng_string" title="boto3.dynamodb.types.Context.to_eng_string"><code class="xref py py-obj docutils literal"><span class="pre">to_eng_string</span></code></a>(a)</td>
+<td>Converts a number to a string, using scientific notation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.to_integral.html#boto3.dynamodb.types.Context.to_integral" title="boto3.dynamodb.types.Context.to_integral"><code class="xref py py-obj docutils literal"><span class="pre">to_integral</span></code></a>(a)</td>
+<td>Rounds to an integer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.to_integral_exact.html#boto3.dynamodb.types.Context.to_integral_exact" title="boto3.dynamodb.types.Context.to_integral_exact"><code class="xref py py-obj docutils literal"><span class="pre">to_integral_exact</span></code></a>(a)</td>
+<td>Rounds to an integer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="boto3.dynamodb.types.Context.to_integral_value.html#boto3.dynamodb.types.Context.to_integral_value" title="boto3.dynamodb.types.Context.to_integral_value"><code class="xref py py-obj docutils literal"><span class="pre">to_integral_value</span></code></a>(a)</td>
+<td>Rounds to an integer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="boto3.dynamodb.types.Context.to_sci_string.html#boto3.dynamodb.types.Context.to_sci_string" title="boto3.dynamodb.types.Context.to_sci_string"><code class="xref py py-obj docutils literal"><span class="pre">to_sci_string</span></code></a>(a)</td>
+<td>Converts a number to a string, using scientific notation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="boto3.dynamodb.types.Context.Etiny.html" class="btn btn-neutral float-right" title="boto3.dynamodb.types.Context.Etiny" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="boto3.dynamodb.types.Binary.__init__.html" class="btn btn-neutral" title="boto3.dynamodb.types.Binary.__init__" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 13, 2016.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/copybutton.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

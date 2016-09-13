@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.Mapping.get
+====================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: Mapping.get

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.compare_total
+==========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.compare_total

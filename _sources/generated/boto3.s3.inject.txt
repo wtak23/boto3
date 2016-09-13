@@ -1,0 +1,104 @@
+:mod:`boto3.s3.inject`
+======================
+
+.. automodule:: boto3.s3.inject
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      bucket_copy
+      bucket_download_file
+      bucket_download_fileobj
+      bucket_load
+      bucket_upload_file
+      bucket_upload_fileobj
+      copy
+      download_file
+      download_fileobj
+      inject_bucket_methods
+      inject_object_methods
+      inject_object_summary_methods
+      inject_s3_transfer_methods
+      object_copy
+      object_download_file
+      object_download_fileobj
+      object_summary_load
+      object_upload_file
+      object_upload_fileobj
+      upload_file
+      upload_fileobj
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.s3.inject.bucket_copy
+       generated/boto3.s3.inject.bucket_download_file
+       generated/boto3.s3.inject.bucket_download_fileobj
+       generated/boto3.s3.inject.bucket_load
+       generated/boto3.s3.inject.bucket_upload_file
+       generated/boto3.s3.inject.bucket_upload_fileobj
+       generated/boto3.s3.inject.copy
+       generated/boto3.s3.inject.download_file
+       generated/boto3.s3.inject.download_fileobj
+       generated/boto3.s3.inject.inject_bucket_methods
+       generated/boto3.s3.inject.inject_object_methods
+       generated/boto3.s3.inject.inject_object_summary_methods
+       generated/boto3.s3.inject.inject_s3_transfer_methods
+       generated/boto3.s3.inject.object_copy
+       generated/boto3.s3.inject.object_download_file
+       generated/boto3.s3.inject.object_download_fileobj
+       generated/boto3.s3.inject.object_summary_load
+       generated/boto3.s3.inject.object_upload_file
+       generated/boto3.s3.inject.object_upload_fileobj
+       generated/boto3.s3.inject.upload_file
+       generated/boto3.s3.inject.upload_fileobj
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      ProgressCallbackInvoker
+      S3Transfer
+      TransferConfig
+      TransferManager
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.s3.inject.ProgressCallbackInvoker
+       generated/boto3.s3.inject.S3Transfer
+       generated/boto3.s3.inject.TransferConfig
+       generated/boto3.s3.inject.TransferManager
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      ClientError
+   
+   

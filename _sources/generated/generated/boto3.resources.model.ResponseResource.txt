@@ -1,0 +1,28 @@
+:class:`boto3.resources.model.ResponseResource`
+===============================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: ResponseResource
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResponseResource.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ResponseResource.identifiers
+   ~ResponseResource.model
+

@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.MutableSequence.reverse
+================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: MutableSequence.reverse

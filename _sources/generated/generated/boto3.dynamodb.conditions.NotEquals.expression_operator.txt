@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.NotEquals.expression_operator
+=======================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: NotEquals.expression_operator

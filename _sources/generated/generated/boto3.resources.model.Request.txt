@@ -1,0 +1,27 @@
+:class:`boto3.resources.model.Request`
+======================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Request
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Request.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Request.params
+

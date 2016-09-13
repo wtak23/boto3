@@ -1,0 +1,6 @@
+boto3.utils.ServiceContext.resource_json_definitions
+====================================================
+
+.. currentmodule:: boto3.utils
+
+.. autoattribute:: ServiceContext.resource_json_definitions

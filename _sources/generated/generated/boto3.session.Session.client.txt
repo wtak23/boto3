@@ -1,0 +1,6 @@
+boto3.session.Session.client
+============================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: Session.client

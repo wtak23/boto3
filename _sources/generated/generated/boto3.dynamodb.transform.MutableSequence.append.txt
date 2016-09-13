@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.MutableSequence.append
+===============================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: MutableSequence.append

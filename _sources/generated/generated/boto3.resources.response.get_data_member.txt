@@ -1,0 +1,6 @@
+:func:`boto3.resources.response.get_data_member`
+================================================
+
+.. currentmodule:: boto3.resources.response
+
+.. autofunction:: get_data_member

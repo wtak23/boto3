@@ -1,0 +1,47 @@
+:mod:`boto3.resources.params`
+=============================
+
+.. automodule:: boto3.resources.params
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      build_param_structure
+      create_request_parameters
+      get_data_member
+      xform_name
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.params.build_param_structure
+       generated/boto3.resources.params.create_request_parameters
+       generated/boto3.resources.params.get_data_member
+       generated/boto3.resources.params.xform_name
+      
+   
+   
+
+   
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      ResourceLoadException
+   
+   

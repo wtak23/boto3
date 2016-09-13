@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.rfind
+============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.rfind

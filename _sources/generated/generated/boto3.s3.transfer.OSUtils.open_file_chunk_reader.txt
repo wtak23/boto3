@@ -1,0 +1,6 @@
+boto3.s3.transfer.OSUtils.open_file_chunk_reader
+================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: OSUtils.open_file_chunk_reader

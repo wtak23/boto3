@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeType.__init__
+================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: AttributeType.__init__

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Clamped
+============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoexception:: Clamped

@@ -1,0 +1,6 @@
+boto3.resources.base.ServiceResource.__init__
+=============================================
+
+.. currentmodule:: boto3.resources.base
+
+.. automethod:: ServiceResource.__init__

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.remainder_near
+===========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.remainder_near

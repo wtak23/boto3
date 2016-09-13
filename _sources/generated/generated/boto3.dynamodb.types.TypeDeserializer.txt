@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.types.TypeDeserializer`
+==============================================
+.. currentmodule:: boto3.dynamodb.types
+.. autoclass:: TypeDeserializer
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TypeDeserializer.deserialize
+
+
+
+
+

@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.transform.ConditionBase`
+===============================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: ConditionBase
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ConditionBase.__init__
+   ~ConditionBase.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ConditionBase.expression_format
+   ~ConditionBase.expression_operator
+   ~ConditionBase.has_grouped_values
+

@@ -1,0 +1,6 @@
+boto3.s3.transfer.TransferConfig.ALIAS
+======================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoattribute:: TransferConfig.ALIAS

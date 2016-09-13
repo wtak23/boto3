@@ -1,0 +1,6 @@
+boto3.NullHandler.get_name
+==========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.get_name

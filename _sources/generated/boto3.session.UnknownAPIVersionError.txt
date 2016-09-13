@@ -1,0 +1,6 @@
+boto3.session.UnknownAPIVersionError
+====================================
+
+.. currentmodule:: boto3.session
+
+.. autoexception:: UnknownAPIVersionError

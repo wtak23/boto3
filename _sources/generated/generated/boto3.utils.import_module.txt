@@ -1,0 +1,6 @@
+:func:`boto3.utils.import_module`
+=================================
+
+.. currentmodule:: boto3.utils
+
+.. autofunction:: import_module

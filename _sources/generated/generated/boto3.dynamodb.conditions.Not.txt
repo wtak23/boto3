@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.Not`
+======================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: Not
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Not.__init__
+   ~Not.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Not.expression_format
+   ~Not.expression_operator
+   ~Not.has_grouped_values
+

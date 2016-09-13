@@ -1,0 +1,6 @@
+:func:`boto3.resources.action.xform_name`
+=========================================
+
+.. currentmodule:: boto3.resources.action
+
+.. autofunction:: xform_name

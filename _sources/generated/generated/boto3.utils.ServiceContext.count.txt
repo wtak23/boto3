@@ -1,0 +1,6 @@
+boto3.utils.ServiceContext.count
+================================
+
+.. currentmodule:: boto3.utils
+
+.. automethod:: ServiceContext.count

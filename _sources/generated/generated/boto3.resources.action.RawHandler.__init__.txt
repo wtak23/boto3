@@ -1,0 +1,6 @@
+boto3.resources.action.RawHandler.__init__
+==========================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: RawHandler.__init__

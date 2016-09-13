@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Equals.get_expression
+===============================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Equals.get_expression

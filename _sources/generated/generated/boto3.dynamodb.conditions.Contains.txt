@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.Contains`
+===========================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: Contains
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Contains.__init__
+   ~Contains.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Contains.expression_format
+   ~Contains.expression_operator
+   ~Contains.has_grouped_values
+

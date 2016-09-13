@@ -1,0 +1,6 @@
+:func:`boto3.resources.response.build_identifiers`
+==================================================
+
+.. currentmodule:: boto3.resources.response
+
+.. autofunction:: build_identifiers

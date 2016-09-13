@@ -1,0 +1,19 @@
+:class:`boto3.resources.model.Parameter`
+========================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Parameter
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Parameter.__init__
+
+
+
+
+

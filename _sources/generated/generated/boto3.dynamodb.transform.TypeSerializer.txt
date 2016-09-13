@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.transform.TypeSerializer`
+================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: TypeSerializer
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TypeSerializer.serialize
+
+
+
+
+

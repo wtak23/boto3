@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceModel.waiters
+=============================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. autoattribute:: ResourceModel.waiters

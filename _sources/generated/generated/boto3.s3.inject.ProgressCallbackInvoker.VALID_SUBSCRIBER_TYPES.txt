@@ -1,0 +1,6 @@
+boto3.s3.inject.ProgressCallbackInvoker.VALID_SUBSCRIBER_TYPES
+==============================================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autoattribute:: ProgressCallbackInvoker.VALID_SUBSCRIBER_TYPES

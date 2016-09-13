@@ -1,0 +1,6 @@
+:func:`boto3.dynamodb.transform.register_high_level_interface`
+==============================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. autofunction:: register_high_level_interface

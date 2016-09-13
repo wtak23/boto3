@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.compare_total
+==========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.compare_total

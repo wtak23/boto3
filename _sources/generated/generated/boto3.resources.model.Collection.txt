@@ -1,0 +1,27 @@
+:class:`boto3.resources.model.Collection`
+=========================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Collection
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Collection.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~Collection.batch_actions
+

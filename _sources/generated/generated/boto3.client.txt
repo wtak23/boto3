@@ -1,0 +1,6 @@
+:func:`boto3.client`
+====================
+
+.. currentmodule:: boto3
+
+.. autofunction:: client

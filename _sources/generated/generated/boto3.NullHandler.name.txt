@@ -1,0 +1,6 @@
+boto3.NullHandler.name
+======================
+
+.. currentmodule:: boto3
+
+.. autoattribute:: NullHandler.name

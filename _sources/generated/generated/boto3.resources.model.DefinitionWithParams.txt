@@ -1,0 +1,27 @@
+:class:`boto3.resources.model.DefinitionWithParams`
+===================================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: DefinitionWithParams
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DefinitionWithParams.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~DefinitionWithParams.params
+

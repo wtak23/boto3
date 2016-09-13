@@ -1,0 +1,6 @@
+:func:`boto3.resources.collection.merge_dicts`
+==============================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. autofunction:: merge_dicts

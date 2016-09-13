@@ -1,0 +1,6 @@
+boto3.NullHandler.emit
+======================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.emit

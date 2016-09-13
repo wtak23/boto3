@@ -1,0 +1,57 @@
+:mod:`boto3.dynamodb.types`
+===========================
+
+.. automodule:: boto3.dynamodb.types
+
+   
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Binary
+      Context
+      Decimal
+      Mapping
+      Set
+      TypeDeserializer
+      TypeSerializer
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.dynamodb.types.Binary
+       generated/boto3.dynamodb.types.Context
+       generated/boto3.dynamodb.types.Decimal
+       generated/boto3.dynamodb.types.Mapping
+       generated/boto3.dynamodb.types.Set
+       generated/boto3.dynamodb.types.TypeDeserializer
+       generated/boto3.dynamodb.types.TypeSerializer
+
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      Clamped
+      Inexact
+      Overflow
+      Rounded
+      Underflow
+   
+   

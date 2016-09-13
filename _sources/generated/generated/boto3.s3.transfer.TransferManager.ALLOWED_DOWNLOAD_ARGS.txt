@@ -1,0 +1,6 @@
+boto3.s3.transfer.TransferManager.ALLOWED_DOWNLOAD_ARGS
+=======================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoattribute:: TransferManager.ALLOWED_DOWNLOAD_ARGS

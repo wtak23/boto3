@@ -1,0 +1,6 @@
+boto3.utils.LazyLoadedWaiterModel.__init__
+==========================================
+
+.. currentmodule:: boto3.utils
+
+.. automethod:: LazyLoadedWaiterModel.__init__

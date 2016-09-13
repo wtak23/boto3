@@ -1,0 +1,22 @@
+:class:`boto3.dynamodb.transform.TransformationInjector`
+========================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: TransformationInjector
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TransformationInjector.__init__
+   ~TransformationInjector.inject_attribute_value_input
+   ~TransformationInjector.inject_attribute_value_output
+   ~TransformationInjector.inject_condition_expressions
+
+
+
+
+

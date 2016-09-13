@@ -1,0 +1,6 @@
+boto3.resources.model.ResponseResource.__init__
+===============================================
+
+.. currentmodule:: boto3.resources.model
+
+.. automethod:: ResponseResource.__init__

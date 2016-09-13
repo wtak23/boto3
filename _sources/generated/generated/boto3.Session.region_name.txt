@@ -1,0 +1,6 @@
+boto3.Session.region_name
+=========================
+
+.. currentmodule:: boto3
+
+.. autoattribute:: Session.region_name

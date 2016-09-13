@@ -1,0 +1,6 @@
+boto3.s3.transfer.BaseSubscriber.on_progress
+============================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: BaseSubscriber.on_progress

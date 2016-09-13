@@ -1,0 +1,6 @@
+boto3.resources.collection.CollectionManager.iterator
+=====================================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. automethod:: CollectionManager.iterator

@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceModel.load_rename_map
+=====================================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. automethod:: ResourceModel.load_rename_map

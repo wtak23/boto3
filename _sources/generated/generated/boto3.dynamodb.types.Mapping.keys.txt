@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Mapping.keys
+=================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Mapping.keys

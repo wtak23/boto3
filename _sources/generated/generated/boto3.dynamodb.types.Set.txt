@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.types.Set`
+=================================
+.. currentmodule:: boto3.dynamodb.types
+.. autoclass:: Set
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Set.isdisjoint
+
+
+
+
+

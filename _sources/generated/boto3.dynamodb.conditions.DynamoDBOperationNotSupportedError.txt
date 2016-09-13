@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.DynamoDBOperationNotSupportedError
+============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoexception:: DynamoDBOperationNotSupportedError

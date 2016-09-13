@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.transform.DynamoDBHighLevelResource`
+===========================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: DynamoDBHighLevelResource
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DynamoDBHighLevelResource.__init__
+
+
+
+
+

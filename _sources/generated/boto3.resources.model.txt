@@ -1,0 +1,66 @@
+:mod:`boto3.resources.model`
+============================
+
+.. automodule:: boto3.resources.model
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      xform_name
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.model.xform_name
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Action
+      Collection
+      DefinitionWithParams
+      Identifier
+      Parameter
+      Request
+      ResourceModel
+      ResponseResource
+      Waiter
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.model.Action
+       generated/boto3.resources.model.Collection
+       generated/boto3.resources.model.DefinitionWithParams
+       generated/boto3.resources.model.Identifier
+       generated/boto3.resources.model.Parameter
+       generated/boto3.resources.model.Request
+       generated/boto3.resources.model.ResourceModel
+       generated/boto3.resources.model.ResponseResource
+       generated/boto3.resources.model.Waiter
+
+   
+   
+
+   
+   
+   

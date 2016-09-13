@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ConditionExpressionBuilder.reset
+==========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ConditionExpressionBuilder.reset

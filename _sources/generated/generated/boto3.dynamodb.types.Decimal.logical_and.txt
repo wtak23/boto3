@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.logical_and
+========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.logical_and

@@ -1,0 +1,29 @@
+:class:`boto3.s3.transfer.BaseSubscriber`
+=========================================
+.. currentmodule:: boto3.s3.transfer
+.. autoclass:: BaseSubscriber
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BaseSubscriber.on_done
+   ~BaseSubscriber.on_progress
+   ~BaseSubscriber.on_queued
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BaseSubscriber.VALID_SUBSCRIBER_TYPES
+

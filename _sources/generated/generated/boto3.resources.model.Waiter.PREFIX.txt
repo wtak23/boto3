@@ -1,0 +1,6 @@
+boto3.resources.model.Waiter.PREFIX
+===================================
+
+.. currentmodule:: boto3.resources.model
+
+.. autoattribute:: Waiter.PREFIX

@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceFactory.__init__
+================================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. automethod:: ResourceFactory.__init__

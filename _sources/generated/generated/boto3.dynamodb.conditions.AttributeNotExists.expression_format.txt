@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeNotExists.expression_format
+==============================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: AttributeNotExists.expression_format

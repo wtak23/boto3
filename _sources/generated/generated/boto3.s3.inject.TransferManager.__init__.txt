@@ -1,0 +1,6 @@
+boto3.s3.inject.TransferManager.__init__
+========================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. automethod:: TransferManager.__init__

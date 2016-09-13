@@ -1,0 +1,6 @@
+boto3.session.Config.merge
+==========================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: Config.merge

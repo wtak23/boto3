@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.LessThan.expression_operator
+======================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: LessThan.expression_operator

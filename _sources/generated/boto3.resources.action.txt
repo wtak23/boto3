@@ -1,0 +1,68 @@
+:mod:`boto3.resources.action`
+=============================
+
+.. automodule:: boto3.resources.action
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      create_request_parameters
+      inject_attribute
+      xform_name
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.action.create_request_parameters
+       generated/boto3.resources.action.inject_attribute
+       generated/boto3.resources.action.xform_name
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      Action
+      ActionDocstring
+      BatchAction
+      CustomModeledAction
+      RawHandler
+      ResourceHandler
+      ServiceAction
+      WaiterAction
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.action.Action
+       generated/boto3.resources.action.ActionDocstring
+       generated/boto3.resources.action.BatchAction
+       generated/boto3.resources.action.CustomModeledAction
+       generated/boto3.resources.action.RawHandler
+       generated/boto3.resources.action.ResourceHandler
+       generated/boto3.resources.action.ServiceAction
+       generated/boto3.resources.action.WaiterAction
+
+   
+   
+
+   
+   
+   

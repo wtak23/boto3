@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceMeta.copy
+=========================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. automethod:: ResourceMeta.copy

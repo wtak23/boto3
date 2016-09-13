@@ -1,0 +1,6 @@
+boto3.session.Config.__init__
+=============================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: Config.__init__

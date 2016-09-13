@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.MutableSequence.remove
+===============================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: MutableSequence.remove

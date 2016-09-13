@@ -1,0 +1,6 @@
+boto3.exceptions.DynanmoDBOperationNotSupportedError
+====================================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: DynanmoDBOperationNotSupportedError

@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.not_exists
+=========================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.not_exists

@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.AttributeExists.__init__
+==================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: AttributeExists.__init__

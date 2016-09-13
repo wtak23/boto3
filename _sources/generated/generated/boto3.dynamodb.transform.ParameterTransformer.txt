@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.transform.ParameterTransformer`
+======================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: ParameterTransformer
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ParameterTransformer.transform
+
+
+
+
+

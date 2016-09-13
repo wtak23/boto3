@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Size.between
+======================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Size.between

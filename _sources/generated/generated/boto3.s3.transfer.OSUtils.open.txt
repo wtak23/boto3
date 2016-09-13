@@ -1,0 +1,6 @@
+boto3.s3.transfer.OSUtils.open
+==============================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: OSUtils.open

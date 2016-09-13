@@ -1,0 +1,20 @@
+:class:`boto3.dynamodb.table.TableResource`
+===========================================
+.. currentmodule:: boto3.dynamodb.table
+.. autoclass:: TableResource
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~TableResource.__init__
+   ~TableResource.batch_writer
+
+
+
+
+

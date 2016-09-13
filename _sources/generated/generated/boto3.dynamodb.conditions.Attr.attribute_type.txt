@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.attribute_type
+=============================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.attribute_type

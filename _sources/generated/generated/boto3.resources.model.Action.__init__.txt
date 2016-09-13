@@ -1,0 +1,6 @@
+boto3.resources.model.Action.__init__
+=====================================
+
+.. currentmodule:: boto3.resources.model
+
+.. automethod:: Action.__init__

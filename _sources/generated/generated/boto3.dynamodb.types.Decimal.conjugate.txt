@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.conjugate
+======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.conjugate

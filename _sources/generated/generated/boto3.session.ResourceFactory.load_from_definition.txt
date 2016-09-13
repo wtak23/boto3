@@ -1,0 +1,6 @@
+boto3.session.ResourceFactory.load_from_definition
+==================================================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: ResourceFactory.load_from_definition

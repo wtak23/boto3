@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Not.get_expression
+============================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Not.get_expression

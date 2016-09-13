@@ -1,0 +1,6 @@
+boto3.session.ResourceFactory.__init__
+======================================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: ResourceFactory.__init__

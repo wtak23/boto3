@@ -1,0 +1,33 @@
+:class:`boto3.dynamodb.conditions.Attr`
+=======================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: Attr
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Attr.__init__
+   ~Attr.attribute_type
+   ~Attr.begins_with
+   ~Attr.between
+   ~Attr.contains
+   ~Attr.eq
+   ~Attr.exists
+   ~Attr.gt
+   ~Attr.gte
+   ~Attr.is_in
+   ~Attr.lt
+   ~Attr.lte
+   ~Attr.ne
+   ~Attr.not_exists
+   ~Attr.size
+
+
+
+
+

@@ -1,0 +1,20 @@
+:class:`boto3.dynamodb.transform.DocumentModifiedShape`
+=======================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: DocumentModifiedShape
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~DocumentModifiedShape.__init__
+   ~DocumentModifiedShape.replace_documentation_for_matching_shape
+
+
+
+
+

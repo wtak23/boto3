@@ -1,0 +1,6 @@
+boto3.NullHandler.setLevel
+==========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.setLevel

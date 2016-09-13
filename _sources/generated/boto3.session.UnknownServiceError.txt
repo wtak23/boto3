@@ -1,0 +1,6 @@
+boto3.session.UnknownServiceError
+=================================
+
+.. currentmodule:: boto3.session
+
+.. autoexception:: UnknownServiceError

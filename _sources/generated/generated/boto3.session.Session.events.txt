@@ -1,0 +1,6 @@
+boto3.session.Session.events
+============================
+
+.. currentmodule:: boto3.session
+
+.. autoattribute:: Session.events

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.remainder
+======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.remainder

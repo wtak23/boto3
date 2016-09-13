@@ -1,0 +1,19 @@
+:class:`boto3.resources.model.Action`
+=====================================
+.. currentmodule:: boto3.resources.model
+.. autoclass:: Action
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Action.__init__
+
+
+
+
+

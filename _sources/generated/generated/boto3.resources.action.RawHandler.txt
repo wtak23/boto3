@@ -1,0 +1,19 @@
+:class:`boto3.resources.action.RawHandler`
+==========================================
+.. currentmodule:: boto3.resources.action
+.. autoclass:: RawHandler
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~RawHandler.__init__
+
+
+
+
+

@@ -1,0 +1,6 @@
+boto3.NullHandler.release
+=========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.release

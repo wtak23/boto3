@@ -1,0 +1,19 @@
+:class:`boto3.dynamodb.transform.ConditionExpressionTransformation`
+===================================================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: ConditionExpressionTransformation
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ConditionExpressionTransformation.__init__
+
+
+
+
+

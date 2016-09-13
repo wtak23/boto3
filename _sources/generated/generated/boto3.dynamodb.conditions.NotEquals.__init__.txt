@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.NotEquals.__init__
+============================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: NotEquals.__init__

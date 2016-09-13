@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.BuiltConditionExpression.count
+========================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: BuiltConditionExpression.count

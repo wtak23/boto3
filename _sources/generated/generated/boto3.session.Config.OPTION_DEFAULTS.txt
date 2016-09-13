@@ -1,0 +1,6 @@
+boto3.session.Config.OPTION_DEFAULTS
+====================================
+
+.. currentmodule:: boto3.session
+
+.. autoattribute:: Config.OPTION_DEFAULTS

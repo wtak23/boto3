@@ -1,0 +1,27 @@
+:class:`boto3.resources.factory.ServiceResource`
+================================================
+.. currentmodule:: boto3.resources.factory
+.. autoclass:: ServiceResource
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ServiceResource.__init__
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ServiceResource.meta
+

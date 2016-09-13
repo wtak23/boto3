@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.to_eng_string
+==========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.to_eng_string

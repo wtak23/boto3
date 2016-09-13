@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Rounded
+============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoexception:: Rounded

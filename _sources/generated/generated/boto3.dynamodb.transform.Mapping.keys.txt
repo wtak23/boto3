@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.Mapping.keys
+=====================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: Mapping.keys

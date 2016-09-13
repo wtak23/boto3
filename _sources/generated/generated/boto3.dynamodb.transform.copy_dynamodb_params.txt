@@ -1,0 +1,6 @@
+:func:`boto3.dynamodb.transform.copy_dynamodb_params`
+=====================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. autofunction:: copy_dynamodb_params

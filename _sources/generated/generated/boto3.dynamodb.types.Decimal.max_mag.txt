@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.max_mag
+====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.max_mag

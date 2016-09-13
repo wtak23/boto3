@@ -1,0 +1,6 @@
+:func:`boto3.s3.inject.object_summary_load`
+===========================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autofunction:: object_summary_load

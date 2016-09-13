@@ -1,0 +1,6 @@
+boto3.s3.transfer.ClientError
+=============================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoexception:: ClientError

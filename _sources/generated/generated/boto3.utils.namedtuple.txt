@@ -1,0 +1,6 @@
+:func:`boto3.utils.namedtuple`
+==============================
+
+.. currentmodule:: boto3.utils
+
+.. autofunction:: namedtuple

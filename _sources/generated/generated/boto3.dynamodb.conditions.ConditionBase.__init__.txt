@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ConditionBase.__init__
+================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ConditionBase.__init__

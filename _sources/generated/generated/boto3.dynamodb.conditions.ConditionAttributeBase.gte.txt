@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.ConditionAttributeBase.gte
+====================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: ConditionAttributeBase.gte

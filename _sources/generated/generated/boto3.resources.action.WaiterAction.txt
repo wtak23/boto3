@@ -1,0 +1,19 @@
+:class:`boto3.resources.action.WaiterAction`
+============================================
+.. currentmodule:: boto3.resources.action
+.. autoclass:: WaiterAction
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~WaiterAction.__init__
+
+
+
+
+

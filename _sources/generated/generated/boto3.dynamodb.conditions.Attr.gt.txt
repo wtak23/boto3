@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Attr.gt
+=================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Attr.gt

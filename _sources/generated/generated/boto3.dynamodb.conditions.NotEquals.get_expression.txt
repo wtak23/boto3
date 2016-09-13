@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.NotEquals.get_expression
+==================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: NotEquals.get_expression

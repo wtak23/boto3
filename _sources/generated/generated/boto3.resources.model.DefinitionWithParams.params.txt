@@ -1,0 +1,6 @@
+boto3.resources.model.DefinitionWithParams.params
+=================================================
+
+.. currentmodule:: boto3.resources.model
+
+.. autoattribute:: DefinitionWithParams.params

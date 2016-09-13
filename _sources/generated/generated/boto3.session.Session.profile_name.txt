@@ -1,0 +1,6 @@
+boto3.session.Session.profile_name
+==================================
+
+.. currentmodule:: boto3.session
+
+.. autoattribute:: Session.profile_name

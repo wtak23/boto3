@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.real
+=================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoattribute:: Decimal.real

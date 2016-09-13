@@ -1,0 +1,24 @@
+:class:`boto3.resources.collection.ResourceCollection`
+======================================================
+.. currentmodule:: boto3.resources.collection
+.. autoclass:: ResourceCollection
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResourceCollection.__init__
+   ~ResourceCollection.all
+   ~ResourceCollection.filter
+   ~ResourceCollection.limit
+   ~ResourceCollection.page_size
+   ~ResourceCollection.pages
+
+
+
+
+

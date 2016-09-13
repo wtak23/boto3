@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.normalize
+======================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.normalize

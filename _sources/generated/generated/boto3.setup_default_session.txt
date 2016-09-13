@@ -1,0 +1,6 @@
+:func:`boto3.setup_default_session`
+===================================
+
+.. currentmodule:: boto3
+
+.. autofunction:: setup_default_session

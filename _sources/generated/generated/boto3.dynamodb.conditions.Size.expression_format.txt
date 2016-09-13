@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Size.expression_format
+================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: Size.expression_format

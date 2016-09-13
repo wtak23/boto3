@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.to_integral
+========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.to_integral

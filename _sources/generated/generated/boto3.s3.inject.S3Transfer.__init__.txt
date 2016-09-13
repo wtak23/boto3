@@ -1,0 +1,6 @@
+boto3.s3.inject.S3Transfer.__init__
+===================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. automethod:: S3Transfer.__init__

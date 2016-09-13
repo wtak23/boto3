@@ -1,0 +1,25 @@
+:class:`boto3.resources.collection.CollectionManager`
+=====================================================
+.. currentmodule:: boto3.resources.collection
+.. autoclass:: CollectionManager
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CollectionManager.__init__
+   ~CollectionManager.all
+   ~CollectionManager.filter
+   ~CollectionManager.iterator
+   ~CollectionManager.limit
+   ~CollectionManager.page_size
+   ~CollectionManager.pages
+
+
+
+
+

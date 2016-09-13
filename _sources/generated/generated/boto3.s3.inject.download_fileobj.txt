@@ -1,0 +1,6 @@
+:func:`boto3.s3.inject.download_fileobj`
+========================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autofunction:: download_fileobj

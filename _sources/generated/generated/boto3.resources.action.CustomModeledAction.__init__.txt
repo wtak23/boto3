@@ -1,0 +1,6 @@
+boto3.resources.action.CustomModeledAction.__init__
+===================================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: CustomModeledAction.__init__

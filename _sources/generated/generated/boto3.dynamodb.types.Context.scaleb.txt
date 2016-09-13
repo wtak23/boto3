@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.scaleb
+===================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.scaleb

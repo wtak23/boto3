@@ -1,0 +1,6 @@
+:func:`boto3.set_stream_logger`
+===============================
+
+.. currentmodule:: boto3
+
+.. autofunction:: set_stream_logger

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.__init__
+=====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.__init__

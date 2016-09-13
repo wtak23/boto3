@@ -1,0 +1,26 @@
+:class:`boto3.dynamodb.conditions.AttributeBase`
+================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: AttributeBase
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~AttributeBase.__init__
+   ~AttributeBase.begins_with
+   ~AttributeBase.between
+   ~AttributeBase.eq
+   ~AttributeBase.gt
+   ~AttributeBase.gte
+   ~AttributeBase.lt
+   ~AttributeBase.lte
+
+
+
+
+

@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.LessThan`
+===========================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: LessThan
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LessThan.__init__
+   ~LessThan.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LessThan.expression_format
+   ~LessThan.expression_operator
+   ~LessThan.has_grouped_values
+

@@ -1,0 +1,6 @@
+boto3.resources.params.ResourceLoadException
+============================================
+
+.. currentmodule:: boto3.resources.params
+
+.. autoexception:: ResourceLoadException

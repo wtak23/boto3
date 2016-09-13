@@ -1,0 +1,6 @@
+boto3.ec2.deletetags.CustomModeledAction.__init__
+=================================================
+
+.. currentmodule:: boto3.ec2.deletetags
+
+.. automethod:: CustomModeledAction.__init__

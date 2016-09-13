@@ -1,0 +1,6 @@
+boto3.resources.model.Collection.batch_actions
+==============================================
+
+.. currentmodule:: boto3.resources.model
+
+.. autoattribute:: Collection.batch_actions

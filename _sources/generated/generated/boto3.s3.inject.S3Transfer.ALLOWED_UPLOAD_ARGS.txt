@@ -1,0 +1,6 @@
+boto3.s3.inject.S3Transfer.ALLOWED_UPLOAD_ARGS
+==============================================
+
+.. currentmodule:: boto3.s3.inject
+
+.. autoattribute:: S3Transfer.ALLOWED_UPLOAD_ARGS

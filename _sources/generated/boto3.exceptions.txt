@@ -1,0 +1,35 @@
+:mod:`boto3.exceptions`
+=======================
+
+.. automodule:: boto3.exceptions
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   Exceptions
+   ----------
+   .. autosummary::
+      :toctree:
+
+   
+      Boto3Error
+      DynamoDBNeedsConditionError
+      DynamoDBNeedsKeyConditionError
+      DynamoDBOperationNotSupportedError
+      DynanmoDBOperationNotSupportedError
+      NoVersionFound
+      ResourceLoadException
+      ResourceNotExistsError
+      RetriesExceededError
+      S3TransferFailedError
+      S3UploadFailedError
+      UnknownAPIVersionError
+   
+   

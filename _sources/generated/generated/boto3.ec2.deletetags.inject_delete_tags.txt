@@ -1,0 +1,6 @@
+:func:`boto3.ec2.deletetags.inject_delete_tags`
+===============================================
+
+.. currentmodule:: boto3.ec2.deletetags
+
+.. autofunction:: inject_delete_tags

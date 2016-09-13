@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.LessThanEquals`
+=================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: LessThanEquals
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~LessThanEquals.__init__
+   ~LessThanEquals.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~LessThanEquals.expression_format
+   ~LessThanEquals.expression_operator
+   ~LessThanEquals.has_grouped_values
+

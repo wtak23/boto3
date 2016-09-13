@@ -1,0 +1,6 @@
+boto3.s3.transfer.TransferManager.shutdown
+==========================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: TransferManager.shutdown

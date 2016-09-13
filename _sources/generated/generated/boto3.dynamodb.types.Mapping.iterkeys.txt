@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Mapping.iterkeys
+=====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Mapping.iterkeys

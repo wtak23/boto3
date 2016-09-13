@@ -1,0 +1,6 @@
+:func:`boto3.resources.params.build_param_structure`
+====================================================
+
+.. currentmodule:: boto3.resources.params
+
+.. autofunction:: build_param_structure

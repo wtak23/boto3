@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.rotate
+===================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.rotate

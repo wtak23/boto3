@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Size.gt
+=================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. automethod:: Size.gt

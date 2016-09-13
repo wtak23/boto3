@@ -1,0 +1,6 @@
+boto3.resources.collection.CollectionManager.page_size
+======================================================
+
+.. currentmodule:: boto3.resources.collection
+
+.. automethod:: CollectionManager.page_size

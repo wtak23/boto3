@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.copy_abs
+=====================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.copy_abs

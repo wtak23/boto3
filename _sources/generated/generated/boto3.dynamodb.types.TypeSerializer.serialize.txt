@@ -1,0 +1,6 @@
+boto3.dynamodb.types.TypeSerializer.serialize
+=============================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: TypeSerializer.serialize

@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Overflow
+=============================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. autoexception:: Overflow

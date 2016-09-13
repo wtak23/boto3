@@ -1,0 +1,19 @@
+:class:`boto3.s3.transfer.S3TransferConfig`
+===========================================
+.. currentmodule:: boto3.s3.transfer
+.. autoclass:: S3TransferConfig
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~S3TransferConfig.__init__
+
+
+
+
+

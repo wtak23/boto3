@@ -1,0 +1,6 @@
+boto3.utils.ServiceContext.service_model
+========================================
+
+.. currentmodule:: boto3.utils
+
+.. autoattribute:: ServiceContext.service_model

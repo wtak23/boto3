@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.BeginsWith`
+=============================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: BeginsWith
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~BeginsWith.__init__
+   ~BeginsWith.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~BeginsWith.expression_format
+   ~BeginsWith.expression_operator
+   ~BeginsWith.has_grouped_values
+

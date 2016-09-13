@@ -1,0 +1,6 @@
+boto3.dynamodb.table.TableResource.batch_writer
+===============================================
+
+.. currentmodule:: boto3.dynamodb.table
+
+.. automethod:: TableResource.batch_writer

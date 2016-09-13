@@ -1,0 +1,6 @@
+boto3.utils.LazyLoadedWaiterModel.get_waiter
+============================================
+
+.. currentmodule:: boto3.utils
+
+.. automethod:: LazyLoadedWaiterModel.get_waiter

@@ -1,0 +1,6 @@
+boto3.resources.response.ResourceHandler.handle_response_item
+=============================================================
+
+.. currentmodule:: boto3.resources.response
+
+.. automethod:: ResourceHandler.handle_response_item

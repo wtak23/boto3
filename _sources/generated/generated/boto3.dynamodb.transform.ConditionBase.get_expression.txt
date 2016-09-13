@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.ConditionBase.get_expression
+=====================================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: ConditionBase.get_expression

@@ -1,0 +1,6 @@
+boto3.exceptions.ResourceLoadException
+======================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: ResourceLoadException

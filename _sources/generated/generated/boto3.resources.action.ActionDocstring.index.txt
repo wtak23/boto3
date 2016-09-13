@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.index
+============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.index

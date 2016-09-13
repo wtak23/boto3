@@ -1,0 +1,6 @@
+boto3.resources.model.Identifier.__init__
+=========================================
+
+.. currentmodule:: boto3.resources.model
+
+.. automethod:: Identifier.__init__

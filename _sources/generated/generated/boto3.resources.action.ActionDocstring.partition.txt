@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.partition
+================================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.partition

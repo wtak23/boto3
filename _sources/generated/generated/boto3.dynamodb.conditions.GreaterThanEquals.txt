@@ -1,0 +1,30 @@
+:class:`boto3.dynamodb.conditions.GreaterThanEquals`
+====================================================
+.. currentmodule:: boto3.dynamodb.conditions
+.. autoclass:: GreaterThanEquals
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~GreaterThanEquals.__init__
+   ~GreaterThanEquals.get_expression
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~GreaterThanEquals.expression_format
+   ~GreaterThanEquals.expression_operator
+   ~GreaterThanEquals.has_grouped_values
+

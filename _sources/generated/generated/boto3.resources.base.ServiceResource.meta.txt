@@ -1,0 +1,6 @@
+boto3.resources.base.ServiceResource.meta
+=========================================
+
+.. currentmodule:: boto3.resources.base
+
+.. autoattribute:: ServiceResource.meta

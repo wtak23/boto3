@@ -1,0 +1,30 @@
+:class:`boto3.s3.inject.S3Transfer`
+===================================
+.. currentmodule:: boto3.s3.inject
+.. autoclass:: S3Transfer
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~S3Transfer.__init__
+   ~S3Transfer.download_file
+   ~S3Transfer.upload_file
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~S3Transfer.ALLOWED_DOWNLOAD_ARGS
+   ~S3Transfer.ALLOWED_UPLOAD_ARGS
+

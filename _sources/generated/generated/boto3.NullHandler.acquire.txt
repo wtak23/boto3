@@ -1,0 +1,6 @@
+boto3.NullHandler.acquire
+=========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.acquire

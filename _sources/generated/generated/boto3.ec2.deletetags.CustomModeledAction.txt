@@ -1,0 +1,20 @@
+:class:`boto3.ec2.deletetags.CustomModeledAction`
+=================================================
+.. currentmodule:: boto3.ec2.deletetags
+.. autoclass:: CustomModeledAction
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~CustomModeledAction.__init__
+   ~CustomModeledAction.inject
+
+
+
+
+

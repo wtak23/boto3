@@ -1,0 +1,25 @@
+:class:`boto3.dynamodb.transform.Mapping`
+=========================================
+.. currentmodule:: boto3.dynamodb.transform
+.. autoclass:: Mapping
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~Mapping.get
+   ~Mapping.items
+   ~Mapping.iteritems
+   ~Mapping.iterkeys
+   ~Mapping.itervalues
+   ~Mapping.keys
+   ~Mapping.values
+
+
+
+
+

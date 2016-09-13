@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.logical_xor
+========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.logical_xor

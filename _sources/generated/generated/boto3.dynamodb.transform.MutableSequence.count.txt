@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.MutableSequence.count
+==============================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: MutableSequence.count

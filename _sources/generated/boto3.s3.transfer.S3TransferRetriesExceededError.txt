@@ -1,0 +1,6 @@
+boto3.s3.transfer.S3TransferRetriesExceededError
+================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoexception:: S3TransferRetriesExceededError

@@ -1,0 +1,6 @@
+boto3.utils.ServiceContext.index
+================================
+
+.. currentmodule:: boto3.utils
+
+.. automethod:: ServiceContext.index

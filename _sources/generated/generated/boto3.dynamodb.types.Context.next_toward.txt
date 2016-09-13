@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Context.next_toward
+========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Context.next_toward

@@ -1,0 +1,6 @@
+boto3.resources.model.ResponseResource.model
+============================================
+
+.. currentmodule:: boto3.resources.model
+
+.. autoattribute:: ResponseResource.model

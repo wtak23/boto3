@@ -1,0 +1,6 @@
+boto3.resources.action.ServiceAction.__init__
+=============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ServiceAction.__init__

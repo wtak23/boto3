@@ -1,0 +1,6 @@
+boto3.session.Session.get_available_regions
+===========================================
+
+.. currentmodule:: boto3.session
+
+.. automethod:: Session.get_available_regions

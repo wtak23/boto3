@@ -1,0 +1,6 @@
+:func:`boto3.dynamodb.conditions.namedtuple`
+============================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autofunction:: namedtuple

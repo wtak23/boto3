@@ -1,0 +1,6 @@
+boto3.NullHandler.createLock
+============================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.createLock

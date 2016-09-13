@@ -1,0 +1,58 @@
+:mod:`boto3.utils`
+==================
+
+.. automodule:: boto3.utils
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      import_module
+      inject_attribute
+      lazy_call
+      namedtuple
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.utils.import_module
+       generated/boto3.utils.inject_attribute
+       generated/boto3.utils.lazy_call
+       generated/boto3.utils.namedtuple
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      LazyLoadedWaiterModel
+      ServiceContext
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.utils.LazyLoadedWaiterModel
+       generated/boto3.utils.ServiceContext
+
+   
+   
+
+   
+   
+   

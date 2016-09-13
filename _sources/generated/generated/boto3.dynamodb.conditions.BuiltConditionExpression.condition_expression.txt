@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.BuiltConditionExpression.condition_expression
+=======================================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: BuiltConditionExpression.condition_expression

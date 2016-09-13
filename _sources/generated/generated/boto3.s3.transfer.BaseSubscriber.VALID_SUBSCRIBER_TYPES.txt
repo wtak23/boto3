@@ -1,0 +1,6 @@
+boto3.s3.transfer.BaseSubscriber.VALID_SUBSCRIBER_TYPES
+=======================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoattribute:: BaseSubscriber.VALID_SUBSCRIBER_TYPES

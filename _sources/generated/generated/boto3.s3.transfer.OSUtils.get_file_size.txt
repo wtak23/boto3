@@ -1,0 +1,6 @@
+boto3.s3.transfer.OSUtils.get_file_size
+=======================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. automethod:: OSUtils.get_file_size

@@ -1,0 +1,6 @@
+boto3.dynamodb.transform.Mapping.iteritems
+==========================================
+
+.. currentmodule:: boto3.dynamodb.transform
+
+.. automethod:: Mapping.iteritems

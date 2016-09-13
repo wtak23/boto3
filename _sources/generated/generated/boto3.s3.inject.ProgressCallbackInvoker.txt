@@ -1,0 +1,30 @@
+:class:`boto3.s3.inject.ProgressCallbackInvoker`
+================================================
+.. currentmodule:: boto3.s3.inject
+.. autoclass:: ProgressCallbackInvoker
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ProgressCallbackInvoker.__init__
+   ~ProgressCallbackInvoker.on_done
+   ~ProgressCallbackInvoker.on_progress
+   ~ProgressCallbackInvoker.on_queued
+
+
+
+
+
+Attributes
+----------
+.. autosummary::
+  :toctree:
+
+
+   ~ProgressCallbackInvoker.VALID_SUBSCRIBER_TYPES
+

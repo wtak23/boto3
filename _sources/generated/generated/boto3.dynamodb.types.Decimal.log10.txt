@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.log10
+==================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.log10

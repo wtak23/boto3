@@ -1,0 +1,6 @@
+boto3.resources.factory.ResourceFactory.load_from_definition
+============================================================
+
+.. currentmodule:: boto3.resources.factory
+
+.. automethod:: ResourceFactory.load_from_definition

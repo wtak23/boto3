@@ -1,0 +1,6 @@
+boto3.session.ResourceNotExistsError
+====================================
+
+.. currentmodule:: boto3.session
+
+.. autoexception:: ResourceNotExistsError

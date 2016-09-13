@@ -1,0 +1,6 @@
+:func:`boto3.utils.inject_attribute`
+====================================
+
+.. currentmodule:: boto3.utils
+
+.. autofunction:: inject_attribute

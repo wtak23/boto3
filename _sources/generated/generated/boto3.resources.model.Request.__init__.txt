@@ -1,0 +1,6 @@
+boto3.resources.model.Request.__init__
+======================================
+
+.. currentmodule:: boto3.resources.model
+
+.. automethod:: Request.__init__

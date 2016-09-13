@@ -1,0 +1,6 @@
+boto3.resources.model.ResourceModel.references
+==============================================
+
+.. currentmodule:: boto3.resources.model
+
+.. autoattribute:: ResourceModel.references

@@ -1,0 +1,60 @@
+:mod:`boto3.resources.response`
+===============================
+
+.. automodule:: boto3.resources.response
+
+   
+   
+   Functions
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:func_custom.rst
+
+   
+      all_not_none
+      build_empty_response
+      build_identifiers
+      get_data_member
+      xform_name
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.response.all_not_none
+       generated/boto3.resources.response.build_empty_response
+       generated/boto3.resources.response.build_identifiers
+       generated/boto3.resources.response.get_data_member
+       generated/boto3.resources.response.xform_name
+      
+   
+   
+
+   
+   
+   Classes
+   -------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      RawHandler
+      ResourceHandler
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/boto3.resources.response.RawHandler
+       generated/boto3.resources.response.ResourceHandler
+
+   
+   
+
+   
+   
+   

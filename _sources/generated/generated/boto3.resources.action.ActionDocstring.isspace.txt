@@ -1,0 +1,6 @@
+boto3.resources.action.ActionDocstring.isspace
+==============================================
+
+.. currentmodule:: boto3.resources.action
+
+.. automethod:: ActionDocstring.isspace

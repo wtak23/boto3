@@ -1,0 +1,6 @@
+boto3.exceptions.UnknownAPIVersionError
+=======================================
+
+.. currentmodule:: boto3.exceptions
+
+.. autoexception:: UnknownAPIVersionError

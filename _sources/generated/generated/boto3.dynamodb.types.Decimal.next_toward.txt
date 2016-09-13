@@ -1,0 +1,6 @@
+boto3.dynamodb.types.Decimal.next_toward
+========================================
+
+.. currentmodule:: boto3.dynamodb.types
+
+.. automethod:: Decimal.next_toward

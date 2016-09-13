@@ -1,0 +1,6 @@
+boto3.s3.transfer.TransferManager.ALLOWED_COPY_ARGS
+===================================================
+
+.. currentmodule:: boto3.s3.transfer
+
+.. autoattribute:: TransferManager.ALLOWED_COPY_ARGS

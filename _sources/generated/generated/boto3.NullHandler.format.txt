@@ -1,0 +1,6 @@
+boto3.NullHandler.format
+========================
+
+.. currentmodule:: boto3
+
+.. automethod:: NullHandler.format

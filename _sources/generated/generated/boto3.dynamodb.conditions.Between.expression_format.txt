@@ -1,0 +1,6 @@
+boto3.dynamodb.conditions.Between.expression_format
+===================================================
+
+.. currentmodule:: boto3.dynamodb.conditions
+
+.. autoattribute:: Between.expression_format

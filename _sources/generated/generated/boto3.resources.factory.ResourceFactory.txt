@@ -1,0 +1,20 @@
+:class:`boto3.resources.factory.ResourceFactory`
+================================================
+.. currentmodule:: boto3.resources.factory
+.. autoclass:: ResourceFactory
+   :undoc-members:
+
+
+Methods
+-------
+.. autosummary::
+   :toctree:
+
+
+   ~ResourceFactory.__init__
+   ~ResourceFactory.load_from_definition
+
+
+
+
+
