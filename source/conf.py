@@ -27,7 +27,13 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 # -- General configuration ------------------------------------------------
+import boto3
+import boto3.session
+from boto3.docs import generate_docs
 
+
+session = boto3.session.Session(region_name='us-east-1')
+generate_docs(os.path.dirname(os.path.abspath(__file__)), session)
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
@@ -105,6 +111,7 @@ language = None
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = [
+# 'api*.rst',
 # 'demo_autoclass.rst',
 # 'demo_automodule.rst',
 # 'demo_automodule.rst',
